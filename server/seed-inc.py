@@ -108,11 +108,17 @@ def xyz(path):
 
 ## FUNCTIONS END #####################################################################################################
 
+
+## GLOBAL VARIABLES BEGIN ############################################################################################
+
 income_statements = []
 inc_count = 0
 
 company_tracker = {}
 company_count = 0
+
+## batch_count determines how many entries will be written to the global income_statements list before committing them to DB.
+batch_count = 50000
 
 main_keys = ['NetIncomeLoss',
                         'NetIncomeLossAvailableToCommonStockholdersBasic',
@@ -135,6 +141,8 @@ all_keys =  [  'Revenues',
 
 max = 10165
 r = randint(1,10165)
+
+## GLOBAL VARIABLES END ##############################################################################################
 
 with app.app_context():
    
@@ -164,14 +172,20 @@ with app.app_context():
             end_dates = {}
             end_count = 0
             
+            ## Creates new income statement using a net income key from main_keys
             abc(gaap if gaap else ifrs)
             
+            ## After all available income statements rows are created, co_inc_dict is used to store the newly created income statements 
             co_inc_dict = {inc.frame: inc for inc in income_statements if inc.company_cik == company.cik}
 
+            ## Using the entries in co_inc_dict, xyz modifies each income statement to include other desired account figures/balances using the all_keys list (revenue accounts in this example).
             xyz(gaap if gaap else ifrs)
-                  
+            
+            ## Create a list with income statements that have no total_revenue (i.e. IncomeStatement.total_revenue == None)
             no_r = [inc for inc in co_inc_dict.values() if inc.total_revenue == None]
             
+            ## For income statements that do not derive their total_revenue from the 'Revenues' key, use these alternate attributes to determine total_revenue.
+            ## (Many companies do not use 'Revenues' as their key for their "top-line" revenue figure and instead use other keys to do so, such as 'RevenueFromContractWithCustomerExcludingAssessedTax', etc.)
             for inc in no_r:
                rceat = inc.rev_from_ceat
                rnoie = inc.rev_net_of_ie
@@ -194,6 +208,8 @@ with app.app_context():
                elif srn: 
                   inc.total_revenue = srn
                   print(f'{inc} added total_revenues')
+               elif srgn and srsn:
+                  inc.total_revenue = srgn + srsn
                elif srgn:
                   inc.total_revenue = srgn
                   print(f'{inc} added total_revenues')
@@ -226,10 +242,8 @@ with app.app_context():
       
       else:
          pass
-      
-      
 
-      if len(income_statements) > 50000:
+      if len(income_statements)>= batch_count:
          print(f'Committing {len(income_statements)} sheets to DB')
          db.session.add_all(income_statements)
          db.session.commit()
