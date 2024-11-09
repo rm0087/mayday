@@ -1,0 +1,81 @@
+{
+   "slides": [
+        {
+            "id": 0,
+            "images":[],
+            "animations":[],
+            "en":{},
+            "es":{},
+            "vi":{}
+        },
+        {
+            "id": 1,
+            "en": {
+                "title": "Welcome"
+            },
+            "es": {
+                "title": "Bienvenido"
+            },
+            "vi": {
+                "title": "Chào mừng"
+            }
+        },
+        {
+            "id": 2,
+            "en": {
+                "title": "Introduction from the Captain",
+                "media": []
+            },
+            "es": {
+                "title": "Introducción del Capitán",
+                "media":[]
+            },
+            "vi": {
+                "title": "Lời Tâm Sự Của Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
+                "media":[]
+            }
+        },
+        {
+            "id": 3,
+            "en": {
+                "title": "Radio Communications",
+                "listPoints": [
+                    "Bridge-to-Bridge Radio Regulations require the person steering the vessel maintain a listening watch on:",
+                    "Channel 13 for vessel-to-vessel.",
+                    "Channel 16 for emergencies."
+                ],
+                "images": [
+
+                ]
+            },
+            "es": {
+                "title": "Comunicaciones de Radio Marino",
+                "listPoints": [
+                    "Las regulaciones de radio de Cabina-a-Cabina requieren a la persona que dirige el barco se mantenga escuchando en:",
+                    "El Canal 13 VHF para las comunicaciones de barco-a-barco.",
+                    "El Canal 16 VHF para las emergencias."
+                ]
+            },
+            "vi": {
+                "title": "Liên Lạc bằng Radio",
+                "listPoints": [
+                    "Coast Guard bắt buộc người lái tàu phải luôn trực nghe và sử dụng máy truyền tin (radio) như sau:",
+                    "Đài 13 khi liên lạc vận chuyển với tàu khác.",
+                    "Đài 16 trong các trường hợp khẩn cấp - gọi là Emergency."
+                ]
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+   ] 
+}
