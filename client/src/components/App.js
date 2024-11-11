@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import slideContent from "./slide-content.json";
 const { slides } = slideContent;
 
 export default function App() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [slideType, setSlideType] = useState(slides[currentIndex].type);
-    const [language, setLanguage] = useState("vi")
+    const [language, setLanguage] = useState("en")
+    const [isPlaying, setIsPlaying] = useState(true)
+    const audioRef = useRef(null);
+    const videoRef = useRef(null);
 
-    // Example Slide Templates
+    // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const TitleSlide = ({ content }) => (
         <div>
             <h1>{content[language].title}</h1>
@@ -21,21 +24,67 @@ export default function App() {
     );
 
     const TextAndMediaSlide = ({ content }) => {
-        const listPoints = content[language].listPoints.map((point)=><li>{point}</li>);
+        
+        //if listpoints is not empty, map list points
+        const listPoints = content[language].listPoints?.map((point) =>
+            point ? <li>{point}</li> : null
+        )
+        
+        // if content.images is not empty, map images
+        const medias = content.images?.map((media) =>
+            media? <img src={media} alt="Slide Media" /> : null    
+        )
+
+        return (
+            <div>
+                <div id = "title">
+                    <h1>{content[language].title}</h1>
+                </div>
+                <div id = "slide-content">
+                    <h3>{content[language].listHeads?.[0] || ""}</h3>
+                    {listPoints}
+                    <div id = "medias">
+                        {medias}
+                    </div>
+                </div>
+            
+            </div>
+        )
+    };
+
+    const TextAndMediaSlideRight = ({ content }) => {
+        
+        //if listpoints is not empty, map list points
+        const listPoints = content[language].listPoints?.map((point) =>
+            point ? <li>{point}</li> : null
+        )
+        
+        // if content.images is not empty, map images
+        const medias = content.images?.map((media) =>
+            media? <img src={media} alt="Slide Media" /> : null    
+        )
+
         return (
         <div>
+            <div id = "title">
+                <h1>{content[language].title}</h1>
+            </div>
+            <div id = "slide-content-right">
+                <h3>{content[language].listHeads?.[0] || ""}</h3>
+                {listPoints}
+                <div id = "medias-right">
+                    {medias}
+                </div>
+            </div>
             
-            <h1>{content[language].title}</h1>
-            <h3>{content[language].listHeads?.[0] || ""}</h3>
-            {listPoints}
-            {/* <img src={content[language].imageUrl} alt="Slide Media" /> */}
         </div>
         )
     };
 
     const MediaOnlySlide = ({ content }) => (
         <div>
-            <img src={content[language].imageUrl} alt="Slide Media" />
+            {/* <img src={content[language].imageUrl} alt="Slide Media" /> */}
+            <h1>{content[language].title}</h1>
         </div>
     );
 
@@ -61,7 +110,8 @@ export default function App() {
             </ul>
         </div>
     );
-
+    // END SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////
+    
     const goToNextSlide = () => {
         const newIndex = (currentIndex + 1) % slides.length;
         const newSlideType = slides[newIndex].type;
@@ -75,6 +125,17 @@ export default function App() {
         setCurrentIndex(newIndex);
         setSlideType(newSlideType);
     };
+
+    const toggleMediaPlayback = () => {
+        if (isPlaying) {
+          audioRef.current?.pause();
+          videoRef.current?.pause();
+        } else {
+          audioRef.current?.play();
+          videoRef.current?.play();
+        }
+        setIsPlaying(!isPlaying);
+      };
 
     // Define slide templates based on slideType
     const renderSlide = () => {
@@ -91,22 +152,38 @@ export default function App() {
                 return <QuizSlide content={slides[currentIndex]} />;
             case "5":
                 return <MediaAndQuizSlide content={slides[currentIndex]} />;
+            case "6":
+                return <TextAndMediaSlideRight content={slides[currentIndex]} />;
             default:
                 return <div>Unknown slide type</div>;
         }
     };
 
+    const handleLanguage = (key) => setLanguage(key)
     return (
         <>
+            {slideContent[language] && slideContent[language].soundtrack && <audio ref={audioRef} src={slideContent[language].soundtrack} loop />}
+            {Object.entries(slideContent.languages).map(([key,language]) =>
+                <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
+            )}
             <div id = "slideshow-container">
                 <div>{renderSlide()}</div>
             </div>
-            <div id = "test-stats">
-                <p>Current index: {currentIndex}</p>
-                <p>Slide ID: {slides[currentIndex].id}</p>
-                <p>Slide type: {slideType} - {slideContent.slideTypes[slideType]}</p>
-                <button onClick={goToPreviousSlide}>Previous</button>
-                <button onClick={goToNextSlide}>Next</button>
+            <div id = "control-panel">
+                <div id = "controls">
+                    <button onClick={goToPreviousSlide}>Previous</button>
+                    <button onClick={toggleMediaPlayback}>
+                        {isPlaying ? 'Pause' : 'Play'}
+                    </button>
+                    <button onClick={goToNextSlide}>Next</button>
+                </div>
+                <div id = "test-stats">
+                    <p>currentIndex: {currentIndex}</p>
+                    <p>Slide ID: {slides[currentIndex].id}</p>
+                    <p>slideType: {slideType} - {slideContent.slideTypes[slideType]}</p>
+                    <p>language: {language}</p>
+                    
+                </div>
             </div>
         </>
     );
