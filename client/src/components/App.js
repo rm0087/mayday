@@ -9,7 +9,7 @@ export default function App() {
     const [isPlaying, setIsPlaying] = useState(true)
     const audioRef = useRef(null);
     const videoRef = useRef(null);
-
+    
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const TitleSlide = ({ content }) => (
         <div>
@@ -88,16 +88,148 @@ export default function App() {
         </div>
     );
 
-    const QuizSlide = ({ content }) => (
-        <div>
-            <h1>{content[language].question}</h1>
-            <ul>
-                {content[language].options.map((option, index) => (
-                    <li key={index}>{option}</li>
-                ))}
-            </ul>
-        </div>
-    );
+    const QuizSlide = ({ content }) => {
+        const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+        const [selectedAnswer, setSelectedAnswer] = useState(null);
+        const [showFeedback, setShowFeedback] = useState(false);
+        const [score, setScore] = useState(0);
+        const [quizCompleted, setQuizCompleted] = useState(false);
+    
+        const questions = content[language].questions;
+        const currentQuestion = questions[currentQuestionIndex];
+    
+        const handleAnswerSelect = (optionId) => {
+            if (showFeedback) return;
+            setSelectedAnswer(optionId);
+        };
+    
+        const handleSubmit = () => {
+            if (selectedAnswer === null) return;
+            setShowFeedback(true);
+    
+            const selectedOption = currentQuestion.options.find(opt => opt.id === selectedAnswer);
+            if (selectedOption?.isCorrect) {
+                setScore(score + 1);
+                // Play correct answer sound here
+            } else {
+                // Play incorrect answer sound here
+            }
+        };
+    
+        const moveToNextQuestion = () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                setCurrentQuestionIndex(currentQuestionIndex + 1);
+                setSelectedAnswer(null);
+                setShowFeedback(false);
+            } else {
+                setQuizCompleted(true);
+            }
+        };
+    
+        const getFinalFeedback = () => {
+            const percentage = (score / questions.length) * 100;
+            if (percentage === 100) return content[language].finalFeedback.perfect;
+            if (percentage >= 70) return content[language].finalFeedback.good;
+            return content[language].finalFeedback.needsPractice;
+        };
+    
+        return (
+            <div className="w-full max-w-2xl mx-auto p-6 border rounded-lg shadow-sm">
+                {!quizCompleted ? (
+                    <div className="space-y-6">
+                        <h2 className="text-2xl font-bold">{content[language].title}</h2>
+                        {currentQuestionIndex === 0 && (
+                            <p className="text-gray-600">{content[language].instructions}</p>
+                        )}
+                        <div className="text-sm text-gray-500">
+                            {`${currentQuestionIndex + 1} / ${questions.length}`}
+                        </div>
+                        <div className="space-y-4">
+                            <h3 className="text-xl font-semibold">{currentQuestion.questionText}</h3>
+                            {currentQuestion.media.image && (
+                                <img
+                                    src={currentQuestion.media.image}
+                                    alt="Question media"
+                                    className="max-w-full h-auto rounded-lg"
+                                />
+                            )}
+                            <div className="space-y-2">
+                                {currentQuestion.options.map((option) => (
+                                    <button
+                                        key={option.id}
+                                        className={`w-full text-left p-4 rounded-lg border ${
+                                            selectedAnswer === option.id
+                                                ? showFeedback
+                                                    ? option.isCorrect
+                                                        ? 'bg-green-100 border-green-500'
+                                                        : 'bg-red-100 border-red-500'
+                                                    : 'bg-blue-50 border-blue-500'
+                                                : 'hover:bg-gray-50'
+                                        } ${
+                                            showFeedback && option.isCorrect ? 'ring-2 ring-green-500' : ''
+                                        }`}
+                                        onClick={() => handleAnswerSelect(option.id)}
+                                        disabled={showFeedback}
+                                    >
+                                        <span className="mr-2">{option.id.toUpperCase()}.</span>
+                                        {option.text}
+                                        {showFeedback && option.isCorrect && (
+                                            <span className="ml-auto text-green-500">✓</span>
+                                        )}
+                                        {showFeedback && selectedAnswer === option.id && !option.isCorrect && (
+                                            <span className="ml-auto text-red-500">✗</span>
+                                        )}
+                                    </button>
+                                ))}
+                            </div>
+                            {showFeedback && (
+                                <div
+                                    className={`p-4 rounded-lg ${
+                                        currentQuestion.options.find(opt => opt.id === selectedAnswer)?.isCorrect
+                                            ? 'bg-green-100 text-green-800'
+                                            : 'bg-red-100 text-red-800'
+                                    }`}
+                                >
+                                    {currentQuestion.options.find(opt => opt.id === selectedAnswer)?.isCorrect
+                                        ? currentQuestion.feedback.correct
+                                        : currentQuestion.feedback.incorrect}
+                                </div>
+                            )}
+                            <div className="flex justify-end space-x-4">
+                                {!showFeedback ? (
+                                    <button
+                                        onClick={handleSubmit}
+                                        disabled={selectedAnswer === null}
+                                        className={`px-4 py-2 rounded-lg ${
+                                            selectedAnswer === null
+                                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                                : 'bg-blue-500 text-white hover:bg-blue-600'
+                                        }`}
+                                    >
+                                        Submit Answer
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={moveToNextQuestion}
+                                        className="px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600"
+                                    >
+                                        {currentQuestionIndex < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="text-center space-y-6">
+                        <h2 className="text-2xl font-bold">Quiz Complete!</h2>
+                        <p className="text-xl">Your score: {score} out of {questions.length}</p>
+                        <p className="text-lg">{getFinalFeedback()}</p>
+                    </div>
+                )}
+            </div>
+        )
+    };
+
 
     const MediaAndQuizSlide = ({ content }) => (
         <div>
@@ -162,7 +294,7 @@ export default function App() {
     const handleLanguage = (key) => setLanguage(key)
     return (
         <>
-            {slideContent[language] && slideContent[language].soundtrack && <audio ref={audioRef} src={slideContent[language].soundtrack} loop />}
+            {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
             {Object.entries(slideContent.languages).map(([key,language]) =>
                 <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
             )}

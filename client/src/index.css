@@ -13,7 +13,7 @@
   width: 120vh;
   height: 80vh;
   max-width: 1200px;
-  max-height: 800px;
+  max-height: 700px;
   overflow:hidden;
   position: relative;
   display: flex;
@@ -76,7 +76,9 @@
 #medias img {
   width: 30%;
   height: auto;
+  max-height:200px;
   object-fit: contain;
+  margin: auto;
 }
 
 #medias-right {
@@ -86,10 +88,10 @@
   overflow:auto;
 }
 
-#medias-right img {
-  /* width: auto; */
+/* #medias-right img {
+  width: auto;
   
-}
+} */
 
 #control-panel {
   border-width: 1px;
