@@ -25,3 +25,5 @@ yarn-error.log*
 # .json
 # */*.json
 # */*/*.json
+
+/archive
