@@ -29,10 +29,29 @@ export default function App() {
         const listPoints = content[language].listPoints?.map((point) =>
             point ? <li>{point}</li> : null
         )
+
+        const listPoints2 = content[language].listPoints2?.map((point) =>
+            point ? <li>{point}</li> : null
+        )
         
         // if content.images is not empty, map images
-        const medias = content.images?.map((media) =>
+        const images = content.images?.map((media) =>
             media? <img src={media} alt="Slide Media" /> : null    
+        )
+
+        const videos = content.videos?.map((video)=>
+            video? 
+                <video width="640" height="360" controls autoplay loop>
+                    <source src={video} type="video/mp4"/>
+                </video> : null
+        )
+
+        const uniqueMedia = content[language].uniqueMedia?.map((media)=>
+                media.slice(-4) === ".mp4"?
+                    <video width="640" height="360" controls autoplay>
+                        <source src={media} type="video/mp4"/>
+                    </video> 
+                    : <img src = {media} alt="Slide Media" />    
         )
 
         return (
@@ -43,41 +62,16 @@ export default function App() {
                 <div id = "slide-content">
                     <h3>{content[language].listHeads?.[0] || ""}</h3>
                     {listPoints}
+                    <h3>{content[language].listHeads2?.[0] || ""}</h3>
+                    {listPoints2}
+
                     <div id = "medias">
-                        {medias}
+                        {images}
+                        {videos}
+                        {uniqueMedia}
                     </div>
                 </div>
-            
             </div>
-        )
-    };
-
-    const TextAndMediaSlideRight = ({ content }) => {
-        
-        //if listpoints is not empty, map list points
-        const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li>{point}</li> : null
-        )
-        
-        // if content.images is not empty, map images
-        const medias = content.images?.map((media) =>
-            media? <img src={media} alt="Slide Media" /> : null    
-        )
-
-        return (
-        <div>
-            <div id = "title">
-                <h1>{content[language].title}</h1>
-            </div>
-            <div id = "slide-content-right">
-                <h3>{content[language].listHeads?.[0] || ""}</h3>
-                {listPoints}
-                <div id = "medias-right">
-                    {medias}
-                </div>
-            </div>
-            
-        </div>
         )
     };
 
@@ -128,9 +122,9 @@ export default function App() {
     
         const getFinalFeedback = () => {
             const percentage = (score / questions.length) * 100;
-            if (percentage === 100) return content[language].finalFeedback.perfect;
-            if (percentage >= 70) return content[language].finalFeedback.good;
-            return content[language].finalFeedback.needsPractice;
+            if (percentage === 100) return "Perfect score!";
+            if (percentage >= 70) return "Decent job.";
+            return "You need to study more.";
         };
     
         return (
@@ -284,8 +278,6 @@ export default function App() {
                 return <QuizSlide content={slides[currentIndex]} />;
             case "5":
                 return <MediaAndQuizSlide content={slides[currentIndex]} />;
-            case "6":
-                return <TextAndMediaSlideRight content={slides[currentIndex]} />;
             default:
                 return <div>Unknown slide type</div>;
         }
