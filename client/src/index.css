@@ -48,8 +48,8 @@
 
 #slideshow-container img {
   /* width: 100px; */
-  height: auto;
-  object-fit: contain;
+  /* height: auto;
+  object-fit: contain; */
   /* margin: 10px; */
 }
 
