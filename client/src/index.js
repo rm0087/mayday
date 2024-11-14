@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Make sure to use 'react-dom/client' for React 18
 import App from "./components/App";
-import "./index.css";
+import "./output.css";
 
 
 const container = document.getElementById("root");

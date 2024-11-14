@@ -1,16 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-:root {
-  --primary-color: #1e3a8a;
-  --secondary-color: #64748b;
-  --accent-color: #22c55e;
-  --background-color: #f8fafc;
-  --text-color: #1e293b;
-}
-
 #slideshow-container {
   border-width: 1px;
   border-color: #000000;
