@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import slideContent from "./slide-content.json";
 const { slides } = slideContent;
 
@@ -11,17 +11,31 @@ export default function App() {
     const videoRef = useRef(null);
     
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
+    const goToSlide = (index, slide) => {
+        setCurrentIndex(index-1)
+        setSlideType(slide.type)
+    }
+    
     const TitleSlide = ({ content }) => (
         <div>
             <h1>{content[language].title}</h1>
         </div>
     );
 
-    const TextOnlySlide = ({ content }) => (
+    const Navigation = ({ content }) => {
+        const links = content[language].links?.map((link) =>
+            <button key={content[language].links.indexOf(link)} onClick={()=>{goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
+        )
+        
+        return (
         <div>
-            <p>{content[language].text}</p>
+            <div id = "title">
+                <h1>{content[language].title}</h1>
+            </div>
+            {links}
         </div>
-    );
+        )
+    };
 
     const TextAndMediaSlide = ({ content }) => {
         
@@ -139,14 +153,18 @@ export default function App() {
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
                         <div className="space-y-4">
+                        {!showFeedback ?(
+                            <img
+                                src={content.images[0]}
+                                alt="Question media"
+                                className="max-w-full h-auto rounded-lg"
+                            />
+                        ):
+                            <video width="640" height="360" controls autoplay>
+                                    {<source src={content.videos[0]}/>}
+                            </video>}
                             <h3 className="text-xl font-semibold">{currentQuestion.questionText}</h3>
-                            {currentQuestion.media.image && (
-                                <img
-                                    src={currentQuestion.media.image}
-                                    alt="Question media"
-                                    className="max-w-full h-auto rounded-lg"
-                                />
-                            )}
+                            
                             <div className="space-y-2">
                                 {currentQuestion.options.map((option) => (
                                     <button
@@ -269,7 +287,7 @@ export default function App() {
             case "0":
                 return <TitleSlide content={slides[currentIndex]} />;
             case "1":
-                return <TextOnlySlide content={slides[currentIndex]} />;
+                return <Navigation content={slides[currentIndex]} />;
             case "2":
                 return <TextAndMediaSlide content={slides[currentIndex]} />;
             case "3":
@@ -282,6 +300,8 @@ export default function App() {
                 return <div>Unknown slide type</div>;
         }
     };
+
+    useEffect(()=>{renderSlide()},[currentIndex])
 
     const handleLanguage = (key) => setLanguage(key)
     return (

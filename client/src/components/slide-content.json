@@ -1,7 +1,7 @@
 {   
     "slideTypes": {
         "0": "Title",
-        "1": "TextOnly",
+        "1": "Navigation",
         "2": "TextAndMedia",
         "3": "MediaOnly",
         "4": "Quiz",
@@ -16,33 +16,99 @@
     "slides": [
         {
             "id": 1,
-            "type": "2",
+            "type": "1",
             "images":[],
             "animations":[],
             "videos": [],
             "en": {
                 "title": "Welcome",
                 "soundtrack": "/assets/soundtracks/lat.mp3",
-                "subtitles": "",
+                "subtitles": "Using this CD, you will learn more about communication and navigation rules. You will also learn how to make a proper Mayday call. After you have completed the lessons, you can print a completion certificate. You must go through all the lessons at one time to print the certificate. You can also read and print tip cards containing information that will help you stay safe. To start, click on the Introduction from the Captain.",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[]
+                "uniqueMedia":[],
+                "links":[
+                    {
+                        "title":"Introduction from the Captain",
+                        "ref": 2
+                    },
+                    {
+                        "title":"Communication and Navigation",
+                        "ref": 3
+                    },
+                    {
+                        "title":"Communicating and Navigating Activity",
+                        "ref": 27
+                    },
+                    {
+                        "title":"Mayday Call",
+                        "ref": 28
+                    },
+                    {
+                        "title":"Important Summary Information",
+                        "ref": 36
+                    }
+                ]
             },
             "es": {
                 "title": "Bienvenido",
                 "soundtrack": "/assets/soundtracks/long.mp3",
-                "subtitles": "",
+                "subtitles": "Con el uso de este CD, usted aprenderá más acerca de las reglas de comunicación y navegación. Usted también aprenderá cómo hacer una buena llamada de Mayday. Después de haber completado las lecciones, usted puede imprimir un certificado de realización. Usted debe revisar todas las lecciones completamente para poder imprimir el certificado. También puede leer e imprimir tarjetas de claves que contienen información que le ayudará a mantenerse seguro. Para comenzar haga clic sobre la Introducción del Capitán.",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[]
+                "uniqueMedia":[],
+                "links":[
+                    {
+                        "title":"Introducción del Capitán",
+                        "ref": 2
+                    },
+                    {
+                        "title":"Comunicación y Navegación",
+                        "ref": 3
+                    },
+                    {
+                        "title":"Actividad de Comunicación y de Navegación",
+                        "ref": 27
+                    },
+                    {
+                        "title":"Llamada Mayday",
+                        "ref": 28
+                    },
+                    {
+                        "title":"Importante Información de Resumen",
+                        "ref": 36
+                    }
+                ]
             },
             "vi": {
                 "title": "Chào mừng",
                 "soundtrack": "/assets/soundtracks/mayday.mp3",
-                "subtitles": "",
+                "subtitles": "CD này sẽ giúp bạṇ hiểu thêm về cách liên lạc bằng VHF radio, và biết thêm về luật hải hành. Nó sẽ giúp bạṇ am tường cách gọi Mayday mà chúng tôi tạm dịch là “Trời ơi cứu tôi với”. Sau khi hoàn thành tất các bài học nầy, bạṇ có thể in ra chứng chỉ tốt nghiêp gọi là Certificate of completion. Tuy nhiên quý vị phải hoàn tất các bài học trong CD nầy trong cùng một lúc. Nghĩa là nếu bạn bỏ cuộc nữa chừng thì không in chứng chỉ được. Lần tới phải bắt đầu lại từ đầu. Bạ̣n cũng có thể in những bảng chỉ dẩn, gọi là tip cards, để đọc, hoặc để tham khảo. Những bảng chỉ dẩn đó, chắc chắn sẽ giúp các bạn hiểu thêm về sư an toàn khi đi tàu, cùng bảo vệ tánh mạng và tài sản của thủy thủ đoàn của mình. Để bắt đầu, bạn hãy nhấn vào vào “Lời Tâm Sự Của Một Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm.",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[]
+                "uniqueMedia":[],
+                "links":[
+                    {
+                        "title":"Lời Tâm Sự của Một Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
+                        "ref": 2
+                    },
+                    {
+                        "title":"Cách Liên Lạc Máy Radio và Luật Hải Hành",
+                        "ref": 3
+                    },
+                    {
+                        "title":"Trình Bày Về Cách Liên Lạc Máy Radio và Luật Hải Hành",
+                        "ref": 27
+                    },
+                    {
+                        "title":"Cách Gọi MAYDAY (Trời Ơi Cứu Tôi Với)",
+                        "ref": 28
+                    },
+                    {
+                        "title":"Bảng Chỉ Dẩn Tóm Tắt",
+                        "ref": 36
+                    }
+                ]
             }
         },
         {
@@ -820,6 +886,470 @@
                     "Bạn cần phải liên lạc bằng VHF Radio trên đài 13 cho rỏ ràng hơn."
                 ],
                 "uniqueMedia":[]
+            }
+        },
+        {
+            "id": 20,
+            "type": "4",
+            "images":[
+                "/assets/images/20-01.png"
+            ],
+            "animations":[],
+            "videos":[
+                "/assets/videos/14-01.mp4"
+            ],
+            "en": {
+                "title": "Meeting",
+                "soundtrack": "",
+                "subtitles": "Now let’s apply the communication rules to some situations. You meet another vessel and want to pass by moving to your right. How many blasts must you use to signal? Click on the correct answer.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "You meet another vessel and want to pass by moving to your right. How many blasts must you use to signal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Short Blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Short Blasts",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct. 1 short blast - 'I inted to change course to my right or starboard'",
+                            "incorrect": "No, the correct answer is to pass by moving to your right, you will signal with one blast."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "es": {
+                "title": "Dos barcos de encuentro",
+                "soundtrack": "",
+                "subtitles": "Ahora vamos a aplicar las normas de comunicación a algunas situaciones. Suponga que te encuentras con otro barco y quiere pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe usar para emitir la señal? Haga clic en la respuesta correcta.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Suponga que te encuentras con otro barco y quiere pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe usar para emitir la señal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Pitido Corto",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Pitidos Cortos",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correcto. 1 pitido corto - 'Intento cambiar de rumbo a mi derecha o el lado Estribor.",
+                            "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su derecha, señalizará sonando 1 pitido corto de la bocina."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "vi": {
+                "title": "Gặp nhau",
+                "soundtrack": "",
+                "subtitles": "Bây giờ bạn hãy áp dụng các quy tắc liên lạc với nhiiều trường hợp khác nhau. Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Tiếng Còi Ngắn",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Tiếng Còi Ngắn",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Đúng. 1 tiếng còi ngăn – Tôi định đổi hướng sang bên phải tàu của tôi, hoặc mạn phải tàu.",
+                            "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên phải tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, một tiếng còi."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 21,
+            "type": "4",
+            "images":[
+                "/assets/images/21-01.png"
+            ],
+            "animations":[],
+            "videos":[
+                "/assets/videos/17-01.mp4"
+            ],
+            "en": {
+                "title": "Meeting",
+                "soundtrack": "",
+                "subtitles": "Now you meet another vessel and want to pass by moving to your left. How many blasts must you use to signal? Click on the correct answer.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Now you meet another vessel and want to pass by moving to your left. How many blasts must you use to signal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Short Blast",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Short Blasts",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct. 2 short blasts - 'I intend to change course to my left or port'",
+                            "incorrect": "No, the correct answer is to pass by moving to your left. You will signal with two blasts."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "es": {
+                "title": "Dos barcos de encuentro",
+                "soundtrack": "",
+                "subtitles": "Ahora usted se encuentra con otro barco y quiere pasarlo moviéndose a la izquierda. ¿Cuántos pitidos de bocina debe usar para emitir la señal? Haga clic en la respuesta correcta.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Ahora usted se encuentra con otro barco y quiere pasarlo moviéndose a la izquierda. ¿Cuántos pitidos de bocina debe usar para emitir la señal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Pitido Corto",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Pitidos Cortos",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correcto. 2 pitidos cortos – Intento cambiar de rumbo a mi izquierda o al lado Puerto.",
+                            "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su izquierda, señalizará sonando 2 pitidos cortos de la bocina."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "vi": {
+                "title": "Gặp nhau",
+                "soundtrack": "",
+                "subtitles": "Bây giờ quý vị gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên trái của mình. Quý vị phải sử dụng bao nhiêu tiếng còi để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Tiếng Còi Ngắn",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Tiếng Còi Ngắn",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Đúng. 2 tiếng còi ngắn – Tôi định đổi hướng sang bên trái tàu của tôi, hoặc mạn trái tàu.",
+                            "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên trái, tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, hai tiếng còi."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "type": "4",
+            "images":[
+                "/assets/images/20-01.png"
+            ],
+            "animations":[],
+            "videos":[
+                "/assets/videos/14-01.mp4"
+            ],
+            "en": {
+                "title": "Meeting",
+                "soundtrack": "",
+                "subtitles": "Now let’s apply the communication rules to some situations. You meet another vessel and want to pass by moving to your right. How many blasts must you use to signal? Click on the correct answer.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "You meet another vessel and want to pass by moving to your right. How many blasts must you use to signal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Short Blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Short Blasts",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct. 1 short blast - 'I inted to change course to my right or starboard'",
+                            "incorrect": "No, the correct answer is to pass by moving to your right, you will signal with one blast."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "es": {
+                "title": "Dos barcos de encuentro",
+                "soundtrack": "",
+                "subtitles": "Ahora vamos a aplicar las normas de comunicación a algunas situaciones. Suponga que te encuentras con otro barco y quiere pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe usar para emitir la señal? Haga clic en la respuesta correcta.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Suponga que te encuentras con otro barco y quiere pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe usar para emitir la señal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Pitido Corto",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Pitidos Cortos",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correcto. 1 pitido corto - 'Intento cambiar de rumbo a mi derecha o el lado Estribor.",
+                            "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su derecha, señalizará sonando 1 pitido corto de la bocina."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "vi": {
+                "title": "Gặp nhau",
+                "soundtrack": "",
+                "subtitles": "Bây giờ bạn hãy áp dụng các quy tắc liên lạc với nhiiều trường hợp khác nhau. Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Tiếng Còi Ngắn",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Tiếng Còi Ngắn",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Đúng. 1 tiếng còi ngăn – Tôi định đổi hướng sang bên phải tàu của tôi, hoặc mạn phải tàu.",
+                            "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên phải tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, một tiếng còi."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "type": "4",
+            "images":[
+                "/assets/images/21-01.png"
+            ],
+            "animations":[],
+            "videos":[
+                "/assets/videos/17-01.mp4"
+            ],
+            "en": {
+                "title": "Meeting",
+                "soundtrack": "",
+                "subtitles": "Now you meet another vessel and want to pass by moving to your left. How many blasts must you use to signal? Click on the correct answer.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Now you meet another vessel and want to pass by moving to your left. How many blasts must you use to signal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Short Blast",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Short Blasts",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct. 2 short blasts - 'I intend to change course to my left or port'",
+                            "incorrect": "No, the correct answer is to pass by moving to your left. You will signal with two blasts."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "es": {
+                "title": "Dos barcos de encuentro",
+                "soundtrack": "",
+                "subtitles": "Ahora usted se encuentra con otro barco y quiere pasarlo moviéndose a la izquierda. ¿Cuántos pitidos de bocina debe usar para emitir la señal? Haga clic en la respuesta correcta.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Ahora usted se encuentra con otro barco y quiere pasarlo moviéndose a la izquierda. ¿Cuántos pitidos de bocina debe usar para emitir la señal?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Pitido Corto",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Pitidos Cortos",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correcto. 2 pitidos cortos – Intento cambiar de rumbo a mi izquierda o al lado Puerto.",
+                            "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su izquierda, señalizará sonando 2 pitidos cortos de la bocina."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "vi": {
+                "title": "Gặp nhau",
+                "soundtrack": "",
+                "subtitles": "Bây giờ quý vị gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên trái của mình. Quý vị phải sử dụng bao nhiêu tiếng còi để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 Tiếng Còi Ngắn",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 Tiếng Còi Ngắn",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Đúng. 2 tiếng còi ngắn – Tôi định đổi hướng sang bên trái tàu của tôi, hoặc mạn trái tàu.",
+                            "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên trái, tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, hai tiếng còi."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
             }
         },
         {
