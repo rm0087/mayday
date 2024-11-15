@@ -38,18 +38,18 @@
   margin-bottom: 20px;
 }
 
-#slideshow-container img {
-  /* width: 100px; */
-  /* height: auto;
-  object-fit: contain; */
-  /* margin: 10px; */
-}
+/* #slideshow-container img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin: 10px;
+} */
 
-/* #title {
+#title {
   justify-content: center;
   display: flex;
   flex-direction: row;
-} */
+}
 
 #slide-content {
   align-content:  center;

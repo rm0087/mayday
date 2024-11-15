@@ -142,7 +142,7 @@ export default function App() {
         };
     
         return (
-            <div className="w-full max-w-2xl mx-auto p-6 border rounded-lg shadow-sm">
+            <div className="w-full max-w-2xl mx-auto p-6 shadow-sm flex-grow">
                 {!quizCompleted ? (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-bold">{content[language].title}</h2>
@@ -153,16 +153,12 @@ export default function App() {
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
                         <div className="space-y-4">
-                        {!showFeedback ?(
-                            <img
+                            {content.images.length > 0  ?<img
                                 src={content.images[0]}
                                 alt="Question media"
                                 className="max-w-full h-auto rounded-lg"
                             />
-                        ):
-                            <video width="640" height="360" controls autoplay>
-                                    {<source src={content.videos[0]}/>}
-                            </video>}
+                            : null}
                             <h3 className="text-xl font-semibold">{currentQuestion.questionText}</h3>
                             
                             <div className="space-y-2">
