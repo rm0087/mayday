@@ -160,7 +160,7 @@ export default function App() {
                                 className="max-w-full h-auto rounded-lg"
                             />
                             : null}
-                            <h3 className="tracking-normal leading-none font-semibold">{currentQuestion.questionText}</h3>
+                            <h3 className="tracking-wide font-semibold">{currentQuestion.questionText}</h3>
                             
                             <div className="space-y-2">
                                 {currentQuestion.options.map((option) => (

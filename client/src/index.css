@@ -43,6 +43,7 @@
   font-size: 30px;
   font-weight:bold;
   margin: 20px;
+  line-height: 1.25em;
 }
 
 #slideshow-container li {
@@ -50,6 +51,8 @@
   font-size: 30px;
   margin-left: 20px;
   margin-bottom: 20px;
+  font-weight:bold;
+  line-height: 1.25em;
 }
 
 #title {
