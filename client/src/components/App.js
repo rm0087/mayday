@@ -321,13 +321,13 @@ export default function App() {
                     </button>
                     <button onClick={goToNextSlide}>Next</button>
                 </div>
-                <div id = "test-stats">
+                {/* <div id = "test-stats">
                     <p>currentIndex: {currentIndex}</p>
                     <p>Slide ID: {slides[currentIndex].id}</p>
                     <p>slideType: {slideType} - {slideContent.slideTypes[slideType]}</p>
                     <p>language: {language}</p>
                     
-                </div>
+                </div> */}
             </div>
         </>
     );

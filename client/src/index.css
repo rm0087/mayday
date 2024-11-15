@@ -18,7 +18,7 @@
 }
 #slideshow-container {
   width: 120vh;
-  height: 80vh;
+  height: 85vh;
   max-width: 800px;
   max-height: 100%;
   overflow:visible;
@@ -101,14 +101,26 @@
 
 #control-panel {
   overflow: visible;
-  position: relative;
+  position: fixed;
   width: 100px;
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
   align-items: left;
   /* justify-content: center; */
   /* margin: auto; */
   /* font-size: 20px; */
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  background-color: #1e293b;
+  
+}
+
+#controls button {
+  margin: 5px;
+  color: #f8fafc
 }
 
 .space-y-2 {
