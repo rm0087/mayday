@@ -142,7 +142,7 @@ export default function App() {
         };
     
         return (
-            <div className="w-full max-w-2xl mx-auto p-6 shadow-sm flex-grow">
+            <div className="w-full max-w-2xl mx-auto p-6 flex-grow">
                 {!quizCompleted ? (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-bold">{content[language].title}</h2>
@@ -153,19 +153,20 @@ export default function App() {
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
                         <div className="space-y-4">
-                            {content.images.length > 0  ?<img
+                            {content.images.length > 0  ?
+                            <img
                                 src={content.images[0]}
                                 alt="Question media"
                                 className="max-w-full h-auto rounded-lg"
                             />
                             : null}
-                            <h3 className="text-xl font-semibold">{currentQuestion.questionText}</h3>
+                            <h3 className="tracking-normal leading-none font-semibold">{currentQuestion.questionText}</h3>
                             
                             <div className="space-y-2">
                                 {currentQuestion.options.map((option) => (
                                     <button
                                         key={option.id}
-                                        className={`w-full text-left p-4 rounded-lg border ${
+                                        className={`w-full text-left text-20px p-4 rounded-lg border ${
                                             selectedAnswer === option.id
                                                 ? showFeedback
                                                     ? option.isCorrect
@@ -194,8 +195,8 @@ export default function App() {
                                 <div
                                     className={`p-4 rounded-lg ${
                                         currentQuestion.options.find(opt => opt.id === selectedAnswer)?.isCorrect
-                                            ? 'bg-green-100 text-green-800'
-                                            : 'bg-red-100 text-red-800'
+                                            ? 'bg-green-100 text-20px text-green-800'
+                                            : 'bg-red-100 text-20px text-red-800'
                                     }`}
                                 >
                                     {currentQuestion.options.find(opt => opt.id === selectedAnswer)?.isCorrect
@@ -210,8 +211,8 @@ export default function App() {
                                         disabled={selectedAnswer === null}
                                         className={`px-4 py-2 rounded-lg ${
                                             selectedAnswer === null
-                                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                                                : 'bg-blue-500 text-white hover:bg-blue-600'
+                                                ? 'bg-gray-100 text-20px text-gray-400 cursor-not-allowed'
+                                                : 'bg-blue-500 text-20px text-white hover:bg-blue-600'
                                         }`}
                                     >
                                         Submit Answer
@@ -219,7 +220,7 @@ export default function App() {
                                 ) : (
                                     <button
                                         onClick={moveToNextQuestion}
-                                        className="px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600"
+                                        className="px-4 py-2 rounded-lg bg-blue-500 text-20px text-white hover:bg-blue-600"
                                     >
                                         {currentQuestionIndex < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
                                     </button>
@@ -229,9 +230,9 @@ export default function App() {
                     </div>
                 ) : (
                     <div className="text-center space-y-6">
-                        <h2 className="text-2xl font-bold">Quiz Complete!</h2>
-                        <p className="text-xl">Your score: {score} out of {questions.length}</p>
-                        <p className="text-lg">{getFinalFeedback()}</p>
+                        <h2 className="text-20px font-bold">Quiz Complete!</h2>
+                        <p className="text-20px">Your score: {score} out of {questions.length}</p>
+                        <p className="text-20px">{getFinalFeedback()}</p>
                     </div>
                 )}
             </div>
@@ -302,14 +303,17 @@ export default function App() {
     const handleLanguage = (key) => setLanguage(key)
     return (
         <>
-            {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-            {Object.entries(slideContent.languages).map(([key,language]) =>
+        {Object.entries(slideContent.languages).map(([key,language]) =>
                 <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
             )}
+        <div id ="container">
+            {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
+            
             <div id = "slideshow-container">
                 <div>{renderSlide()}</div>
             </div>
-            <div id = "control-panel">
+        </ div>
+        <div id = "control-panel">
                 <div id = "controls">
                     <button onClick={goToPreviousSlide}>Previous</button>
                     <button onClick={toggleMediaPlayback}>

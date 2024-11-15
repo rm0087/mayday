@@ -11,6 +11,11 @@
   --text-color: #1e293b;
 }
 
+
+#container {
+  display:flex;
+  justify-content: center;
+}
 #slideshow-container {
   width: 120vh;
   height: 80vh;
@@ -21,39 +26,44 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: auto;
+  margin-top: 20px;
   font-size: 1vw;
 }
 
 #slideshow-container h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 2em;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 #slideshow-container h3 {
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
-  font-size: 1.5em;
+  font-size: 30px;
+  font-weight:bold;
   margin: 20px;
 }
 
 #slideshow-container li {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  margin-left: 40px;
+  font-size: 30px;
+  margin-left: 20px;
   margin-bottom: 20px;
 }
 
 #title {
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
 }
 
 #slide-content {
   align-content:  center;
+  margin-right: 40px;
+  margin-left:20px;
+  padding: auto;
 }
 
 #slide-content-right {
@@ -84,13 +94,14 @@
 
 #control-panel {
   overflow: visible;
-  position: fixed;
+  position: relative;
+  width: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: left;
-  justify-content: center;
-  margin: auto;
-  font-size: 1vw;
+  /* justify-content: center; */
+  /* margin: auto; */
+  /* font-size: 20px; */
 }
 
 .space-y-2 {
@@ -100,4 +111,9 @@
 
 button {
   margin:10px;
+}
+
+.text-2xl {
+  font-size: 16px;
+  line-height: 2rem;
 }

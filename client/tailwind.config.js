@@ -5,7 +5,11 @@ module.exports = {
     "./public/**/*.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        '20px': '20px',
+      },
+    },
   },
   plugins: [],
 }
