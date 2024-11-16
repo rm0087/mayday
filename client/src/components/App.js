@@ -55,9 +55,11 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <video width="640" height="360" controls autoplay loop>
+           
+                <video className="responsive-video" controls autoplay loop>
                     <source src={video} type="video/mp4"/>
                 </video> : null
+           
         )
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
@@ -306,11 +308,11 @@ export default function App() {
         {Object.entries(slideContent.languages).map(([key,language]) =>
                 <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
             )}
-        <div id ="container">
+        <div className = "responsive-div" id ="container">
             {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
             
-            <div id = "slideshow-container">
-                <div id = "render-slide">{renderSlide()}</div>
+            <div className = "responsive-div" id = "slideshow-container">
+                <div className = "responsive-div" id = "render-slide">{renderSlide()}</div>
             </div>
         </ div>
         <div id = "control-panel">

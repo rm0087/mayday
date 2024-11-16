@@ -803,13 +803,13 @@ video {
   --tw-ring-color: rgb(34 197 94 / var(--tw-ring-opacity));
 }
 
-:root {
+/* :root {
   --primary-color: #1e3a8a;
   --secondary-color: #64748b;
   --accent-color: #22c55e;
   --background-color: #f8fafc;
   --text-color: #1e293b;
-}
+} */
 
 #container {
   display:flex;
@@ -817,10 +817,9 @@ video {
 }
 
 #slideshow-container {
-  width: 120vh;
-  height: 85vh;
-  max-width: 800px;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  min-height:89vh;
   overflow:visible;
   position: relative;
   display: flex;
@@ -851,10 +850,10 @@ video {
 
 #slideshow-container li {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 1em;
   margin-left: 20px;
   margin-bottom: 20px;
-  /* font-weight:bold; */
+  font-weight:bold;
   line-height: 1.25em;
   letter-spacing: 0.025em;
   color:#000000;
@@ -910,7 +909,7 @@ video {
 
 #control-panel {
   overflow: visible;
-  position: fixed;
+  position: relative;
   width: 100px;
   display: flex;
   flex-direction:row;
