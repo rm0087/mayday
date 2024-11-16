@@ -845,7 +845,8 @@ video {
   font-weight:bold;
   margin: 20px;
   line-height: 1.25em;
-  letter-spacing: 0.025em
+  letter-spacing: 0.025em;
+  color:#000000;
 }
 
 #slideshow-container li {
@@ -855,7 +856,8 @@ video {
   margin-bottom: 20px;
   /* font-weight:bold; */
   line-height: 1.25em;
-  letter-spacing: 0.025em
+  letter-spacing: 0.025em;
+  color:#000000;
 }
 
 #title {
@@ -864,6 +866,8 @@ video {
   display: flex;
   flex-direction: row;
   padding:auto;
+  background-color: #1e293b;
+  color:coral;
 }
 
 #slide-content {
@@ -871,6 +875,11 @@ video {
   margin-right: 40px;
   margin-left:20px;
   padding: auto;
+  /* background-color:#64748b; */
+}
+
+#render-slide {
+  background-color: #64748b;
 }
 
 #slide-content-right {

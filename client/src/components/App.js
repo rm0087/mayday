@@ -298,7 +298,7 @@ export default function App() {
         }
     };
 
-    useEffect(()=>{renderSlide()},[currentIndex])
+    // useEffect(()=>{renderSlide()},[currentIndex])
 
     const handleLanguage = (key) => setLanguage(key)
     return (
@@ -310,7 +310,7 @@ export default function App() {
             {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
             
             <div id = "slideshow-container">
-                <div>{renderSlide()}</div>
+                <div id = "render-slide">{renderSlide()}</div>
             </div>
         </ div>
         <div id = "control-panel">
