@@ -28,12 +28,9 @@ export default function App() {
         )
         
         return (
-        <div>
-            <div id = "title">
-                <h1>{content[language].title}</h1>
-            </div>
+            <>
             {links}
-        </div>
+            </>
         )
     };
 
@@ -55,10 +52,10 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-           
+                <div className = "p-4 m-auto w-full bg-green-100">
                 <video className="responsive-video" controls autoplay loop>
                     <source src={video} type="video/mp4"/>
-                </video> : null
+                </video></div> : null
            
         )
 
@@ -71,14 +68,10 @@ export default function App() {
         )
 
         return (
-            <div>
-                <div id = "title">
-                    <h1>{content[language].title}</h1>
-                </div>
-                <div id = "slide-content">
-                    <h3>{content[language].listHeads?.[0] || ""}</h3>
+            <>
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3>{content[language].listHeads[0]}</h3> : null}
                     {listPoints}
-                    <h3>{content[language].listHeads2?.[0] || ""}</h3>
+                    {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3>{content[language].listHeads2[0]}</h3> : null}
                     {listPoints2}
 
                     <div id = "medias">
@@ -86,15 +79,14 @@ export default function App() {
                         {videos}
                         {uniqueMedia}
                     </div>
-                </div>
-            </div>
+                
+            </>
         )
     };
 
     const MediaOnlySlide = ({ content }) => (
         <div>
             {/* <img src={content[language].imageUrl} alt="Slide Media" /> */}
-            <h1>{content[language].title}</h1>
         </div>
     );
 
@@ -308,29 +300,32 @@ export default function App() {
         {Object.entries(slideContent.languages).map(([key,language]) =>
                 <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
             )}
-        <div className = "responsive-div" id ="container">
-            {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-            
-            <div className = "responsive-div" id = "slideshow-container">
-                <div className = "responsive-div" id = "render-slide">{renderSlide()}</div>
+            <div id ="title">
+                <h1>{slideContent.slides[currentIndex][language].title}</h1>
             </div>
-        </ div>
-        <div id = "control-panel">
-                <div id = "controls">
-                    <button onClick={goToPreviousSlide}>Previous</button>
-                    <button onClick={toggleMediaPlayback}>
-                        {isPlaying ? 'Pause' : 'Play'}
-                    </button>
-                    <button onClick={goToNextSlide}>Next</button>
+            <div className = "responsive-div" id ="container">
+                {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
+                
+                
+                    <div className = "responsive-div" id = "render-slide">{renderSlide()}</div>
+                
+            </ div>
+            <div id = "control-panel">
+                    <div id = "controls">
+                        <button onClick={goToPreviousSlide}>Previous</button>
+                        <button onClick={toggleMediaPlayback}>
+                            {isPlaying ? 'Pause' : 'Play'}
+                        </button>
+                        <button onClick={goToNextSlide}>Next</button>
+                    </div>
+                    {/* <div id = "test-stats">
+                        <p>currentIndex: {currentIndex}</p>
+                        <p>Slide ID: {slides[currentIndex].id}</p>
+                        <p>slideType: {slideType} - {slideContent.slideTypes[slideType]}</p>
+                        <p>language: {language}</p>
+                        
+                    </div> */}
                 </div>
-                {/* <div id = "test-stats">
-                    <p>currentIndex: {currentIndex}</p>
-                    <p>Slide ID: {slides[currentIndex].id}</p>
-                    <p>slideType: {slideType} - {slideContent.slideTypes[slideType]}</p>
-                    <p>language: {language}</p>
-                    
-                </div> */}
-            </div>
         </>
     );
 }
