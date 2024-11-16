@@ -300,8 +300,12 @@ export default function App() {
         {Object.entries(slideContent.languages).map(([key,language]) =>
                 <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
             )}
-            <div id ="title">
-                <h1>{slideContent.slides[currentIndex][language].title}</h1>
+            <div id ="header-limit">
+            <div id = "header">
+                <div id ="title">
+                    <h1>{slideContent.slides[currentIndex][language].title}</h1>
+                </div>
+            </div>
             </div>
             <div className = "responsive-div" id ="container">
                 {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
