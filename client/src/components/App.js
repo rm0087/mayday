@@ -156,7 +156,7 @@ export default function App() {
                             : null}
                             <h3 className="tracking-wide leading-none font-semibold">{currentQuestion.questionText}</h3>
                             
-                            <div className="w-full space-y-2 items-center">
+                            <div className="w-full space-y-2 items-center flex flex-col">
                                 {currentQuestion.options.map((option) => (
                                     <button
                                         key={option.id}
@@ -304,7 +304,7 @@ export default function App() {
             <div className="min-w-full" id ="header-limit">
             <div className="m-auto bg-slate-500 p-7 justify-items-center" id = "header">
                 <div className="w-3/4" id ="title">
-                    <h1 className="w-full text-left text-3xl">{slideContent.slides[currentIndex][language].title}</h1>
+                    <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex][language].title}</h1>
                 </div>
             </div>
             </div>
