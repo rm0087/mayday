@@ -52,34 +52,36 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "p-4 m-auto w-full bg-green-100">
-                <video className="responsive-video" controls autoplay loop>
+                <div className = "p-4 m-auto w-screen bg-slate-800 justify-items-center drop-shadow-xl">
+                <video className="w-min h-auto" controls autoplay loop>
                     <source src={video} type="video/mp4"/>
                 </video></div> : null
            
         )
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
-                media.slice(-4) === ".mp4"?
-                    <video width="640" height="360" controls autoplay>
-                        <source src={media} type="video/mp4"/>
-                    </video> 
-                    : <img src = {media} alt="Slide Media" />    
+            media.slice(-4) === ".mp4"?
+            <div className = "p-4 m-auto w-screen bg-slate-800 justify-items-center drop-shadow-xl">
+                <video controls autoplay>
+                    <source src={media} type="video/mp4"/>
+                </video>
+                </div> 
+                : <img src = {media} alt="Slide Media" />    
         )
 
         return (
             <>
+            <div className="w-4/4">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3>{content[language].listHeads[0]}</h3> : null}
-                    {listPoints}
-                    {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3>{content[language].listHeads2[0]}</h3> : null}
-                    {listPoints2}
-
-                    <div id = "medias">
-                        {images}
-                        {videos}
-                        {uniqueMedia}
-                    </div>
-                
+                {listPoints}
+                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3>{content[language].listHeads2[0]}</h3> : null}
+                {listPoints2}
+            </div>
+                <div className = "grid-cols-2 justify-items-center" id= "medias">
+                    {images}
+                    {videos}
+                    {uniqueMedia}
+                </div>
             </>
         )
     };
@@ -139,14 +141,12 @@ export default function App() {
             <div className="w-full max-w-2xl mx-auto p-6 flex-grow">
                 {!quizCompleted ? (
                     <div className="space-y-6">
-                        <h2 className="text-2xl font-bold">{content[language].title}</h2>
-                        {currentQuestionIndex === 0 && (
-                            <p className="text-gray-600">{content[language].instructions}</p>
-                        )}
-                        <div className="text-sm text-gray-500">
+                        <h2 className="text-2xl font-bold">Question</h2>
+                        
+                        <div className="m-0 text-sm text-gray-500">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
-                        <div className="space-y-4">
+                        <div className="space-y-4 justify-items-center">
                             {content.images.length > 0  ?
                             <img
                                 src={content.images[0]}
@@ -156,7 +156,7 @@ export default function App() {
                             : null}
                             <h3 className="tracking-wide leading-none font-semibold">{currentQuestion.questionText}</h3>
                             
-                            <div className="space-y-2">
+                            <div className="w-full space-y-2 items-center">
                                 {currentQuestion.options.map((option) => (
                                     <button
                                         key={option.id}
@@ -297,21 +297,24 @@ export default function App() {
     const handleLanguage = (key) => setLanguage(key)
     return (
         <>
+        <button className="h-10 w-10 border">E</button>
         {Object.entries(slideContent.languages).map(([key,language]) =>
                 <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
             )}
-            <div id ="header-limit">
-            <div id = "header">
-                <div id ="title">
-                    <h1>{slideContent.slides[currentIndex][language].title}</h1>
+            <div className="min-w-full" id ="header-limit">
+            <div className="m-auto bg-slate-500 p-7 justify-items-center" id = "header">
+                <div className="w-3/4" id ="title">
+                    <h1 className="w-full text-left text-3xl">{slideContent.slides[currentIndex][language].title}</h1>
                 </div>
             </div>
             </div>
-            <div className = "responsive-div" id ="container">
-                {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-                
-                
-                    <div className = "responsive-div" id = "render-slide">{renderSlide()}</div>
+            <div className="w-full justify-items-center"id ="container-limit">
+                <div className="m-auto pb-5 m-auto justify-items-center"id ="container">
+                    {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
+                    
+                    
+                        <div className="w-4/4 justify-items-center" id = "render-slide">{renderSlide()}</div>
+            </div>
                 
             </ div>
             <div id = "control-panel">

@@ -200,8 +200,8 @@
             "id": 4,
             "type": "2",
             "images":[
-                "/assets/images/04-01.png",
                 "/assets/images/04-02.png",
+                "/assets/images/04-01.png",
                 "/assets/images/04-03.png"
             ],
             "animations":[],
@@ -235,7 +235,7 @@
             "id": 5,
             "type": "2",
             "images":[
-                "/assets/images/05-01.png",
+                "/assets/images/04-01.png",
                 "/assets/images/05-02.png",
                 "/assets/images/05-03.png"
             ],
