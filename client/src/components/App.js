@@ -13,7 +13,7 @@ export default function App() {
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button key={content[language].links.indexOf(link)} onClick={()=>
+            <button className="w-full text-left text-20px p-4 rounded-lg border" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -37,7 +37,7 @@ export default function App() {
         
         // if content.images is not empty, map images
         const images = content.images?.map((media) =>
-            media? <img className="w-auto h-auto max-w-none max-h-none mt-5" src={media} alt="Slide Media"/> : null    
+            media? <img className="w-auto h-auto max-w-full max-h-full mt-5" src={media} alt="Slide Media"/> : null    
         )
 
         const videos = content.videos?.map((video)=>
