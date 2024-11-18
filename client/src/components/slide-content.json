@@ -1131,16 +1131,16 @@
                 "/assets/videos/14-01.mp4"
             ],
             "en": {
-                "title": "Meeting",
+                "title": "Overtaking",
                 "soundtrack": "",
-                "subtitles": "Now let’s apply the communication rules to some situations. You meet another vessel and want to pass by moving to your right. How many blasts must you use to signal? Click on the correct answer.",
+                "subtitles": "You are overtaking another vessel and want to pass by moving to your right. How many blasts must you use to signal? Click on the correct answer.",
                 "listHeads": [],
                 "listPoints": [],
                 "uniqueMedia":[],
                 "questions": [
                     {
                         "id": 1,
-                        "questionText": "You meet another vessel and want to pass by moving to your right. How many blasts must you use to signal?",
+                        "questionText": "You are overtaking another vessel and want to pass by moving to your right. How many blasts must you use to signal?",
                         "options": [
                             {
                                 "id": "a",
@@ -1166,16 +1166,16 @@
                 ]
             },
             "es": {
-                "title": "Dos barcos de encuentro",
+                "title": "Rebasando",
                 "soundtrack": "",
-                "subtitles": "Ahora vamos a aplicar las normas de comunicación a algunas situaciones. Suponga que te encuentras con otro barco y quiere pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe usar para emitir la señal? Haga clic en la respuesta correcta.",
+                "subtitles": "Está alcanzando a otro barco y desea pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe utilizar para emitir la señal? Haga clic en la respuesta correcta.",
                 "listHeads": [],
                 "listPoints": [],
                 "uniqueMedia":[],
                 "questions": [
                     {
                         "id": 1,
-                        "questionText": "Suponga que te encuentras con otro barco y quiere pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe usar para emitir la señal?",
+                        "questionText": "Está alcanzando a otro barco y desea pasarlo moviéndose a la derecha. ¿Cuántos pitidos de bocina debe utilizar para emitir la señal?",
                         "options": [
                             {
                                 "id": "a",
@@ -1201,16 +1201,16 @@
                 ]
             },
             "vi": {
-                "title": "Gặp nhau",
+                "title": "Qua Mặt",
                 "soundtrack": "",
-                "subtitles": "Bây giờ bạn hãy áp dụng các quy tắc liên lạc với nhiiều trường hợp khác nhau. Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
+                "subtitles": "Bạ̣ đang muốn qua măt một tàu khác và muốn vượt qua bằng cách di chuyển sang bên phải của mình. Quý vị phải sử dụng bao nhiêu tiếng kèn để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
                 "listHeads": [],
                 "listPoints": [],
                 "uniqueMedia":[],
                 "questions": [
                     {
                         "id": 1,
-                        "questionText": "Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu?",
+                        "questionText": "Bạ̣ đang muốn qua măt một tàu khác và muốn vượt qua bằng cách di chuyển sang bên phải của mình. Quý vị phải sử dụng bao nhiêu tiếng kèn để báo hiệu?",
                         "options": [
                             {
                                 "id": "a",
@@ -1247,16 +1247,16 @@
                 "/assets/videos/17-01.mp4"
             ],
             "en": {
-                "title": "Meeting",
+                "title": "Overtaking",
                 "soundtrack": "",
-                "subtitles": "Now you meet another vessel and want to pass by moving to your left. How many blasts must you use to signal? Click on the correct answer.",
+                "subtitles": "You are overtaking another vessel and signal that you will pass to your left. If the other vessel agrees, how many blasts will it respond with? Click on the correct answer.",
                 "listHeads": [],
                 "listPoints": [],
                 "uniqueMedia":[],
                 "questions": [
                     {
                         "id": 1,
-                        "questionText": "Now you meet another vessel and want to pass by moving to your left. How many blasts must you use to signal?",
+                        "questionText": "You are overtaking another vessel and signal that you will pass to your left. If the other vessel agrees, how many blasts will it respond with?",
                         "options": [
                             {
                                 "id": "a",
@@ -1270,8 +1270,8 @@
                             }
                         ],
                         "feedback": {
-                            "correct": "Correct. 2 short blasts - 'I intend to change course to my left or port'",
-                            "incorrect": "No, the correct answer is to pass by moving to your left. You will signal with two blasts."
+                            "correct": "Correct. By signaling with two blasts, the other vessel agrees that you will pass by moving to your left.",
+                            "incorrect": "No, the correct answer is the other vessel will signal with two blasts. By signaling with two blasts, the other vessel agrees that you will pass by moving to your left."
                         },
                         "media": {
                             "image": "",
@@ -1282,16 +1282,16 @@
                 ]
             },
             "es": {
-                "title": "Dos barcos de encuentro",
+                "title": "Rebasando",
                 "soundtrack": "",
-                "subtitles": "Ahora usted se encuentra con otro barco y quiere pasarlo moviéndose a la izquierda. ¿Cuántos pitidos de bocina debe usar para emitir la señal? Haga clic en la respuesta correcta.",
+                "subtitles": "Está alcanzando a otro barco y le indica que va pasarlo por su izquierda. Si el otro barco está de acuerdo, ¿con cuántos pitidos de bocina le responderá? Haga clic en la respuesta correcta.",
                 "listHeads": [],
                 "listPoints": [],
                 "uniqueMedia":[],
                 "questions": [
                     {
                         "id": 1,
-                        "questionText": "Ahora usted se encuentra con otro barco y quiere pasarlo moviéndose a la izquierda. ¿Cuántos pitidos de bocina debe usar para emitir la señal?",
+                        "questionText": "Está alcanzando a otro barco y le indica que va pasarlo por su izquierda. Si el otro barco está de acuerdo, ¿con cuántos pitidos de bocina le responderá?",
                         "options": [
                             {
                                 "id": "a",
@@ -1305,8 +1305,8 @@
                             }
                         ],
                         "feedback": {
-                            "correct": "Correcto. 2 pitidos cortos – Intento cambiar de rumbo a mi izquierda o al lado Puerto.",
-                            "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su izquierda, señalizará sonando 2 pitidos cortos de la bocina."
+                            "correct": "Correcto. Al señalizar sonando 2 veces la sirena, el otro barco acepta que usted lo pasará moviéndose hacia su izquierda.",
+                            "incorrect": "No, la respuesta correcta es que el otro barco señalizará sonando 2 pitidos cortos del la bocina. Al señalizar sonando 2 pitidos cortos del la bocina, el otro barco acepta que usted lo pasará moviéndose hacia su izquierda."
                         },
                         "media": {
                             "image": "",
@@ -1317,16 +1317,16 @@
                 ]
             },
             "vi": {
-                "title": "Gặp nhau",
+                "title": "Qua Mặt",
                 "soundtrack": "",
-                "subtitles": "Bây giờ quý vị gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên trái của mình. Quý vị phải sử dụng bao nhiêu tiếng còi để báo hiệu? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
+                "subtitles": "Quý vị đang muốn qua măt, hay là overtaking, một tàu khác và muốn vượt qua bằng cách di chuyển sang bên trái của mình. Nếu tàu kia đồng ý, tàu kia sẽ trả lời bằng bao nhiêu tiếng còi? <Khi nào sẳn sàng, nhấp vào câu trả lời bạn chọn.>",
                 "listHeads": [],
                 "listPoints": [],
                 "uniqueMedia":[],
                 "questions": [
                     {
                         "id": 1,
-                        "questionText": "Khi bạn gặp một tàu khác và muốn tránh nó bằng cách di chuyển sang bên phải của mình, bạn phải sử dụng bao nhiêu tiếng còi để báo hiệu?",
+                        "questionText": "Quý vị đang muốn qua măt, hay là overtaking, một tàu khác và muốn vượt qua bằng cách di chuyển sang bên trái của mình. Nếu tàu kia đồng ý, tàu kia sẽ trả lời bằng bao nhiêu tiếng còi?",
                         "options": [
                             {
                                 "id": "a",
@@ -1340,8 +1340,8 @@
                             }
                         ],
                         "feedback": {
-                            "correct": "Đúng. 2 tiếng còi ngắn – Tôi định đổi hướng sang bên trái tàu của tôi, hoặc mạn trái tàu.",
-                            "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên trái, tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, hai tiếng còi."
+                            "correct": "Đúng. Khi tàu kia kéo hai tiếng còi, có nghĩa là nó đã đồng cho bạn bạn qua mặt nó. Lúc đó bạn di chuyển sang bên trái tàu của bạn để qua mặt.",
+                            "incorrect": "Không. Câu trả lời đúng đó là: Tàu kia sẽ báo hiệu bằng hai tiếng Còi. Kéo hai tiếng còi có nghĩa là: Tàu kia đã đồng ý cho bạn qua mặt họ. Lúc đó bạn di chuyển sang bên trái tàu của bạn để qua mặt."
                         },
                         "media": {
                             "image": "",
@@ -1349,6 +1349,79 @@
                             "animation": ""
                         }
                     }
+                ]
+            }
+        },{
+            "id": 24,
+            "type": "2",
+            "images":[],
+            "animations":[],
+            "videos": [],
+            "en": {
+                "title": "Crossing",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/images/02-en.png"
+                ]
+            },
+            "es": {
+                "title": "Introducción del Capitán",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/videos/02-es.mp4"
+                ]
+            },
+            "vi": {
+                "title": "Lời Tâm Sự Của Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/videos/02-vi.mp4"
+                ]
+            }
+        },
+        {
+            "id": 25,
+            "type": "2",
+            "images":[],
+            "animations":[],
+            "videos": [],
+            "en": {
+                "title": "Crossing",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/images/02-en.png"
+                ]
+            },
+            "es": {
+                "title": "Introducción del Capitán",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/videos/02-es.mp4"
+                ]
+            },
+            "vi": {
+                "title": "Lời Tâm Sự Của Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/videos/02-vi.mp4"
                 ]
             }
         },
@@ -1554,7 +1627,7 @@
                 ]
             },
             "es": {
-                "title": "",
+                "title": "Revisión",
                 "soundtrack": "",
                 "subtitles": "",
                 "listHeads": [],
@@ -1749,7 +1822,7 @@
                 ]
             },
             "vi": {
-                "title": "",
+                "title": "Đánh Giá Liên Lạc & Hàng Hải",
                 "soundtrack": "",
                 "subtitles": "",
                 "listHeads": [],
@@ -1934,6 +2007,973 @@
                         "feedback": {
                             "correct": "Đúng.",
                             "incorrect": "Không, câu trả lời đúng đó là bạn phải chờ cho đến khi tàu kia trả lời đồng y' trước khi bạn đổi hướng."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 27,
+            "type": "4",
+            "images":[],
+            "animations":[],
+            "videos":[],
+            "en": {
+                "title": "Communicating and Navigating Activity",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "You are approaching another vessel. You want to pass her by moving to your right hand side. How many short blasts do you sound on your horn?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "None, it's up to you to move around a larger vessel",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you must sound 1 blast to signal that you are moving to your right."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "questionText": "When you sound one short blast, what sound signal should you expect the other vessel gives you back?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "Nonel",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the other vessel will signal back with 1 blast if it is OK to pass or 5 or more short blasts for danger."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "questionText": "You are meeting a vessel large or small. You hear one short blast from the other vessel. Which direction should you move?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "To your right",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "To your left",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Straight ahead as the larger vessel has signaled that it is going to move",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you should move to your right since the other vessel signaled with 1 blast."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "questionText": "You are overtaking the vessel. Do you need to signal before you are going to pass?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the correct answer is that you must always signal when you are going to pass. Then the other vessel knows what you are going to do."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "questionText": "You are overtaking a vessel, what signal will you give if you want to pass on the left of the other vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "3 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that 1 blast signals that you will signal with 2 blasts to pass on the left."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 6,
+                        "questionText": "Vessel B is overtaking Vessel A. Must Vessel B sound the whistle before overtaking Vessel A?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the overtaking vessel must signal first to tell you what it is going to do."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 7,
+                        "questionText": "Where would you travel when you are in a ship channel assuming you have enough water depth on the side of the channel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Middle of the ship channel",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "On the side of the ship channel",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the larger vessel will not move if it is in a channel. It needs to stay in the channel."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 8,
+                        "questionText": "If you are vessel B are you expected to slow down for the crossing?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the correct answer is that you are not expected to slow down as you are the Stand On vessel. You are the Stand On vessel since the other vessel is on your left."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 9,
+                        "questionText": "Which vessel in this picture is the Stand On vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Vessel A",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Vessel B",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is vessel B - the Stand On vessel. The Stand On vessel always signals first. The Give Way vessel replies and slows down to maneuver."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 10,
+                        "questionText": "Vessel B sounds on short blast. Which way is Vessel A going to move?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "To the right",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "To the left",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the Give Way vessel, which is vessel A, will move to the right. The Stand On vessel signaled with one blast that the Give Way vessel should move to the right."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 11,
+                        "questionText": "Which vessel is the give-way vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Vessel A",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Vessel B",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that vessel B is the Give Way vessel. It is the Give Way vessel since the other vessel is on its right side."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "es": {
+                "title": "Actividad de Comunicación y de Navegación",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "You are approaching another vessel. You want to pass her by moving to your right hand side. How many short blasts do you sound on your horn?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "None, it's up to you to move around a larger vessel",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you must sound 1 blast to signal that you are moving to your right."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "questionText": "When you sound one short blast, what sound signal should you expect the other vessel gives you back?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "Nonel",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the other vessel will signal back with 1 blast if it is OK to pass or 5 or more short blasts for danger."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "questionText": "You are meeting a vessel large or small. You hear one short blast from the other vessel. Which direction should you move?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "To your right",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "To your left",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Straight ahead as the larger vessel has signaled that it is going to move",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you should move to your right since the other vessel signaled with 1 blast."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "questionText": "You are overtaking the vessel. Do you need to signal before you are going to pass?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the correct answer is that you must always signal when you are going to pass. Then the other vessel knows what you are going to do."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "questionText": "You are overtaking a vessel, what signal will you give if you want to pass on the left of the other vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "3 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that 1 blast signals that you will signal with 2 blasts to pass on the left."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 6,
+                        "questionText": "Vessel B is overtaking Vessel A. Must Vessel B sound the whistle before overtaking Vessel A?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the overtaking vessel must signal first to tell you what it is going to do."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 7,
+                        "questionText": "Where would you travel when you are in a ship channel assuming you have enough water depth on the side of the channel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Middle of the ship channel",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "On the side of the ship channel",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the larger vessel will not move if it is in a channel. It needs to stay in the channel."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 8,
+                        "questionText": "If you are vessel B are you expected to slow down for the crossing?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the correct answer is that you are not expected to slow down as you are the Stand On vessel. You are the Stand On vessel since the other vessel is on your left."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 9,
+                        "questionText": "Which vessel in this picture is the Stand On vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Vessel A",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Vessel B",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is vessel B - the Stand On vessel. The Stand On vessel always signals first. The Give Way vessel replies and slows down to maneuver."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 10,
+                        "questionText": "Vessel B sounds on short blast. Which way is Vessel A going to move?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "To the right",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "To the left",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the Give Way vessel, which is vessel A, will move to the right. The Stand On vessel signaled with one blast that the Give Way vessel should move to the right."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 11,
+                        "questionText": "Which vessel is the give-way vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Vessel A",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Vessel B",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that vessel B is the Give Way vessel. It is the Give Way vessel since the other vessel is on its right side."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "vi": {
+                "title": "Hoạt Động Hàng Hải",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "You are approaching another vessel. You want to pass her by moving to your right hand side. How many short blasts do you sound on your horn?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "None, it's up to you to move around a larger vessel",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you must sound 1 blast to signal that you are moving to your right."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "questionText": "When you sound one short blast, what sound signal should you expect the other vessel gives you back?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "Nonel",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the other vessel will signal back with 1 blast if it is OK to pass or 5 or more short blasts for danger."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "questionText": "You are meeting a vessel large or small. You hear one short blast from the other vessel. Which direction should you move?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "To your right",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "To your left",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Straight ahead as the larger vessel has signaled that it is going to move",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you should move to your right since the other vessel signaled with 1 blast."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "questionText": "You are overtaking the vessel. Do you need to signal before you are going to pass?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the correct answer is that you must always signal when you are going to pass. Then the other vessel knows what you are going to do."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "questionText": "You are overtaking a vessel, what signal will you give if you want to pass on the left of the other vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1 blast",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2 blasts",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "3 blasts",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "5 or more short blasts",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that 1 blast signals that you will signal with 2 blasts to pass on the left."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 6,
+                        "questionText": "Vessel B is overtaking Vessel A. Must Vessel B sound the whistle before overtaking Vessel A?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the overtaking vessel must signal first to tell you what it is going to do."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 7,
+                        "questionText": "Where would you travel when you are in a ship channel assuming you have enough water depth on the side of the channel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Middle of the ship channel",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "On the side of the ship channel",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the larger vessel will not move if it is in a channel. It needs to stay in the channel."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 8,
+                        "questionText": "If you are vessel B are you expected to slow down for the crossing?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "Wrong, the correct answer is that you are not expected to slow down as you are the Stand On vessel. You are the Stand On vessel since the other vessel is on your left."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 9,
+                        "questionText": "Which vessel in this picture is the Stand On vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Vessel A",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Vessel B",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is vessel B - the Stand On vessel. The Stand On vessel always signals first. The Give Way vessel replies and slows down to maneuver."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 10,
+                        "questionText": "Vessel B sounds on short blast. Which way is Vessel A going to move?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "To the right",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "To the left",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the Give Way vessel, which is vessel A, will move to the right. The Stand On vessel signaled with one blast that the Give Way vessel should move to the right."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 11,
+                        "questionText": "Which vessel is the give-way vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Vessel A",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Vessel B",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that vessel B is the Give Way vessel. It is the Give Way vessel since the other vessel is on its right side."
                         },
                         "media": {
                             "image": "",
@@ -2169,6 +3209,410 @@
             }
         },
         {
+            "id": 33,
+            "type": "2",
+            "images":[],
+            "animations":[],
+            "videos": [],
+            "en": {
+                "title": "Practice",
+                "soundtrack": "",
+                "subtitles": "Here are some exercises to help you make the Mayday call in English. Click on the word or number to hear it in English. Practice saying the word yourself.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/images/02-en.png"
+                ]
+            },
+            "es": {
+                "title": "Practique",
+                "soundtrack": "",
+                "subtitles": "Aquí están algunos ejercicios para ayudarle hacer la llamada de Mayday en Inglés. Haga clic en la palabra o el número para escuchar en Inglés. Practique diciendo la palabra usted mismo.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/videos/02-es.mp4"
+                ]
+            },
+            "vi": {
+                "title": "Thực hành",
+                "soundtrack": "",
+                "subtitles": "Đây là một bài tập giúp quý vị thực tập cách gọi Mayday bằng tiếng Anh. Nhấn vào chử hay số để nghe bằng tiếng Anh. Thực tập bằng cách tự nói các chử, hoăc số nêu trên.",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[
+                    "/assets/videos/02-vi.mp4"
+                ]
+            }
+        },
+        {
+            "id": 34,
+            "type": "4",
+            "images":[],
+            "animations":[],
+            "videos":[],
+            "en": {
+                "title": "Mayday Review",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "How many times do you say Mayday?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "3",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "d",
+                                "text": "4",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "e",
+                                "text": "5",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you must say Mayday three times."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "questionText": "Does the Mayday call need to include the position of the vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the Mayday call must include the position of the vessel."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "questionText": "Which is the best way to maneuver in a possible collision situation?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "4 miles off the beach",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "10 miles south of Abbeville",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "18 miles easy of Brownsville",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "South of Cameron, Louisiana",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "e",
+                                "text": "I can see an oil rig to my east",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "f",
+                                "text": "Both B and C",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is F, 'Both B and C.'"
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "es": {
+                "title": "Mayday Revisión",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "How many times do you say Mayday?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "3",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "d",
+                                "text": "4",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "e",
+                                "text": "5",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you must say Mayday three times."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "questionText": "Does the Mayday call need to include the position of the vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the Mayday call must include the position of the vessel."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "questionText": "Which is the best way to maneuver in a possible collision situation?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "4 miles off the beach",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "10 miles south of Abbeville",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "18 miles easy of Brownsville",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "South of Cameron, Louisiana",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "e",
+                                "text": "I can see an oil rig to my east",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "f",
+                                "text": "Both B and C",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is F, 'Both B and C.'"
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            },
+            "vi": {
+                "title": "Đánh Giá Tín Hiệu Báo Nguy Hiểm",
+                "soundtrack": "",
+                "subtitles": "",
+                "listHeads": [],
+                "listPoints": [],
+                "uniqueMedia":[],
+                "questions": [
+                    {
+                        "id": 1,
+                        "questionText": "How many times do you say Mayday?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "1",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "2",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "3",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "d",
+                                "text": "4",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "e",
+                                "text": "5",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that you must say Mayday three times."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "questionText": "Does the Mayday call need to include the position of the vessel?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "Yes",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "No",
+                                "isCorrect": false
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is that the Mayday call must include the position of the vessel."
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "questionText": "Which is the best way to maneuver in a possible collision situation?",
+                        "options": [
+                            {
+                                "id": "a",
+                                "text": "4 miles off the beach",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "10 miles south of Abbeville",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "18 miles easy of Brownsville",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "South of Cameron, Louisiana",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "e",
+                                "text": "I can see an oil rig to my east",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": "f",
+                                "text": "Both B and C",
+                                "isCorrect": true
+                            }
+                        ],
+                        "feedback": {
+                            "correct": "Correct.",
+                            "incorrect": "No, the correct answer is F, 'Both B and C.'"
+                        },
+                        "media": {
+                            "image": "",
+                            "video": "",
+                            "animation": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
             "id": 35,
             "type": "2",
             "images":[],
@@ -2242,6 +3686,43 @@
                     "Number of persons on your boat (số người trên tàu).",
                     "Your boat: Color, Length, Type - shrimp boat (Tàu dài bao nhiêu, màu gì)."
                 ],
+                "uniqueMedia":[]
+            }
+        },
+        {
+            "id": 36,
+            "type": "2",
+            "images":[],
+            "animations":[],
+            "videos":[],
+            "en": {
+                "title": "Summary Information",
+                "soundtrack": "",
+                "subtitles": "The Tip Cards provide a summary of important information. You can print the individual Tip Cards. You must be connected to a printer to print the Tip Cards.",
+                "listHeads": [],
+                "listPoints": [],
+                "listHeads2": [],
+                "listPoints2": [],
+                "uniqueMedia":[]
+            },
+            "es": {
+                "title": "Importante Información de Resumen",
+                "soundtrack": "",
+                "subtitles": "Ahora inténtelo usted mismo. Hacer una llamada sobre una emergencia médica. Suponga que está en Latitud 29 grados, 36 minutos y Longitud 93 grados, 44 minutos. Utilice el nombre de su barco y la descripción.",
+                "listHeads": [],
+                "listPoints": [],
+                "listHeads2": [],
+                "listPoints2": [],
+                "uniqueMedia":[]
+            },
+            "vi": {
+                "title": "Bảng Chỉ Dẩn Tóm Tắt",
+                "soundtrack": "",
+                "subtitles": "Bảng chỉ dẩn trên chứa rất nhiều điều quan trọng. Nhấn vào hình trên để mở ra, và in ra bảng chỉ dẩn. Muốn in những bảng chỉ dẩn ra, bạn phải có một máy in gắn liền vào computer nầy.",
+                "listHeads": [],
+                "listPoints": [],
+                "listHeads2": [],
+                "listPoints2": [],
                 "uniqueMedia":[]
             }
         }

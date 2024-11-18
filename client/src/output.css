@@ -628,6 +628,10 @@ video {
   width: 2.5rem;
 }
 
+.w-2\/4 {
+  width: 50%;
+}
+
 .w-3\/4 {
   width: 75%;
 }
@@ -670,6 +674,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-center {

@@ -42,7 +42,7 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "p-4 mt-5 w-screen bg-slate-800 justify-items-center drop-shadow-xl">
+                <div className = "p-4 m-auto w-screen bg-slate-800 justify-items-center drop-shadow-xl">
                 <video className="w-min h-auto" controls autoplay loop>
                     <source src={video} type="video/mp4"/>
                 </video></div> : null
@@ -51,8 +51,8 @@ export default function App() {
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
             media.slice(-4) === ".mp4"?
-            <div className = "p-4 mt-5 w-screen bg-slate-800 justify-items-center drop-shadow-xl">
-                <video controls autoplay>
+            <div className = "p-4 mt-5 w-screen bg-slate-800 drop-shadow-xl">
+                <video className="" controls autoplay>
                     <source src={media} type="video/mp4"/>
                 </video>
                 </div> 
@@ -282,9 +282,9 @@ export default function App() {
                 </div>
             </div>
             <div className="w-full justify-items-center"id ="container-limit">
-                <div className="m-auto pb-5 m-auto justify-items-center"id ="container">
+                <div className="m-auto pb-5 w-4/4"id ="container">
                     {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-                    <div className="w-4/4 justify-items-center" id = "render-slide">{renderSlide()}</div>
+                    <div className="w-4/4 items-center flex flex-col" id = "render-slide">{renderSlide()}</div>
                 </div>
             </div>
             <div id = "control-panel">
