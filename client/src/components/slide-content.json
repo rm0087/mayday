@@ -317,8 +317,8 @@
             "id": 7,
             "type": "2",
             "images":[
-                "/assets/images/07-01.png",
-                "/assets/images/07-02.png"
+                "/assets/images/07-02.png",
+                "/assets/images/07-01.png"
             ],
             "animations":[],
             "videos":[],

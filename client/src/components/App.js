@@ -37,7 +37,7 @@ export default function App() {
         
         // if content.images is not empty, map images
         const images = content.images?.map((media) =>
-            media? <img className="mt-2" src={media} alt="Slide Media" /> : null    
+            media? <img className="w-auto h-auto max-w-none max-h-none mt-5" src={media} alt="Slide Media"/> : null    
         )
 
         const videos = content.videos?.map((video)=>
@@ -67,7 +67,7 @@ export default function App() {
                 {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>
-                <div className = "flex flex-col mt-5" id= "medias">
+                <div className = "mt-5 grid place-items-center" id= "medias">
                     {images}
                     {videos}
                     {uniqueMedia}
@@ -130,7 +130,7 @@ export default function App() {
                         <div className="m-0 text-sm text-gray-500">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
-                        <div className="space-y-4 justify-items-center">
+                        <div className="space-y-4 grid place-items-center">
                             {content.images.length > 0  ?
                             <img
                                 src={content.images[0]}
@@ -275,7 +275,7 @@ export default function App() {
                     <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
                 )}
             <div className="min-w-full mb-5 justify-center flex" id ="header-limit">
-                <div className="mr-1 bg-slate-500 p-7 flex justify-left w-screen" id = "header">
+                <div className="bg-slate-500 p-7 flex justify-left w-screen" id = "header">
                     <div className="w-3/4" id ="title">
                         <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
                     </div>
