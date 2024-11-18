@@ -11,20 +11,10 @@ export default function App() {
     const videoRef = useRef(null);
     
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
-    const goToSlide = (index, slide) => {
-        setCurrentIndex(index-1)
-        setSlideType(slide.type)
-    }
-    
-    const TitleSlide = ({ content }) => (
-        <div>
-            <h1>{content[language].title}</h1>
-        </div>
-    );
-
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button key={content[language].links.indexOf(link)} onClick={()=>{goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
+            <button key={content[language].links.indexOf(link)} onClick={()=>
+                {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
         return (
@@ -38,16 +28,16 @@ export default function App() {
         
         //if listpoints is not empty, map list points
         const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li>{point}</li> : null
+            point ? <li className="text-base leading-tight tracking-wide p-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
-            point ? <li>{point}</li> : null
+            point ? <li className="text-base leading-tight tracking-wide p-2">{point}</li> : null
         )
         
         // if content.images is not empty, map images
         const images = content.images?.map((media) =>
-            media? <img src={media} alt="Slide Media" /> : null    
+            media? <img className="mt-2" src={media} alt="Slide Media" /> : null    
         )
 
         const videos = content.videos?.map((video)=>
@@ -72,12 +62,12 @@ export default function App() {
         return (
             <>
             <div className="w-4/4">
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3>{content[language].listHeads[0]}</h3> : null}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
-                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3>{content[language].listHeads2[0]}</h3> : null}
+                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>
-                <div className = "grid-cols-2 justify-items-center" id= "medias">
+                <div className = "grid-cols-2 justify-items-center mt-5" id= "medias">
                     {images}
                     {videos}
                     {uniqueMedia}
@@ -85,12 +75,6 @@ export default function App() {
             </>
         )
     };
-
-    const MediaOnlySlide = ({ content }) => (
-        <div>
-            {/* <img src={content[language].imageUrl} alt="Slide Media" /> */}
-        </div>
-    );
 
     const QuizSlide = ({ content }) => {
         const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -232,21 +216,14 @@ export default function App() {
             </div>
         )
     };
-
-
-    const MediaAndQuizSlide = ({ content }) => (
-        <div>
-            <img src={content[language].imageUrl} alt="Slide Media" />
-            <h1>{content[language].question}</h1>
-            <ul>
-                {content[language].options.map((option, index) => (
-                    <li key={index}>{option}</li>
-                ))}
-            </ul>
-        </div>
-    );
     // END SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////
     
+    // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
+    const goToSlide = (index, slide) => {
+        setCurrentIndex(index-1)
+        setSlideType(slide.type)
+    }
+
     const goToNextSlide = () => {
         const newIndex = (currentIndex + 1) % slides.length;
         const newSlideType = slides[newIndex].type;
@@ -272,67 +249,53 @@ export default function App() {
         setIsPlaying(!isPlaying);
       };
 
+      const handleLanguage = (key) => setLanguage(key)
+      // END SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
+
     // Define slide templates based on slideType
     const renderSlide = () => {
         switch (slideType) {
-            case "0":
-                return <TitleSlide content={slides[currentIndex]} />;
             case "1":
                 return <Navigation content={slides[currentIndex]} />;
             case "2":
                 return <TextAndMediaSlide content={slides[currentIndex]} />;
-            case "3":
-                return <MediaOnlySlide content={slides[currentIndex]} />;
             case "4":
                 return <QuizSlide content={slides[currentIndex]} />;
-            case "5":
-                return <MediaAndQuizSlide content={slides[currentIndex]} />;
             default:
                 return <div>Unknown slide type</div>;
         }
     };
-
+    
     // useEffect(()=>{renderSlide()},[currentIndex])
 
-    const handleLanguage = (key) => setLanguage(key)
     return (
         <>
-        <button className="h-10 w-10 border">E</button>
-        {Object.entries(slideContent.languages).map(([key,language]) =>
-                <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
-            )}
+            <button className="h-10 w-10 border">E</button>
+            {Object.entries(slideContent.languages).map(([key,language]) =>
+                    <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
+                )}
             <div className="min-w-full mb-5" id ="header-limit">
-            <div className="m-auto bg-slate-500 p-7 justify-items-center" id = "header">
-                <div className="w-3/4" id ="title">
-                    <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
+                <div className="m-auto bg-slate-500 p-7 justify-items-center" id = "header">
+                    <div className="w-3/4" id ="title">
+                        <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
+                    </div>
                 </div>
-            </div>
             </div>
             <div className="w-full justify-items-center"id ="container-limit">
                 <div className="m-auto pb-5 m-auto justify-items-center"id ="container">
                     {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-                    
-                    
-                        <div className="w-4/4 justify-items-center" id = "render-slide">{renderSlide()}</div>
-            </div>
-                
-            </ div>
-            <div id = "control-panel">
-                    <div id = "controls">
-                        <button onClick={goToPreviousSlide}>Previous</button>
-                        <button onClick={toggleMediaPlayback}>
-                            {isPlaying ? 'Pause' : 'Play'}
-                        </button>
-                        <button onClick={goToNextSlide}>Next</button>
-                    </div>
-                    {/* <div id = "test-stats">
-                        <p>currentIndex: {currentIndex}</p>
-                        <p>Slide ID: {slides[currentIndex].id}</p>
-                        <p>slideType: {slideType} - {slideContent.slideTypes[slideType]}</p>
-                        <p>language: {language}</p>
-                        
-                    </div> */}
+                    <div className="w-4/4 justify-items-center" id = "render-slide">{renderSlide()}</div>
                 </div>
+            </div>
+            <div id = "control-panel">
+                <div id = "controls">
+                    <button onClick={goToPreviousSlide}>Previous</button>
+                    <button onClick={toggleMediaPlayback}>
+                        {isPlaying ? 'Pause' : 'Play'}
+                    </button>
+                    <button onClick={goToNextSlide}>Next</button>
+                </div>
+            </div>
         </>
     );
 }
