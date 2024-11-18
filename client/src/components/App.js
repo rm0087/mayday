@@ -42,7 +42,7 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "p-4 m-auto w-screen bg-slate-800 justify-items-center drop-shadow-xl">
+                <div className = "p-4 mt-5 w-screen bg-slate-800 drop-shadow-xl flex justify-center">
                 <video className="w-min h-auto" controls autoplay loop>
                     <source src={video} type="video/mp4"/>
                 </video></div> : null
@@ -51,7 +51,7 @@ export default function App() {
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
             media.slice(-4) === ".mp4"?
-            <div className = "p-4 mt-5 w-screen bg-slate-800 drop-shadow-xl">
+            <div className = "p-4 mt-5 w-screen bg-slate-800 drop-shadow-xl flex justify-center">
                 <video className="" controls autoplay>
                     <source src={media} type="video/mp4"/>
                 </video>
@@ -61,13 +61,13 @@ export default function App() {
 
         return (
             <>
-            <div className="w-4/4">
+            <div className="w-4/4 list-inside">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
                 {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>
-                <div className = "grid-cols-2 justify-items-center mt-5" id= "medias">
+                <div className = "flex flex-col mt-5" id= "medias">
                     {images}
                     {videos}
                     {uniqueMedia}
@@ -274,8 +274,8 @@ export default function App() {
             {Object.entries(slideContent.languages).map(([key,language]) =>
                     <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
                 )}
-            <div className="min-w-full mb-5" id ="header-limit">
-                <div className="m-auto bg-slate-500 p-7 justify-items-center" id = "header">
+            <div className="min-w-full mb-5 justify-center flex" id ="header-limit">
+                <div className="mr-1 bg-slate-500 p-7 flex justify-left w-screen" id = "header">
                     <div className="w-3/4" id ="title">
                         <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
                     </div>
