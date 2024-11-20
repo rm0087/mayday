@@ -3,7 +3,7 @@
         "0": "Title",
         "1": "Navigation",
         "2": "TextAndMedia",
-        "3": "MediaOnly",
+        "3": "PdfSlide",
         "4": "Quiz",
         "5": "MediaAndQuiz",
         "6": "TextAndMediaRight"
@@ -926,7 +926,7 @@
                             "incorrect": "No, the correct answer is to pass by moving to your right, you will signal with one blast."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/20-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -961,7 +961,7 @@
                             "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su derecha, señalizará sonando 1 pitido corto de la bocina."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/20-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -996,7 +996,7 @@
                             "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên phải tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, một tiếng còi."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/20-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1007,9 +1007,7 @@
         {
             "id": 21,
             "type": "4",
-            "images":[
-                "/assets/images/21-01.png"
-            ],
+            "images":[],
             "animations":[],
             "videos":[
                 "/assets/videos/17-01.mp4"
@@ -1042,7 +1040,7 @@
                             "incorrect": "No, the correct answer is to pass by moving to your left. You will signal with two blasts."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/21-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1077,7 +1075,7 @@
                             "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su izquierda, señalizará sonando 2 pitidos cortos de la bocina."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/21-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1112,7 +1110,7 @@
                             "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên trái, tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, hai tiếng còi."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/21-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1123,9 +1121,7 @@
         {
             "id": 22,
             "type": "4",
-            "images":[
-                "/assets/images/20-01.png"
-            ],
+            "images":[],
             "animations":[],
             "videos":[
                 "/assets/videos/14-01.mp4"
@@ -1158,7 +1154,7 @@
                             "incorrect": "No, the correct answer is to pass by moving to your right, you will signal with one blast."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/22-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1193,7 +1189,7 @@
                             "incorrect": "No, la respuesta correcta es pasar moviéndose hacia su derecha, señalizará sonando 1 pitido corto de la bocina."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/22-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1228,7 +1224,7 @@
                             "incorrect": "Không. Câu trả lời đúng là vượt qua bằng cách di chuyển sang bên phải tàu của bạn. Nghĩa là bạn sẽ báo hiệu bằng, một tiếng còi."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/22-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1274,7 +1270,7 @@
                             "incorrect": "No, the correct answer is the other vessel will signal with two blasts. By signaling with two blasts, the other vessel agrees that you will pass by moving to your left."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/23-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1309,7 +1305,7 @@
                             "incorrect": "No, la respuesta correcta es que el otro barco señalizará sonando 2 pitidos cortos del la bocina. Al señalizar sonando 2 pitidos cortos del la bocina, el otro barco acepta que usted lo pasará moviéndose hacia su izquierda."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/23-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -1344,7 +1340,7 @@
                             "incorrect": "Không. Câu trả lời đúng đó là: Tàu kia sẽ báo hiệu bằng hai tiếng Còi. Kéo hai tiếng còi có nghĩa là: Tàu kia đã đồng ý cho bạn qua mặt họ. Lúc đó bạn di chuyển sang bên trái tàu của bạn để qua mặt."
                         },
                         "media": {
-                            "image": "",
+                            "image": "/assets/images/23-01.png",
                             "video": "",
                             "animation": ""
                         }
@@ -3682,7 +3678,7 @@
         },
         {
             "id": 36,
-            "type": "2",
+            "type": "3",
             "images":[],
             "animations":[],
             "videos":[],
@@ -3690,31 +3686,109 @@
                 "title": "Summary Information",
                 "soundtrack": "",
                 "subtitles": "The Tip Cards provide a summary of important information. You can print the individual Tip Cards. You must be connected to a printer to print the Tip Cards.",
-                "listHeads": [],
+                "listHeads": ["Click one of the topics for more information"],
                 "listPoints": [],
                 "listHeads2": [],
                 "listPoints2": [],
-                "uniqueMedia":[]
+                "uniqueMedia":[],
+                "links":[
+                    {
+                        "title": "Communications and Navigation",
+                        "ref": "/assets/pdf/CommunicationsNavigation_EN.pdf"
+                    },
+                    {
+                        "title": "Fire",
+                        "ref": "/assets/pdf/Fire_EN.pdf"
+                    },
+                    {
+                        "title": "Flooding and EPIRBS",
+                        "ref": "/assets/pdf/FloodingEPIRBS_EN.pdf"
+                    },
+                    {
+                        "title": "Abandon Ship",
+                        "ref": "/assets/pdf/AbandonShip_EN.pdf"
+                    },
+                    {
+                        "title": "Health and First Aid",
+                        "ref": "/assets/pdf/HealthFirstAid_EN.pdf"
+                    },
+                    {
+                        "title": "Mayday",
+                        "ref": "/assets/pdf/Mayday_EN.pdf"
+                    }
+                ]
             },
             "es": {
                 "title": "Importante Información de Resumen",
                 "soundtrack": "",
                 "subtitles": "Ahora inténtelo usted mismo. Hacer una llamada sobre una emergencia médica. Suponga que está en Latitud 29 grados, 36 minutos y Longitud 93 grados, 44 minutos. Utilice el nombre de su barco y la descripción.",
-                "listHeads": [],
+                "listHeads": ["Haga clic en uno de los temas para obtener más información"],
                 "listPoints": [],
                 "listHeads2": [],
                 "listPoints2": [],
-                "uniqueMedia":[]
+                "uniqueMedia":[],
+                "links":[
+                    {
+                        "title": "Comunicación y Navegación",
+                        "ref": "/assets/pdf/CommunicationsNavigation_ES.pdf"
+                    },
+                    {
+                        "title": "Incendio",
+                        "ref": "/assets/pdf/Fire_ES.pdf"
+                    },
+                    {
+                        "title": "Inundación y EPIRBs",
+                        "ref": "/assets/pdf/FloodingEPIRBS_ES.pdf"
+                    },
+                    {
+                        "title": "Abandonar el Barco",
+                        "ref": "/assets/pdf/AbandonShip_ES.pdf"
+                    },
+                    {
+                        "title": "Salud y Primeros",
+                        "ref": "/assets/pdf/HealthFirstAid_ES.pdf"
+                    },
+                    {
+                        "title": "Mayday",
+                        "ref": "/assets/pdf/Mayday_ES.pdf"
+                    }
+                ]
             },
             "vi": {
                 "title": "Bảng Chỉ Dẩn Tóm Tắt",
                 "soundtrack": "",
                 "subtitles": "Bảng chỉ dẩn trên chứa rất nhiều điều quan trọng. Nhấn vào hình trên để mở ra, và in ra bảng chỉ dẩn. Muốn in những bảng chỉ dẩn ra, bạn phải có một máy in gắn liền vào computer nầy.",
-                "listHeads": [],
+                "listHeads": ["Nhấn vào hình trên để mở ra, và in ra bảng chỉ dẩn."],
                 "listPoints": [],
                 "listHeads2": [],
                 "listPoints2": [],
-                "uniqueMedia":[]
+                "uniqueMedia":[],
+                "links":[
+                    {
+                        "title": "Liên Lạc Truyền Tin & Hải Hành",
+                        "ref": "/assets/pdf/CommunicationsNavigation_VI.pdf"
+                    },
+                    {
+                        "title": "Hỏa Hoạn",
+                        "ref": "/assets/pdf/Fire_VI.pdf"
+                    },
+                    {
+                        "title": "Tàu Vô Nước và Máy EPIRB",
+                        "ref": "/assets/pdf/FloodingEPIRBS_VI.pdf"
+                    },
+                    {
+                        "title": "Nhiệm Sở Bỏ Tàu",
+                        "ref": "/assets/pdf/AbandonShip_VI.pdf"
+                    },
+                    {
+                        "title": "Cứu Thương và Sức Khỏe",
+                        "ref": "/assets/pdf/HealthFirstAid_VI.pdf"
+                    },
+                    {
+                        "title": "Mayday",
+                        "ref": "/assets/pdf/Mayday_VI.pdf"
+                    }
+                ]
             }
         }
     ] 

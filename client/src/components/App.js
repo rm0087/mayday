@@ -13,7 +13,7 @@ export default function App() {
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button className="w-auto text-left text-20px p-4 rounded-lg border" key={content[language].links.indexOf(link)} onClick={()=>
+            <button className="w-[320px] m-1 w-[320px] p-4 border rounded-lg text-center text-20px" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -23,6 +23,20 @@ export default function App() {
             </>
         )
     };
+
+    
+    const PdfSlide = ({ content }) => {
+        const links = content[language].links?.map((link) =>
+            <a href={link.ref} className=" flex items-center m-1 w-[320px] p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+        )
+        
+        return (
+            <>
+            {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
+            {links}
+            </>
+        )
+    }
 
     const TextAndMediaSlide = ({ content }) => {
         
@@ -133,7 +147,7 @@ export default function App() {
         };
     
         return (
-            <div className="w-full max-w-2xl mx-auto p-6 flex-grow">
+            <div className="w-full max-w-2xl mx-auto p-6 flex-grow ">
                 {!quizCompleted ? (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-bold">Question</h2>
@@ -141,7 +155,7 @@ export default function App() {
                         <div className="m-0 text-sm text-gray-500">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
-                        <div className="space-y-4 grid place-items-center">
+                        <div className="space-y-4 grid place-items-center drop-shadow-md">
                             {currentQuestion.media.image  ?
                             <img
                                 src={currentQuestion.media.image}
@@ -149,7 +163,7 @@ export default function App() {
                                 className="max-w-full h-auto rounded-lg"
                             />
                             : null}
-                            <h3 className="tracking-wide leading-none font-semibold">{currentQuestion.questionText}</h3>
+                            <h3 className="tracking-wide leading-none font-semibold ">{currentQuestion.questionText}</h3>
                             
                             <div className="w-full space-y-2 items-center flex flex-col">
                                 {currentQuestion.options.map((option) => (
@@ -227,6 +241,7 @@ export default function App() {
             </div>
         )
     };
+
     // END SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////
     
     // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
@@ -270,6 +285,8 @@ export default function App() {
                 return <Navigation content={slides[currentIndex]} />;
             case "2":
                 return <TextAndMediaSlide content={slides[currentIndex]} />;
+            case "3":
+                return <PdfSlide content={slides[currentIndex]} />;
             case "4":
                 return <QuizSlide content={slides[currentIndex]} />;
             default:
