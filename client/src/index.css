@@ -35,11 +35,6 @@
   color: #f8fafc
 }
 
-button {
-  margin:10px;
-}
-
-
 #sprite24 {
   animation: spriteAnimation24 6s steps(3) infinite;
   /* background-size: 50vw; */

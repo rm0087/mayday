@@ -19,7 +19,7 @@ export default function App() {
         
         return (
             <>
-            {links}
+                {links}
             </>
         )
     };
@@ -32,8 +32,8 @@ export default function App() {
         
         return (
             <>
-            {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
-            {links}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
+                {links}
             </>
         )
     }
@@ -155,21 +155,21 @@ export default function App() {
                         <div className="m-0 text-sm text-gray-500">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
-                        <div className="space-y-4 grid place-items-center drop-shadow-md">
+                        <div className="space-y-4 grid place-items-center">
                             {currentQuestion.media.image  ?
                             <img
                                 src={currentQuestion.media.image}
                                 alt="Question media"
-                                className="max-w-full h-auto rounded-lg"
+                                className="max-w-full h-auto rounded-lg drop-shadow-md"
                             />
                             : null}
-                            <h3 className="tracking-wide leading-none font-semibold ">{currentQuestion.questionText}</h3>
+                            <h3 className="tracking-wide leading-tight font-semibold text-lg">{currentQuestion.questionText}</h3>
                             
                             <div className="w-full space-y-2 items-center flex flex-col">
                                 {currentQuestion.options.map((option) => (
                                     <button
                                         key={option.id}
-                                        className={`w-full text-left text-20px p-4 rounded-lg border ${
+                                        className={`w-full text-left text-base p-4 rounded-lg border ${
                                             selectedAnswer === option.id
                                                 ? showFeedback
                                                     ? option.isCorrect
@@ -300,7 +300,7 @@ export default function App() {
         <>
             <button className="h-10 w-10 border">E</button>
             {Object.entries(slideContent.languages).map(([key,language]) =>
-                    <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
+                    <button key={key} className="m-2" onClick={()=>handleLanguage(key)}>{language}</button>
                 )}
             <div className="min-w-full mb-5 justify-center flex" id ="header-limit">
                 <div className="bg-slate-500 p-7 flex justify-left w-screen drop-shadow-md" id = "header">
