@@ -38,3 +38,33 @@
 button {
   margin:10px;
 }
+
+
+#sprite24 {
+  animation: spriteAnimation24 6s steps(3) infinite;
+  /* background-size: 50vw; */
+  max-width: 800px;
+}
+
+@keyframes spriteAnimation24 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1396px; /* Shift vertically to show the second frame */
+  }
+}
+
+
+#sprite25 {
+  animation: spriteAnimation25 4s steps(2) infinite;
+}
+
+@keyframes spriteAnimation25 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -935px; /* Shift vertically to show the second frame */
+  }
+}

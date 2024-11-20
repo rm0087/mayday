@@ -28,4 +28,148 @@
         "listPoints": [],
         "uniqueMedia":[]
     }
-}
+},
+
+//quiz slide template
+{
+    "id": 0,
+    "type": "4",
+    "images":[],
+    "animations":[],
+    "videos":[],
+    "en": {
+        "title": "",
+        "soundtrack": "",
+        "subtitles": "",
+        "listHeads": [],
+        "listPoints": [],
+        "uniqueMedia":[],
+        "questions": [
+            {
+                "id": 1,
+                "questionText": "",
+                "options": [
+                    {
+                        "id": "a",
+                        "text": "",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": "b",
+                        "text": "",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": "c",
+                        "text": "",
+                        "isCorrect": true
+                    },
+                    {
+                        "id": "d",
+                        "text": "",
+                        "isCorrect": false
+                    }
+                ],
+                "feedback": {
+                    "correct": "Làm tốt lắm!",
+                    "incorrect": "Hãy thử lại!"
+                },
+                "media": {
+                    "image": "",
+                    "video": "",
+                    "animation": ""
+                }
+            }
+        ]
+    },
+    "es": {
+        "title": "",
+        "soundtrack": "",
+        "subtitles": "",
+        "listHeads": [],
+        "listPoints": [],
+        "uniqueMedia":[],
+        "questions": [
+            {
+                "id": 1,
+                "questionText": "",
+                "options": [
+                    {
+                        "id": "a",
+                        "text": "",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": "b",
+                        "text": "",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": "c",
+                        "text": "",
+                        "isCorrect": true
+                    },
+                    {
+                        "id": "d",
+                        "text": "",
+                        "isCorrect": false
+                    }
+                ],
+                "feedback": {
+                    "correct": "Làm tốt lắm!",
+                    "incorrect": "Hãy thử lại!"
+                },
+                "media": {
+                    "image": "",
+                    "video": "",
+                    "animation": ""
+                }
+            }
+        ]
+    },
+    "vi": {
+        "title": "",
+        "soundtrack": "",
+        "subtitles": "",
+        "listHeads": [],
+        "listPoints": [],
+        "uniqueMedia":[],
+        "questions": [
+            {
+                "id": 1,
+                "questionText": "",
+                "options": [
+                    {
+                        "id": "a",
+                        "text": "",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": "b",
+                        "text": "",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": "c",
+                        "text": "",
+                        "isCorrect": true
+                    },
+                    {
+                        "id": "d",
+                        "text": "",
+                        "isCorrect": false
+                    }
+                ],
+                "feedback": {
+                    "correct": "Làm tốt lắm!",
+                    "incorrect": "Hãy thử lại!"
+                },
+                "media": {
+                    "image": "",
+                    "video": "",
+                    "animation": ""
+                }
+            }
+        ]
+    }
+},

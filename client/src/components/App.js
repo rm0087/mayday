@@ -13,7 +13,7 @@ export default function App() {
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button className="w-full text-left text-20px p-4 rounded-lg border" key={content[language].links.indexOf(link)} onClick={()=>
+            <button className="w-auto text-left text-20px p-4 rounded-lg border" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -42,16 +42,26 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "p-4 mt-5 w-screen bg-slate-800 drop-shadow-xl flex justify-center">
-                <video className="w-min h-auto" controls autoplay loop>
-                    <source src={video} type="video/mp4"/>
-                </video></div> : null
+                <div className = "p-4 w-screen bg-slate-800 drop-shadow-md flex justify-center">
+                    <video className="w-min h-auto" controls autoplay loop>
+                        <source src={video} type="video/mp4"/>
+                    </video>
+                </div> : null
            
+        )
+
+        const animations = content.animations?.map((animation)=>
+            animation?
+                <div className = "p-4 w-screen bg-slate-800 drop-shadow-md flex justify-center">
+                    <div id={`sprite${content.id}`} className="bg-no-repeat w-screen h-[466px] bg-contain" style={{ backgroundImage: `url(${animation})` }}>
+                    </div>
+                </div> : null
+
         )
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
             media.slice(-4) === ".mp4"?
-            <div className = "p-4 mt-5 w-screen bg-slate-800 drop-shadow-xl flex justify-center">
+            <div className = "p-4 w-screen bg-slate-800 drop-shadow-md flex justify-center">
                 <video className="" controls autoplay>
                     <source src={media} type="video/mp4"/>
                 </video>
@@ -71,6 +81,7 @@ export default function App() {
                     {images}
                     {videos}
                     {uniqueMedia}
+                    {animations}
                 </div>
             </>
         )
@@ -131,9 +142,9 @@ export default function App() {
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
                         <div className="space-y-4 grid place-items-center">
-                            {content.images.length > 0  ?
+                            {currentQuestion.media.image  ?
                             <img
-                                src={content.images[0]}
+                                src={currentQuestion.media.image}
                                 alt="Question media"
                                 className="max-w-full h-auto rounded-lg"
                             />
@@ -275,7 +286,7 @@ export default function App() {
                     <button key={key} onClick={()=>handleLanguage(key)}>{language}</button>
                 )}
             <div className="min-w-full mb-5 justify-center flex" id ="header-limit">
-                <div className="bg-slate-500 p-7 flex justify-left w-screen" id = "header">
+                <div className="bg-slate-500 p-7 flex justify-left w-screen drop-shadow-md" id = "header">
                     <div className="w-3/4" id ="title">
                         <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
                     </div>
