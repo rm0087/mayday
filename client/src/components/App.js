@@ -9,6 +9,7 @@ export default function App() {
     const [isPlaying, setIsPlaying] = useState(true)
     const audioRef = useRef(null);
     const videoRef = useRef(null);
+    const [isAnimating, setIsAnimating] = useState(false)
     
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
@@ -56,7 +57,7 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "p-4 w-screen bg-slate-800 drop-shadow-md flex justify-center">
+                <div className = "flex w-screen mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
                     <video className="w-min h-auto" controls autoplay loop>
                         <source src={video} type="video/mp4"/>
                     </video>
@@ -66,7 +67,7 @@ export default function App() {
 
         const animations = content.animations?.map((animation)=>
             animation?
-                <div className = "p-4 w-screen bg-slate-800 drop-shadow-md flex justify-center">
+                <div className = "flex w-screen mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
                     <div id={`sprite${content.id}`} className="bg-no-repeat w-screen h-[466px] bg-contain" style={{ backgroundImage: `url(${animation})` }}>
                     </div>
                 </div> : null
@@ -75,7 +76,7 @@ export default function App() {
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
             media.slice(-4) === ".mp4"?
-            <div className = "p-4 w-screen bg-slate-800 drop-shadow-md flex justify-center">
+            <div className = "flex w-screen mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
                 <video className="" controls autoplay>
                     <source src={media} type="video/mp4"/>
                 </video>
@@ -91,7 +92,7 @@ export default function App() {
                 {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>
-                <div className = "mt-5 grid place-items-center" id= "medias">
+                <div className = "grid place-items-center" id= "medias">
                     {images}
                     {videos}
                     {uniqueMedia}
@@ -246,11 +247,13 @@ export default function App() {
     
     // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
     const goToSlide = (index, slide) => {
+        setIsAnimating(true);
         setCurrentIndex(index-1)
         setSlideType(slide.type)
     }
 
     const goToNextSlide = () => {
+        setIsAnimating(true);
         const newIndex = (currentIndex + 1) % slides.length;
         const newSlideType = slides[newIndex].type;
         setCurrentIndex(newIndex);
@@ -258,6 +261,7 @@ export default function App() {
     };
 
     const goToPreviousSlide = () => {
+        setIsAnimating(true);
         const newIndex = (currentIndex - 1 + slides.length) % slides.length;
         const newSlideType = slides[newIndex].type;
         setCurrentIndex(newIndex);
@@ -275,23 +279,34 @@ export default function App() {
         setIsPlaying(!isPlaying);
       };
 
-      const handleLanguage = (key) => setLanguage(key)
+    const handleLanguage = (key) => setLanguage(key)
       // END SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
 
     // Define slide templates based on slideType
+    
     const renderSlide = () => {
-        switch (slideType) {
-            case "1":
-                return <Navigation content={slides[currentIndex]} />;
-            case "2":
-                return <TextAndMediaSlide content={slides[currentIndex]} />;
-            case "3":
-                return <PdfSlide content={slides[currentIndex]} />;
-            case "4":
-                return <QuizSlide content={slides[currentIndex]} />;
-            default:
-                return <div>Unknown slide type</div>;
-        }
+        // Apply the animation class if isAnimating is true
+        return (
+            <div
+                className={`flex flex-col yw-full transition-all ${isAnimating ? 'slide-enter' : ''}`}
+                onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
+            >
+                {(() => {
+                    switch (slideType) {
+                        case "1":
+                            return <Navigation content={slides[currentIndex]} />;
+                        case "2":
+                            return <TextAndMediaSlide content={slides[currentIndex]} />;
+                        case "3":
+                            return <PdfSlide content={slides[currentIndex]} />;
+                        case "4":
+                            return <QuizSlide content={slides[currentIndex]} />;
+                        default:
+                            return <div>Unknown slide type</div>;
+                    }
+                })()}
+            </div>
+        );
     };
     
     // useEffect(()=>{renderSlide()},[currentIndex])

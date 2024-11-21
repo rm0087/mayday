@@ -63,3 +63,34 @@
     background-position: 0 -935px; /* Shift vertically to show the second frame */
   }
 }
+
+
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Animation (from top) */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Class for next slide coming from the bottom */
+.slide-from-bottom {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+/* Class for previous slide coming from the top */
+.slide-from-top {
+  animation: slideInFromTop 0.5s ease-out;
+}

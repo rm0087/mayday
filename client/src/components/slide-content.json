@@ -22,7 +22,7 @@
             "videos": [],
             "en": {
                 "title": "Welcome",
-                "soundtrack": "/assets/soundtracks/lat.mp3",
+                "soundtrack": "/assets/soundtracks/en/slide1_s1_s1.mp3",
                 "subtitles": "Using this CD, you will learn more about communication and navigation rules. You will also learn how to make a proper Mayday call. After you have completed the lessons, you can print a completion certificate. You must go through all the lessons at one time to print the certificate. You can also read and print tip cards containing information that will help you stay safe. To start, click on the Introduction from the Captain.",
                 "listHeads": [],
                 "listPoints": [],
@@ -52,7 +52,7 @@
             },
             "es": {
                 "title": "Bienvenido",
-                "soundtrack": "/assets/soundtracks/long.mp3",
+                "soundtrack": "/assets/soundtracks/es/slide1_s1_s1.mp3",
                 "subtitles": "Con el uso de este CD, usted aprenderá más acerca de las reglas de comunicación y navegación. Usted también aprenderá cómo hacer una buena llamada de Mayday. Después de haber completado las lecciones, usted puede imprimir un certificado de realización. Usted debe revisar todas las lecciones completamente para poder imprimir el certificado. También puede leer e imprimir tarjetas de claves que contienen información que le ayudará a mantenerse seguro. Para comenzar haga clic sobre la Introducción del Capitán.",
                 "listHeads": [],
                 "listPoints": [],
@@ -82,7 +82,7 @@
             },
             "vi": {
                 "title": "Chào mừng",
-                "soundtrack": "/assets/soundtracks/mayday.mp3",
+                "soundtrack": "/assets/soundtracks/vi/slide1_s1_s1.mp3",
                 "subtitles": "CD này sẽ giúp bạṇ hiểu thêm về cách liên lạc bằng VHF radio, và biết thêm về luật hải hành. Nó sẽ giúp bạṇ am tường cách gọi Mayday mà chúng tôi tạm dịch là “Trời ơi cứu tôi với”. Sau khi hoàn thành tất các bài học nầy, bạṇ có thể in ra chứng chỉ tốt nghiêp gọi là Certificate of completion. Tuy nhiên quý vị phải hoàn tất các bài học trong CD nầy trong cùng một lúc. Nghĩa là nếu bạn bỏ cuộc nữa chừng thì không in chứng chỉ được. Lần tới phải bắt đầu lại từ đầu. Bạ̣n cũng có thể in những bảng chỉ dẩn, gọi là tip cards, để đọc, hoặc để tham khảo. Những bảng chỉ dẩn đó, chắc chắn sẽ giúp các bạn hiểu thêm về sư an toàn khi đi tàu, cùng bảo vệ tánh mạng và tài sản của thủy thủ đoàn của mình. Để bắt đầu, bạn hãy nhấn vào vào “Lời Tâm Sự Của Một Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm.",
                 "listHeads": [],
                 "listPoints": [],
@@ -119,7 +119,7 @@
             "videos": [],
             "en": {
                 "title": "Introduction from the Captain",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide2_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -158,7 +158,7 @@
             "videos": [],
             "en": {
                 "title": "Radio Communications",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide3_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [
                     "Bridge-to-Bridge Radio Regulations require the person steering the vessel maintain a listening watch on:"
@@ -171,7 +171,7 @@
             },
             "es": {
                 "title": "Comunicaciones de Radio Marino",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide3_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [
                     "Las regulaciones de radio de Cabina-a-Cabina requieren a la persona que dirige el barco se mantenga escuchando en:"
@@ -184,7 +184,7 @@
             },
             "vi": {
                 "title": "Liên Lạc bằng Radio",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide3_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [
                     "Coast Guard bắt buộc người lái tàu phải luôn trực nghe và sử dụng máy truyền tin (radio) như sau:"
@@ -208,7 +208,7 @@
             "videos":[],
             "en": {
                 "title": "Proper Lookout",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide4_s1_s1.mp3",
                 "subtitles": "It is important to keep a proper lookout by sight, by hearing and other available means. Watch for other vessels or obstructions to avoid the risk of collision. Watch the area all around your vessel. Listen for sound signals. You may not hear a merchant vessel approaching from behind. Watch your radar or C-Map if you have them.",
                 "listHeads": ["Maintain a proper look-out by sight and hearing and other available means necessary to evaluate the risk of collision."],
                 "listPoints": [],
@@ -216,7 +216,7 @@
             },
             "es": {
                 "title": "Puesto de observación apropiado",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide4_s1_s1.mp3",
                 "subtitles": "Es importante mantener un puesto de observación apropiado por vista, por oír, y otros medios disponibles. Busque el área por otros barcos u obstrucciones para evitar el riesgo de accidente. Busque el área todo alrededor de su barco. Preste atención para oír los sonidos de señales de otros barcos. Usted no puede oír otros barcos que se aproximan por detrás. Use su radar o C-Map si los tiene.",
                 "listHeads": ["Mantenga un puesto de observación apropiado por vista, y la audiencia, y por todos los medios disponibles necesarios para evaluar el riesgo de accidente."],
                 "listPoints": [],
@@ -224,7 +224,7 @@
             },
             "vi": {
                 "title": "Đề Phòng và Cảnh Giác",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide4_s1_s1.mp3",
                 "subtitles": "Đề phòng, cảnh giác, là một viêc rất quan trọng khi tàu rời bến. Cảnh giác bằng cách quan sát kỷ lưởng, và sử dụng tất cả các phương tiện sẵn có như ống dòm, radar, lắng tai nghe, trực máy VHF radio, AIS, hoặc nhìn C-Map trên computer, v.v.. Để tránh nạn đụng tàu, hảy coi chừng các tàu khác, hay các chướng ngại vật ở chung quanh mình. Luôn luôn quan sát nhìn trước ngó sau. Hảy nhớ rằng tàu buôn mặt dầu chạy rất gần, nhưng vẫn không nghe tiếng động.",
                 "listHeads": ["Luôn luôn đề phòng, và cảnh giác bằng cách quan sát và nghe ngóng trước sau. Sử dụng tất cả các phương tiện sẵn có (Nghe tiếng động, ống dòm, radar, bản đồ c-map, máy radio, AIS, v.v.)."],
                 "listPoints": [],
@@ -243,7 +243,7 @@
             "videos":[],
             "en": {
                 "title": "Proper Lookout",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide5_s1_s1.mp3",
                 "subtitles": "Look side to side for other vessels, oil platforms and objects in the water. Look behind you to see if any traffic is overtaking you. At night or when there is fog or restricted visibility, assign crewmembers as lookouts. A proper lookout can avoid collisions.",
                 "listHeads": ["A proper lookout can avoid collisions."],
                 "listPoints": [],
@@ -251,7 +251,7 @@
             },
             "es": {
                 "title": "Observación Apropiada",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide5_s1_s1.mp3",
                 "subtitles": "Mire lateral, del lado a lado para búsqueda de barcos, plataformas petroleras y objetos en el agua. Mire para detrás de su barco para ver si algún tráfico lo está alcanzando. En la noche o cuando hay niebla, o visibilidad restricta, debe asignar los miembros del equipo como puestos de observación. Una propia observación puede evitar accidentes.",
                 "listHeads": ["Puesto de Observación Una propia observación puede evitar accidentes."],
                 "listPoints": [],
@@ -259,7 +259,7 @@
             },
             "vi": {
                 "title": "Đề Phòng Đúng Cách",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide5_s1_s1.mp3",
                 "subtitles": "Nhìn từ bên này sang bên kia để quan sát các tàu chung quanh, giàn khoan dầu, và các chướng ngại vật khác trên mặt nước. Nhìn phía đằng sau mình để xem có bất kỳ ghe tàu nào chuẩn bị qua mặt quý vị hay không. Hảy nhớ rằng lúc ban đêm, khi có sương mù, mưa, bảo, hay tầm nhìn bị hạn chế, bạn nên đề cử một thủy thủ làm quan sát viên. Việc đề phòng và cảnh giác đúng cách sẽ giúp bạn tránh khỏi tai nạn va đụng.",
                 "listHeads": ["Đề phòng đúng cách có thể tránh khỏi tai nạn - đụng chạm."],
                 "listPoints": [],
@@ -277,7 +277,7 @@
             "videos":[],
             "en": {
                 "title": "Navigation Situations",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide6_s1_s1.mp3",
                 "subtitles": "You must be especially careful in ship channels or shipping lanes. Avoid areas where there is commercial vessel traffic such as in ports or traffic separation zones. Larger ships and barges are confined by deep draft and cannot and will not get out of your way.",
                 "listHeads": [],
                 "listPoints": [
@@ -289,7 +289,7 @@
             },
             "es": {
                 "title": "Situaciones de Navegación",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide6_s1_s1.mp3",
                 "subtitles": "Usted debe tener cuidado especialmente en canales de nave o vías de navegación. Evite las áreas de los barcos mercantes más grandes, por ejemplo, los barcos en las rutas marítimas o en zonas de separación del tráfico. Naves y lanchas más grandes son confinadas por el calado profundo y no pueden y no se saldrán del canal.",
                 "listHeads": [],
                 "listPoints": [
@@ -301,7 +301,7 @@
             },
             "vi": {
                 "title": "Nơi Chốn & Trường Hợp Nên Thận Trọng",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide6_s1_s1.mp3",
                 "subtitles": "Quý vị phải rất cẩn thận khi hải hành trong các ship channels, hoặc đường tàu buôn. Tốt hơn hết, nên tránh những khu vực có nhiều tàu bè qua lại như các hải cảng lớn, hoặc đường tàu buôn chạy. Hảy nhớ rằng các tàu buôn, tàu dầu, và sà lan, họ phải đi trong nước rất sâu. Họ không thể, và sẽ không ra khỏi ship channel được, bởi vì họ sẽ bị mắt cạn. Bạn cũng nên nhớ rằng: Các tàu lớn, hoặc sà lan rất khó khăn trong việc vận chuyển.",
                 "listHeads": [],
                 "listPoints": [
@@ -324,7 +324,7 @@
             "videos":[],
             "en": {
                 "title": "Commercial Vessels",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide7_s1_s1.mp3",
                 "subtitles": "When you operate near commercial vessels, stay alert - watch for traffic. Become familiar with the area and use up-to-date navigation charts. Be sure your vessel can be seen, especially at night. Always display proper navigation lights. Have crew member wear life jacket or other flotation device when on deck, especially if working alone.",
                 "listHeads": [
                     "When you operate near commercial vessels:"
@@ -340,7 +340,7 @@
             },
             "es": {
                 "title": "Buques Comerciales",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide7_s1_s1.mp3",
                 "subtitles": "Cuando usted opere su barco cerca de barcos mercantes: Mantengase alerta y busque el tráfico. Familiarizarse con el área y utilice las cartas actualizadas de navegación. Especialmente de noche, siempre demuestre las luces de navegación apropiadas. Todo miembro de la tripulación debe usar chaleco salvavidas u otro dispositivo de flotación cuando se encuentre sobre cubierta, especialmente si está trabajando solo.",
                 "listHeads": [
                     "Cuando usted opere su barco cerca de barcos mercantes:"
@@ -355,7 +355,7 @@
             },
             "vi": {
                 "title": "Tàu Thương Mại",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide7_s1_s1.mp3",
                 "subtitles": "Nếu bạn phải đi gần các tàu buôn, tàu dầu, hoặc sà lan, hãy luôn chú ý đến các tàu xung quanh mình. Bạn phải nắm những vững khu vực đó và luôn luôn sử dụng các hải đồ mới nhất. Hãy chắc chắn, hoặc make sure, là tàu kia nhìn thấy tàu của bạṇ. Đặc biệt vào ban đêm, luôn bật đèn hải hành đúng cách. Yêu cầu thành viên đoàn thủy thủ mặc áo phao cứu sinh hoặc thiết bị nổi khác khi ở trên boong tàu, đặc biệt là nếu làm việc một mình.",
                 "listHeads": [
                     "Nếu bạ̣n đi gần tàu buôn, tàu dầu, hay sà lan:"
@@ -380,7 +380,7 @@
             "videos":[],
             "en": {
                 "title": "Ship Channels",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide8_s1_s1.mp3",
                 "subtitles": "Stay out of the ship channel whenever you can. Remember the edges of a channel are deep enough for shallow draft vessels. Cross ship channels at right angles and as quickly as possible. Keep clear of two ships meeting. Stay outside of the anchorage areas when possible.",
                 "listHeads": [],
                 "listPoints": [
@@ -393,7 +393,7 @@
             },
             "es": {
                 "title": "Canales de Navegación",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide8_s1_s1.mp3",
                 "subtitles": "Cuando usted pueda, mantenga su barco afuera de los canales de navegación. Cruzando los canales de navegación deben ser perpendicularmente y lo más rápidamente posible. Mantenga la distancia cuando dos barcos mercantes se encuentran. Manténgase afuera de áreas de ancladeros.",
                 "listHeads": [],
                 "listPoints": [
@@ -406,7 +406,7 @@
             },
             "vi": {
                 "title": "Ship Channel",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide8_s1_s1.mp3",
                 "subtitles": "Hãy luôn luôn đi bên mé ngoài của ship channel. Hãy nhớ rằng mé bên nào của ship channel cũng có đủ sâu để cho các tàu nhỏ, như tàu các bạn, đi không bị mắt cạn. Nếu muốn băng qua ship channel, đi thẳng qua cho nhanh. Không nên đi xéo. Không nên đi “chàng hảng” giửa ship channel. Không nên đi gần, hoặc lảng vảng chổ có hai tàu đang qua mặt. Không đi vào khu vực dành riêng cho tàu bỏ neo.",
                 "listHeads": [],
                 "listPoints": [
@@ -428,7 +428,7 @@
             "videos":[],
             "en": {
                 "title": "Blind Spot",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide9_s1_s1.mp3",
                 "subtitles": "If you operate near larger commercial vessels, watch for their blind spot. Because of the length of the vessel and the height of the cargo on deck, there is a danger zone—a blind spot—in front of the vessel. Stay out of the danger zone and remember: if you can’t see the bridge of the vessel, they can’t see you.",
                 "listHeads": [
                     "If you operate near larger commercial vessels, watch for their blind spot."
@@ -438,7 +438,7 @@
             },
             "es": {
                 "title": "Áreas Ocultas",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide9_s1_s1.mp3",
                 "subtitles": "Áreas Ocultas Si usted opera su barco cerca de barcos mercantes manténgase alejado de las áreas donde su barco no se pueda ver. Debido a lo largo del barco y la altura de la carga en cubierta, hay una zona peligrosa, un área oculta, delante del barco. Manténgase fuera de la zona peligrosa y recuerde si usted no puede ver la cabina del barco mercante, ellos no pueden verlo a usted.",
                 "listHeads": [
                     "Si usted opera su barco cerca de barcos mercantes manténgase alejado de las áreas donde su barco no se pueda ver."
@@ -448,7 +448,7 @@
             },
             "vi": {
                 "title": "Điểm mù (Blind spot)",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide9_s1_s1.mp3",
                 "subtitles": "Nếu bạṇ rủi đi gần các tàu buôn lớn, hãy coi chừng điểm mù của họ. Tàu của họ đã rất dài cộng thêm của các kiện hàng trên boong tàu quá cao, cho nên loai tàu nầy, luôn luôn có một khu vưc nguy hiểm, gọi là điểm mù, ở phía trước tàu của họ. Bởi thế cho nên, không bao giờ đi vào khu vực nguy hiểm này cả. Bạn hảy nhớ rằng nếu bạn không thể nhìn thấy đài chỉ huy của họ, họ sẽ không thể nhìn thấy bạn.",
                 "listHeads": [
                     "Nếu quý vị chạy trước, hay chạy gần một tàu buôn, nên coi chừng. Tàu bạn có thể bị nằm điểm mù của họ."
@@ -467,7 +467,7 @@
             ],
             "en": {
                 "title": "Risk of Collision",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide10_s1_s1.mp3",
                 "subtitles": "As the operator of a fishing vessel you must maintain a proper lookout at all times to avoid the risk of a collision. If you think that you might collide with another vessel or obstacle, you should act as if you will collide and take action to avoid it. Use the correct signals.",
                 "listHeads": [],
                 "listPoints": [
@@ -479,7 +479,7 @@
             },
             "es": {
                 "title": "Riesgo de Accidente",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide10_s1_s1.mp3",
                 "subtitles": "Riesgo de Accidente Como operador de un barco pesquero usted debe mantener una vigía apropiada en todo momento para evitar el riesgo de un accidente. Si usted piensa que usted podría chocar con otro barco o un obstáculo, debe actuar como si se chocan y tomar las acciones necesarias para evitarlo. Asegúrese de utilizar las señales de sonidos apropiados.",
                 "listHeads": [],
                 "listPoints": [
@@ -491,7 +491,7 @@
             },
             "vi": {
                 "title": "Nguy Cơ Đụng Tàu",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/evi/slide10_s1_s1.mp3",
                 "subtitles": "Là một người lái tàu fishing boat́, bạn phải luôn quan sát cho thật kỷ. Như thế bạn sẽ tránh khỏi tai nạn đụng chạm. Nếu bạn nghi ngờ là mình có thể đụng với tàu khác hay một chướng ngại vật nào đó, thì bạn hảy nghĩ rằng không sớm thì muộn là bạn sẽ đụng nó. Nghĩ như vậy, thì bắt buộc bạn phải tránh ra chổ nguy hiểm đó ngay tức khắc và thổi còi hiệu đúng cách.",
                 "listHeads": [],
                 "listPoints": [
@@ -512,7 +512,7 @@
             ],
             "en": {
                 "title": "Risk of Collision",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide11_s1_s1.mp3",
                 "subtitles": "To avoid a collision, change course, slow down, or stop, or reverse to allow more time to assess the situation. Take action early and make the maneuver large enough to be recognized by the other vessel. Make sure to use the proper sound signals.",
                 "listHeads": [
                     "To avoid a collision:"
@@ -528,7 +528,7 @@
             },
             "es": {
                 "title": "Riesgo de Accidente",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide11_s1_s1.mp3",
                 "subtitles": "Si es necesario para evitar el riesgo de accidente o dar más tiempo para evaluar la situación, usted puede aflojar su velocidad, o quitar toda su velocidad, parando, o marchar atrás su medio de propulsión. Tome las acciónes temprano y haga la maniobra lo suficientemente grande para ser reconocidas por el otro barco y utilice las señales de sonidos apropiados.",
                 "listHeads": [],
                 "listPoints": [
@@ -539,7 +539,7 @@
             },
             "vi": {
                 "title": "Nguy Cơ Đụng Tàu",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide11_s1_s1.mp3",
                 "subtitles": "Để tránh lâm vào tai nạn đụng tàu, bạn phải đổi hướng, bớt ga, ngưng lại, hoặc là lùi lại, nếu cần. Quyết định và hành động tức khắt, càng sớm càng tốt. Khi đổi hướng, bạn nên bẻ lái với góc độ lớn, để cho tàu đối diện thấy rỏ. Đừng bao giớ bẻ từ từ cả.",
                 "listHeads": [],
                 "listPoints": [
@@ -558,7 +558,7 @@
             "videos":[],
             "en": {
                 "title": "Ship to Ship Communications",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide12_s1_s1.mp3",
                 "subtitles": "Most vessels use radio to communicate their maneuvers and monitor Channel 13. The maneuvers are communicated using the term “whistle” or “blast.” This is based on traditional sound signals. Captains must still know the sound signals for navigation.",
                 "listHeads": [],
                 "listPoints": [
@@ -570,7 +570,7 @@
             },
             "es": {
                 "title": "Comunicaciones de Barco-a-Barco",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide12_s1_s1.mp3",
                 "subtitles": "La mayoría de los barcos utilizan el radio marino para comunicar sus maniobras y escuchan el Canal 13 VHF. Las maniobras son comunicadas utilizando el término “Pitido” o “Sonido” y son señales tradicionales. Cada persona que opera un barco pesquero debe saber las señales para la navegación segura.",
                 "listHeads": [],
                 "listPoints": [
@@ -582,7 +582,7 @@
             },
             "vi": {
                 "title": "Liên Lạc Giửa Các Tàu",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide12_s1_s1.mp3",
                 "subtitles": "Ngày nay, đa số các tàu dùng máy truyền tin để liên lạc khi vận chuyển. Họ liên lạc qua VHF radio đài 13. Bạn cần phải luôn luôn trực, và nghe đài nầy. Theo tục lệ quen thuộc, họ cũng xài chử whistle, nghĩa là còi hiệu, măc dù nói trên VHF radio. Thí dụ như: “I want to pass you on one whistle.” Biết rằng các tàu không dùng còi hiệu nhiều như xưa nữa, tuy nhiên tất cả thuyền trưởng bắt buộc phải nắm vửng ý nghĩa của từng còi hiêu một.",
                 "listHeads": [],
                 "listPoints": [
@@ -603,7 +603,7 @@
             ],
             "en": {
                 "title": "Ship to Ship Communications - Inland Waters",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide13_s1_s1.mp3",
                 "subtitles": "Short blasts of about 1 second long are used to notify the other vessel what you plan to do. The other vessel should reply with either a confirming signal or a danger signal. When you are in inland waters, you must signal and wait for a reply before you start the maneuver.",
                 "listHeads": [],
                 "listPoints": [
@@ -614,7 +614,7 @@
             },
             "es": {
                 "title": "Comunicaciones de Barco-a-Barco - Aguas Interiores",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide13_s1_s1.mp3",
                 "subtitles": "Pitidos cortos de alrededor de 1 segundo de duración se utilizan para notificar al otro barco lo que planea hacer. El otro barco debe responder con una señal que confirme o con la señal de peligro. Cuando se encuentre en las aguas Interiores, usted debe señalar y esperar una respuesta antes de hacer la maniobra.",
                 "listHeads": [],
                 "listPoints": [
@@ -627,7 +627,7 @@
             },
             "vi": {
                 "title": "Liên Lạc Giữa Các Tàu (Trong Vịnh Hoặc Sông)",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide13_s1_s1.mp3",
                 "subtitles": "Tiếng còi ngắn, trong khoảng 1 giây, được sử dụng để thông báo cho tàu khác biết ý định của mìnḥ. Tàu khác cần trả lời bằng một hay nhiều tiếng còi ngắn để xác nhận là đồng ý hay không đồng ý. Khi ở trong vịnh hoăc sông, bạṇ phải kéo còi hiệu trước, chờ tàu kia trả lời, sau đó bắt đầu vận chuyển.",
                 "listHeads": [],
                 "listPoints": [
@@ -647,7 +647,7 @@
             ],
             "en": {
                 "title": "Ship to Ship Communications – International Waters",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide14_s1_s1.mp3",
                 "subtitles": "In international or outside waters, the signals are given when the maneuver is being executed.",
                 "listHeads": [],
                 "listPoints": [
@@ -658,7 +658,7 @@
             },
             "es": {
                 "title": "Comunicaciones de Barco-a-Barco - Aguas Internacionales",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide14_s1_s1.mp3",
                 "subtitles": "En aguas Internacionales, o aguas exteriores, las señales se dan cuando la maniobra está siendo ejecutada.",
                 "listHeads": [],
                 "listPoints": [
@@ -669,7 +669,7 @@
             },
             "vi": {
                 "title": "Liên Lạc Giữa Các Tàu (Ngoài Biển Khơi)",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide14_s1_s1.mp3",
                 "subtitles": "Khác với trong vịnh hoặc sông, ngoài biển khơi, khi còi báo hiệu kéo lên có nghĩa là: Tôi đang đổi hướng.",
                 "listHeads": [],
                 "listPoints": [
@@ -687,7 +687,7 @@
             "videos":[],
             "en": {
                 "title": "Ship to Ship Communications – Inland Waters",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide15_s1_s1.mp3",
                 "subtitles": "Here are some of the common ship to ship sound signals. 1 short blast - I intend to change course to my right or starboard. 2 short blasts - I intend to change course to my left or port. 3 short blasts - I am backing up. 5 or more short blasts - The Danger signal. If another vessel signals you, always answer the signal with the same signal to show that you understand how they plan to move. If you don’t understand, always answer with the Danger Signal.",
                 "listHeads": [],
                 "listPoints": [
@@ -700,7 +700,7 @@
             },
             "es": {
                 "title": "Comunicaciones de Barco-a-Barco - Aguas Interiores",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide15_s1_s1.mp3",
                 "subtitles": "Estas son algunas de las señales de sonidos comunes para comunicaciones de barco-a-barco. 1 pitido corto - Intento cambiar de rumbo a mi derecha o el lado Estribor. 2 pitidos cortos - Intento cambiar de rumbo a mi izquierda o el lado Puerto. 3 pitidos cortos - Estoy dando marcha atrás. 5 o más toques cortos - Señal de Peligro. Si otro barco le suena una señal, siempre responda la señal con la misma señal para mostrar que usted entiende cómo van a moverse. Si usted no entiende, siempre responda con la señal de peligro.",
                 "listHeads": [],
                 "listPoints": [
@@ -713,7 +713,7 @@
             },
             "vi": {
                 "title": "Còi Liên Lạc Giữa Các Tàu: Trong Vịnh hoăc Sông",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide15_s1_s1.mp3",
                 "subtitles": "Còi Liên Lạc Giữa Các Tàu: Trong Vịnh hoăc Sông: 1 tiếng còi ngắn - Tôi định đổi hướng, và muốn đi sang bên phải tàu của tôi, hoặc mạn phải tàu. 2 tiếng còi ngắn - Tôi định đổi hướng, và muốn đi sang bên trái tàu của tôi, hoặc mạn trái tàu. 3 tiếng còi ngắn - Tôi đang de (lùi) lại. 5 tiếng còi ngắn trở lên - Tín hiệu Nguy Hiểm (Emergency) hoặc là tôi không hiểu anh muốn gì.",
                 "listHeads": [],
                 "listPoints": [
@@ -850,7 +850,7 @@
             "videos":[],
             "en": {
                 "title": "Danger Signal",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide19_s1_s1.mp3",
                 "subtitles": "The Danger signal—5 or more short blasts—means I do not understand your intent or it can mean danger. If you hear a signal and do not agree or understand what the other vessel intends to do, you should reply with 5 short blasts. Both vessels should slow or stop until the signals for safe passing are sounded, understood and agreed to. You must communicate by VHF Radio, channel 13, in this situation.",
                 "listHeads": [],
                 "listPoints": [
@@ -863,7 +863,7 @@
             },
             "es": {
                 "title": "Señale de Peligro",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide19_s1_s1.mp3",
                 "subtitles": "5 o más pitidos cortos significan - No entiendo su intención, o significa peligro. Si escucha una señale y no están de acuerdo o no entiende lo que el otro barco tiene la intención de hacer, usted debe responder con cinco pitidos cortos. Ambos barcos deben reducir la velocidad o detenerse hasta que las señales para el adelantamiento con seguridad se han sonado, entendido y aceptados. Usted debe comunicarse por radio Canal 13 VHF.",
                 "listHeads": [],
                 "listPoints": [
@@ -876,7 +876,7 @@
             },
             "vi": {
                 "title": "Báo Hiệu Nguy Hiểm",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide19_s1_s1.mp3",
                 "subtitles": "Báo hiệu Nguy Hiểm - 5 tiếng kèn ngắn trở lên có nghĩa là: Tôi không hiểu ý định của bạn. Nó cũng có thể có nghĩa là: “Coi chừng nguy hiểm tới nơi.” Nếu bạn nghe một còi báo hiệu mà bạn không hiểu, hoăc không đồng ý, bạn phải trả lời bằng 5 tiếng còi ngắn. Bạn phải chạy chậm lại, hoặc dừng lại, hoặc lùi lại, cho đến khi nào bạn hiểu, và đồng ý tiếng còi hiệu của tàu kia. Bạn cần phải liên lạc bằng VHF Radio trên đài 13 cho rỏ ràng hơn.",
                 "listHeads": [],
                 "listPoints": [
@@ -1355,7 +1355,7 @@
             "videos": [],
             "en": {
                 "title": "Crossing",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide32_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -1364,7 +1364,7 @@
             },
             "es": {
                 "title": "Introducción del Capitán",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide32_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -1374,7 +1374,7 @@
             },
             "vi": {
                 "title": "Lời Tâm Sự Của Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide32_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -1391,7 +1391,7 @@
             "videos": [],
             "en": {
                 "title": "Crossing",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide33_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -1400,7 +1400,7 @@
             },
             "es": {
                 "title": "Introducción del Capitán",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide33_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -1409,7 +1409,7 @@
             },
             "vi": {
                 "title": "Lời Tâm Sự Của Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide33_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -2979,7 +2979,7 @@
             "videos":[],
             "en": {
                 "title": "Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide36_s1_s1.mp3",
                 "subtitles": "This lesson will teach you how to make a Mayday call. Mayday means “Help Me.” It is used when a vessel is in immediate danger or danger to Life and Limb. They must have other vessels or the Coast Guard come to their aid.",
                 "listHeads": [],
                 "listPoints": [
@@ -2990,7 +2990,7 @@
             },
             "es": {
                 "title": "Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide36_s1_s1.mp3",
                 "subtitles": "Esta lección le enseñará cómo hacer una llamada de auxilio. Mayday significa 'Ayúdame'.Se utiliza cuando un barco se encuentre en peligro inmediato o peligro para la vida y la integridad física. Se necesita que otros barcos o la Guardia Costera les ayuden.",
                 "listHeads": [],
                 "listPoints": [
@@ -3001,7 +3001,7 @@
             },
             "vi": {
                 "title": "Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide36_s1_s1.mp3",
                 "subtitles": "Bài học này sẽ hướng dẩn quý vị cách gọi Mayday. Mayday coi như đồng nghĩa với “Trời Ơi Cứu Tôi Với.” Hảy gọi Mayday khi tàu của bạn, hay nhân viên của bạn phải đương đầu với nguy hiểm. Sự nguy hiểm đo’ có liên quan đến tài sản, tánh mạng, hay là sức khỏe của bạn. Gọi Mayday có nghĩa là bạn đã lâm vào tình trạng nguy hiểm và rất cần sự giúp đở của Coast Guard hoặc các tàu khác.",
                 "listHeads": [],
                 "listPoints": [
@@ -3019,7 +3019,7 @@
             "videos":[],
             "en": {
                 "title": "Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide37_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -3027,7 +3027,7 @@
             },
             "es": {
                 "title": "Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide37_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -3035,7 +3035,7 @@
             },
             "vi": {
                 "title": "Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide37_s1_s1.mp3",
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
@@ -3050,7 +3050,7 @@
             "videos":[],
             "en": {
                 "title": "Learning to Make a Mayday Call",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide38_s1_s1.mp3",
                 "subtitles": "The Mayday call must be spoken in English. This lesson will teach you to say parts of the call in English. You will need specific information about your vessel. Know that information before you get underway. Be sure you have Mayday form so you will use it in an emergency. A Mayday call must be made on Channel 16 or Single-sideband – 2182 kHz. Speak slowly so that you can be understood.",
                 "listHeads": [],
                 "listPoints": [
@@ -3063,7 +3063,7 @@
             },
             "es": {
                 "title": "Aprender a hacer una llamada de Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/es/slide38_s1_s1.mp3",
                 "subtitles": "Hay que decir la llamada de Mayday en Inglés. Esta lección le enseña a decir las partes de la llamada en Inglés. Usted tendrá información específica acerca de su barco. Sepa esa información antes de ponerse en marcha para tenerlo en caso de una emergencia.Una llamada de Mayday se debe hacer por radio marino en el Canal 16 VHF o Single-sideband 2182 kHz. Hable despacio, para que pueda ser entendido.",
                 "listHeads": [],
                 "listPoints": [
@@ -3076,7 +3076,7 @@
             },
             "vi": {
                 "title": "Học Về Cách Gọi Mayday",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/vi/slide38_s1_s1.mp3",
                 "subtitles": "Cuộc gọi Mayday phải được thực hiện bằng tiếng Anh. Bài học này sẽ giúp quý vị am tường cách nói, và phải nói những gì, trong cuộc gọi. Bạ̣ cần biết chi tiết về tàu của mình, và phải nắm vững chi tiết đó trước khi tàu bạn ra khơi. Kiếm soát lại coi bạn có mẩu Mayday chưa. Mẩu nầy sẽ giúp bạn chuẩn bị sẳn sàng trong trường hợp khẩn cấp. Cuộc gọi Mayday phải được thực hiện trên đài 16 hoặc là Single-sideband 2182 kHz.",
                 "listHeads": [],
                 "listPoints": [
@@ -3096,7 +3096,7 @@
             "videos":[],
             "en": {
                 "title": "Mayday Call Required Information",
-                "soundtrack": "",
+                "soundtrack": "/assets/soundtracks/en/slide39_s1_s1.mp3",
                 "subtitles": "Here is how you must make the Mayday call. Say Mayday three times. Say your vessel name three times. Say where you are using latitude and longitude if you have a GPS or CMAP or describe your geographical area. Do not use LORAN lines. Explain the problem. Say how many people are on board. Describe the vessel. Listen for a response then repeat until someone responds unless you are forced to abandon the ship. Follow the vessel’s emergency procedures.",
                 "listHeads": [],
                 "listPoints": [
@@ -3112,7 +3112,7 @@
             },
             "es": {
                 "title": "Procedimientos de Mayday",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/es/slide39_s1_s1.mp3",
                 "subtitles": "Así es como se debe hacer la llamada de Mayday. Diga Mayday tres veces. De el nombre de su barco 3 veces.La localización de su barco: Coordenadas o área geográfica.La naturaleza del problema (Incendio, Inundación, Persona en al agua, Emergencia Médica).Número de personas a bordo.Descripción del barco (lo largo, barco pesquero, el color, etc.).Espere la respuesta - repite la información hasta que sea reconocido a menos que sea obligado a abandonar el barco.",
                 "listHeads": [],
                 "listPoints": [
@@ -3128,7 +3128,7 @@
             },
             "vi": {
                 "title": "Tin Tức Cần Thiết Khi Gọi Mayday",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/vi/slide39_s1_s1.mp3",
                 "subtitles": "Sau đây là cách quý vị phải thực hiện cuộc gọi Mayday. Nói Mayday 3 lần. Nói tên và loại tàu của bạn 3 lần. Nói vị trí của bạn: Nên dùng Lat and Long lấy từ GPS hoặc là C-MAP. Nếu bí quá, bạn có thể cho biêt vị trí địa lý như 50 miles south of Galveston. Không nên xài LORAN lines. Giải thích vấn đề. Chuyện gì xảy ra như FIRE (hỏa hoạn), MANOVERBOARD (người rớt xuống biển), MEDICAL EMERGENCY (người bịnh nặng), FLOODING or SINKING (tàu vô nước sắp chìm) or INJURED CREW (người bị thương nặng). Cho biết số người trên tàu 3 hay 4 người. Mô tả tàu: Tàu màu gì, dài bao nhiêu feet. Nếu không có ai trả lời radio, bạn cứ lập lại hòai cho đến khi Coast Guard hoặc có ai lên tiếng trừ khi bạṇ bắt buộc phải từ bỏ con tàu. Nhớ là nói chậm rải và rỏ ràng.",
                 "listHeads": [],
                 "listPoints": [
@@ -3151,7 +3151,7 @@
             "videos":[],
             "en": {
                 "title": "Sample Mayday Call",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/en/slide40_s1_s1.mp3",
                 "subtitles": "Listen to this call. Mayday, Mayday, Mayday. Fishing boat Solar Queen, Fishing boat Solar Queen, Fishing boat Solar Queen. At Latitude 2-9 degrees 2-2 minutes, Longitude 9-4 degrees 4-6 minutes. Man Overboard. 3 people on 4-5 foot, blue shrimp boat.",
                 "listHeads": [],
                 "listPoints": [
@@ -3166,7 +3166,7 @@
             },
             "es": {
                 "title": "Procedimientos de Mayday",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/es/slide40_s1_s1.mp3",
                 "subtitles": "Escucha a esta llamada. Mayday, Mayday, Mayday. Solar Queen, Solar Queen, Solar Queen. At Latitude 2-9 degrees 2-2 minutes, Longitude 9-4 degrees 4-6 minutes. Injured crew member. 3 people on 4-5 foot, blue shrimp boat.",
                 "listHeads": [],
                 "listPoints": [
@@ -3181,7 +3181,7 @@
             },
             "vi": {
                 "title": "Nghe Thử Cách Gọi Mayday",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/vi/slide40_s1_s1.mp3",
                 "subtitles": "Hãy lắng nghe cuộc gọi sau đây. Mayday, Mayday, Mayday. Fishing Boat Kình Ngư, Fishing Boat Kình Ngư, Fishing Boat Kình Ngư . Position: Lat 2-9 degrees 2-2 minutes; Long 9-4 degrees 4-6 minutes. I have Man-over-Board. I have 3 persons on my boat.My Boat is 7-5 foot long, blue color shrimp boat.",
                 "listHeads": [],
                 "listPoints": [
@@ -3203,7 +3203,7 @@
             "videos": [],
             "en": {
                 "title": "Practice",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/en/slide41_s1_s1.mp3",
                 "subtitles": "Here are some exercises to help you make the Mayday call in English. Click on the word or number to hear it in English. Practice saying the word yourself.",
                 "listHeads": [],
                 "listPoints": [],
@@ -3213,7 +3213,7 @@
             },
             "es": {
                 "title": "Practique",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/es/slide41_s1_s1.mp3",
                 "subtitles": "Aquí están algunos ejercicios para ayudarle hacer la llamada de Mayday en Inglés. Haga clic en la palabra o el número para escuchar en Inglés. Practique diciendo la palabra usted mismo.",
                 "listHeads": [],
                 "listPoints": [],
@@ -3223,7 +3223,7 @@
             },
             "vi": {
                 "title": "Thực hành",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/vi/slide41_s1_s1.mp3",
                 "subtitles": "Đây là một bài tập giúp quý vị thực tập cách gọi Mayday bằng tiếng Anh. Nhấn vào chử hay số để nghe bằng tiếng Anh. Thực tập bằng cách tự nói các chử, hoăc số nêu trên.",
                 "listHeads": [],
                 "listPoints": [],
@@ -3607,7 +3607,7 @@
             "videos":[],
             "en": {
                 "title": "Do it Yourself",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/en/slide43_s1_s1.mp3",
                 "subtitles": "Now try it yourself. Make a call about a medical emergency. Assume that you are at Latitude 2-9 degrees, 3-6 minutes and longitude 9-3 degrees, 4-4 minutes. Use your own vessel name and description.",
                 "listHeads": [],
                 "listPoints": [
@@ -3631,7 +3631,7 @@
             },
             "es": {
                 "title": "Ahora inténtelo usted mismo",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/es/slide43_s1_s1.mp3",
                 "subtitles": "Ahora inténtelo usted mismo. Hacer una llamada sobre una emergencia médica. Suponga que está en Latitud 29 grados, 36 minutos y Longitud 93 grados, 44 minutos. Utilice el nombre de su barco y la descripción.",
                 "listHeads": [],
                 "listPoints": [
@@ -3654,7 +3654,7 @@
             },
             "vi": {
                 "title": "Tự làm lấy",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/vi/slide43_s1_s1.mp3",
                 "subtitles": "Bây giờ bạn hãy tự làm thử. Thực hiện một cuộc gọi về một trường hợp cấp cứu y tế. Giả định rằng quý vị đang ở.Lat: 2-9 degree 3-6 minute Long: 9-3 degree 4-4 minute. Dùng tên và mô tả tàu của chính quý vị.",
                 "listHeads": [],
                 "listPoints": [
@@ -3684,7 +3684,7 @@
             "videos":[],
             "en": {
                 "title": "Summary Information",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/en/slide44_s1_s1.mp3",
                 "subtitles": "The Tip Cards provide a summary of important information. You can print the individual Tip Cards. You must be connected to a printer to print the Tip Cards.",
                 "listHeads": ["Click one of the topics for more information"],
                 "listPoints": [],
@@ -3720,7 +3720,7 @@
             },
             "es": {
                 "title": "Importante Información de Resumen",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/es/slide44_s1_s1.mp3",
                 "subtitles": "Ahora inténtelo usted mismo. Hacer una llamada sobre una emergencia médica. Suponga que está en Latitud 29 grados, 36 minutos y Longitud 93 grados, 44 minutos. Utilice el nombre de su barco y la descripción.",
                 "listHeads": ["Haga clic en uno de los temas para obtener más información"],
                 "listPoints": [],
@@ -3756,7 +3756,7 @@
             },
             "vi": {
                 "title": "Bảng Chỉ Dẩn Tóm Tắt",
-                "soundtrack": "",
+                "soundtrack": "assets/soundtracks/vi/slide44_s1_s1.mp3",
                 "subtitles": "Bảng chỉ dẩn trên chứa rất nhiều điều quan trọng. Nhấn vào hình trên để mở ra, và in ra bảng chỉ dẩn. Muốn in những bảng chỉ dẩn ra, bạn phải có một máy in gắn liền vào computer nầy.",
                 "listHeads": ["Nhấn vào hình trên để mở ra, và in ra bảng chỉ dẩn."],
                 "listPoints": [],
