@@ -6,7 +6,7 @@ export default function App() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [slideType, setSlideType] = useState(slides[currentIndex].type);
     const [language, setLanguage] = useState("en")
-    const [isPlaying, setIsPlaying] = useState(true)
+    const [isPlaying, setIsPlaying] = useState(false)
     const audioRef = useRef(null);
     const videoRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false)
@@ -33,8 +33,10 @@ export default function App() {
         
         return (
             <>
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
+                <div className="flex flex-col mt-1">
                 {links}
+                </div>
             </>
         )
     }
@@ -43,11 +45,11 @@ export default function App() {
         
         //if listpoints is not empty, map list points
         const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li className="text-base leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li className="md:w-3/4 m-auto text-base leading-tight tracking-wide p-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
-            point ? <li className="text-base leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li className="md:w-3/4 m-auto text-base leading-tight tracking-wide p-2">{point}</li> : null
         )
         
         // if content.images is not empty, map images
@@ -86,10 +88,10 @@ export default function App() {
 
         return (
             <>
-            <div className="w-4/4 list-inside">
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads[0]}</h3> : null}
+            <div className="list-inside m-2">
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
-                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-5 m-auto">{content[language].listHeads2[0]}</h3> : null}
+                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>
                 <div className = "grid place-items-center" id= "medias">
@@ -288,7 +290,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div
-                className={`flex flex-col yw-full transition-all ${isAnimating ? 'slide-enter' : ''}`}
+                className={`flex flex-col transition-all items-center ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
                 {(() => {
@@ -319,15 +321,15 @@ export default function App() {
                 )}
             <div className="min-w-full mb-5 justify-center flex" id ="header-limit">
                 <div className="bg-slate-500 p-7 flex justify-left w-screen drop-shadow-md" id = "header">
-                    <div className="w-3/4" id ="title">
+                    <div className="w-3/4 md:m-auto" id ="title">
                         <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
                     </div>
                 </div>
             </div>
-            <div className="w-full justify-items-center"id ="container-limit">
-                <div className="m-auto pb-5 w-4/4"id ="container">
+            <div className="w-full justify-items-center bg-white"id ="container-limit">
+                <div className="md:m-auto m-2 p-5 w-4/4 md:w-1/2 shadow-lg border rounded-lg" id ="container">
                     {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-                    <div className="w-4/4 items-center flex flex-col" id = "render-slide">{renderSlide()}</div>
+                    <div className="items-center flex flex-col" id = "render-slide">{renderSlide()}</div>
                 </div>
             </div>
             <div id = "control-panel">

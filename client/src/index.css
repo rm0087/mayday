@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: #1e3a8a;
-  --secondary-color: #64748b;
-  --accent-color: #22c55e;
-  --background-color: #f8fafc;
-  --text-color: #1e293b;
-  width: 100%;
+#root {
+ 
+}
+
+#container{
+  background-color: #fffeea;
 }
 
 #control-panel {

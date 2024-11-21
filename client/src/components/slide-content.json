@@ -1368,9 +1368,7 @@
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[
-                    "/assets/videos/02-es.mp4"
-                ]
+                "uniqueMedia":[]
             },
             "vi": {
                 "title": "Lời Tâm Sự Của Thuyền Trưởng Tàu Dầu Đầy Kinh Nghiệm",
@@ -1378,9 +1376,7 @@
                 "subtitles": "",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[
-                    "/assets/videos/02-vi.mp4"
-                ]
+                "uniqueMedia":[]
             }
         },
         {
