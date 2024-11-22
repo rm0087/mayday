@@ -6,8 +6,12 @@
  
 }
 
-#container{
+#render-div{
   background-color: #fffeea;
+}
+
+#slide{
+  background-color: #ffffff;
 }
 
 #control-panel {

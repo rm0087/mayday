@@ -25,7 +25,6 @@ export default function App() {
         )
     };
 
-    
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
             <a href={link.ref} className=" flex items-center m-1 w-[320px] p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
@@ -45,11 +44,11 @@ export default function App() {
         
         //if listpoints is not empty, map list points
         const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li className="md:w-3/4 m-auto text-base leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li className="leading-tight tracking-wide p-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
-            point ? <li className="md:w-3/4 m-auto text-base leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li className="leading-tight tracking-wide p-2">{point}</li> : null
         )
         
         // if content.images is not empty, map images
@@ -88,12 +87,12 @@ export default function App() {
 
         return (
             <>
-            <div className="list-inside m-2">
+            {<div className="w-full list-inside">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
                 {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
-            </div>
+            </div>}
                 <div className = "grid place-items-center" id= "medias">
                     {images}
                     {videos}
@@ -289,8 +288,8 @@ export default function App() {
     const renderSlide = () => {
         // Apply the animation class if isAnimating is true
         return (
-            <div
-                className={`flex flex-col transition-all items-center ${isAnimating ? 'slide-enter' : ''}`}
+            <div id="render-div"
+                className={`md:w-2/4 md:min-w-[960px] w-full flex flex-col transition-all items-center border rounded-lg shadow-lg md:p-5 py-5 ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
                 {(() => {
@@ -319,20 +318,18 @@ export default function App() {
             {Object.entries(slideContent.languages).map(([key,language]) =>
                     <button key={key} className="m-2" onClick={()=>handleLanguage(key)}>{language}</button>
                 )}
-            <div className="min-w-full mb-5 justify-center flex" id ="header-limit">
-                <div className="bg-slate-500 p-7 flex justify-left w-screen drop-shadow-md" id = "header">
+            <div className="min-w-full justify-center flex" id ="header-limit">
+                <div className="p-7 flex justify-left w-screen shadow-md" id = "header">
                     <div className="w-3/4 md:m-auto" id ="title">
                         <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
                     </div>
                 </div>
             </div>
-            <div className="w-full justify-items-center bg-white"id ="container-limit">
-                <div className="md:m-auto m-2 p-5 w-4/4 md:w-1/2 shadow-lg border rounded-lg" id ="container">
-                    {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack} loop />}
-                    <div className="items-center flex flex-col" id = "render-slide">{renderSlide()}</div>
-                </div>
-            </div>
-            <div id = "control-panel">
+            
+                    {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
+                    <div className="w-full items-center flex flex-col pt-5" id = "slide">{renderSlide()}</div>
+          
+            <div id = "control-panel" className="mt-4">
                 <div id = "controls">
                     <button onClick={goToPreviousSlide}>Previous</button>
                     <button onClick={toggleMediaPlayback}>

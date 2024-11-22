@@ -599,17 +599,9 @@ video {
   margin: auto;
 }
 
-.m-5 {
-  margin: 1.25rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 
 .ml-auto {
@@ -624,12 +616,12 @@ video {
   margin-top: 0.25rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
-.box-border {
-  box-sizing: border-box;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -736,10 +728,6 @@ video {
   justify-content: center;
 }
 
-.justify-items-center {
-  justify-items: center;
-}
-
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -762,18 +750,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.overflow-auto {
-  overflow: auto;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.break-words {
-  overflow-wrap: break-word;
 }
 
 .rounded-lg {
@@ -824,19 +800,9 @@ video {
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
 .bg-slate-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-contain {
@@ -859,10 +825,6 @@ video {
   padding: 1rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-6 {
   padding: 1.5rem;
 }
@@ -879,6 +841,15 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -1011,8 +982,12 @@ video {
 #root {
 }
 
-#container{
+#render-div{
   background-color: #fffeea;
+}
+
+#slide{
+  background-color: #ffffff;
 }
 
 #control-panel {
@@ -1119,27 +1094,19 @@ video {
     margin: auto;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
   .md\:w-2\/4 {
     width: 50%;
   }
 
-  .md\:w-full {
-    width: 100%;
+  .md\:min-w-\[958px\] {
+    min-width: 958px;
   }
 
-  .md\:w-auto {
-    width: auto;
+  .md\:min-w-\[960px\] {
+    min-width: 960px;
   }
 
-  .md\:w-3\/4 {
-    width: 75%;
-  }
-
-  .md\:w-1\/4 {
-    width: 25%;
+  .md\:p-5 {
+    padding: 1.25rem;
   }
 }
