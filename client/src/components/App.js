@@ -297,7 +297,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col justify-center transition-all border rounded-lg shadow-lg py-5 md:p-5 ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5 ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
             <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
@@ -337,10 +337,10 @@ export default function App() {
                 </div>
             </div>
             <div id="container" className="flex items-center justify-center align-center pt-5">
-                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:m-2" onClick={goToPreviousSlide}>←</button>
+                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:m-auto" onClick={goToPreviousSlide}>←</button>
                 {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
                 <div className="w-full md:w-min items-center flex flex-col pt-5" id = "slide">{renderSlide()}</div>
-                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:m-2" onClick={goToNextSlide}>→</button>
+                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:m-auto" onClick={goToNextSlide}>→</button>
             </div>
             {/* <div id = "control-panel" className="mt-4">
                 <div id = "controls">
