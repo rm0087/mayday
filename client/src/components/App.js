@@ -14,12 +14,12 @@ export default function App() {
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button className="border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
+            <button className="w-[300px] border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
         return (
-            <div className="flex flex-col mt-10">
+            <div className="flex flex-col mt-10 items-center">
                 {links}
             </div>
         )
@@ -27,13 +27,13 @@ export default function App() {
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a href={link.ref} className="flex items-center m-1 p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
         )
         
         return (
             <>
                 
-                <div className="flex flex-col mt-10">
+                <div className="flex flex-col mt-10 items-center">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
                     {links}
                 </div>
@@ -88,7 +88,7 @@ export default function App() {
 
         return (
             <>
-            {<div className="w-full list-inside mt-10 md:p-6">
+            {<div className="w-full list-inside mt-7 md:p-6">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
                 {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads2[0]}</h3> : null}
@@ -152,7 +152,7 @@ export default function App() {
         return (
             <div className="w-full max-w-2xl p-6 flex-grow ">
                 {!quizCompleted ? (
-                    <div className="space-y-6">
+                    <div className="space-y-6 mt-5">
                         <h2 className="text-2xl font-bold">Question</h2>
                         <div className="m-0 text-sm text-gray-500" id="test">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
@@ -297,7 +297,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative md:w-2/4 md:min-w-[960px] w-full transition-all items-center border rounded-lg shadow-lg md:p-5 py-5 ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col justify-center transition-all border rounded-lg shadow-lg py-5 md:p-5 ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
             <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 

@@ -655,6 +655,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
 .flex {
   display: flex;
 }
@@ -715,6 +719,10 @@ video {
   width: 1.75rem;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -725,6 +733,10 @@ video {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .flex-grow {
