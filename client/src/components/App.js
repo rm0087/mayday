@@ -14,7 +14,7 @@ export default function App() {
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button className="w-[320px] m-1 w-[320px] p-4 border rounded-lg text-center text-20px" key={content[language].links.indexOf(link)} onClick={()=>
+            <button className="m-1 w-[300px] p-4 border rounded-lg text-center text-20px" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -27,7 +27,7 @@ export default function App() {
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a href={link.ref} className=" flex items-center m-1 w-[320px] p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a href={link.ref} className=" flex items-center m-1 w-[300px] p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
         )
         
         return (
@@ -58,7 +58,7 @@ export default function App() {
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "flex w-screen mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
+                <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
                     <video className="w-min h-auto" controls autoplay loop>
                         <source src={video} type="video/mp4"/>
                     </video>
@@ -68,8 +68,8 @@ export default function App() {
 
         const animations = content.animations?.map((animation)=>
             animation?
-                <div className = "flex w-screen mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
-                    <div id={`sprite${content.id}`} className="bg-no-repeat w-screen h-[466px] bg-contain" style={{ backgroundImage: `url(${animation})` }}>
+                <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
+                    <div id={`sprite${content.id}`} className="bg-no-repeat bg-contain" style={{ backgroundImage: `url(${animation})` }}>
                     </div>
                 </div> : null
 
@@ -77,7 +77,7 @@ export default function App() {
 
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
             media.slice(-4) === ".mp4"?
-            <div className = "flex w-screen mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
+            <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
                 <video className="" controls autoplay>
                     <source src={media} type="video/mp4"/>
                 </video>
@@ -149,15 +149,14 @@ export default function App() {
         };
     
         return (
-            <div className="w-full max-w-2xl mx-auto p-6 flex-grow ">
+            <div className="w-full max-w-2xl p-6 flex-grow ">
                 {!quizCompleted ? (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-bold">Question</h2>
-                        
-                        <div className="m-0 text-sm text-gray-500">
+                        <div className="m-0 text-sm text-gray-500" id="test">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
-                        <div className="space-y-4 grid place-items-center">
+                        <div className="space-y-4 grid place-items-center mt-5">
                             {currentQuestion.media.image  ?
                             <img
                                 src={currentQuestion.media.image}
@@ -257,6 +256,7 @@ export default function App() {
         setIsAnimating(true);
         const newIndex = (currentIndex + 1) % slides.length;
         const newSlideType = slides[newIndex].type;
+        scrollToTop();
         setCurrentIndex(newIndex);
         setSlideType(newSlideType);
     };
@@ -265,6 +265,7 @@ export default function App() {
         setIsAnimating(true);
         const newIndex = (currentIndex - 1 + slides.length) % slides.length;
         const newSlideType = slides[newIndex].type;
+        scrollToTop();
         setCurrentIndex(newIndex);
         setSlideType(newSlideType);
     };
@@ -279,6 +280,10 @@ export default function App() {
         }
         setIsPlaying(!isPlaying);
       };
+
+    const scrollToTop = () => {
+        window.scrollTo(0,0)
+    }
 
     const handleLanguage = (key) => setLanguage(key)
       // END SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
@@ -325,10 +330,12 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            
-                    {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
-                    <div className="w-full items-center flex flex-col pt-5" id = "slide">{renderSlide()}</div>
-          
+            <div id="container" className="flex items-center justify-center align-center pt-5">
+                <button className="w-10 h-10 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:m-2" onClick={goToPreviousSlide}>←</button>
+                {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
+                <div className="w-full md:w-min items-center flex flex-col pt-5" id = "slide">{renderSlide()}</div>
+                <button className="w-10 h-10 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:m-2" onClick={goToNextSlide}>→</button>
+            </div>
             <div id = "control-panel" className="mt-4">
                 <div id = "controls">
                     <button onClick={goToPreviousSlide}>Previous</button>

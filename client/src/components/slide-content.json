@@ -3203,9 +3203,7 @@
                 "subtitles": "Here are some exercises to help you make the Mayday call in English. Click on the word or number to hear it in English. Practice saying the word yourself.",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[
-                    "/assets/images/02-en.png"
-                ]
+                "uniqueMedia":[]
             },
             "es": {
                 "title": "Practique",
@@ -3213,9 +3211,7 @@
                 "subtitles": "Aquí están algunos ejercicios para ayudarle hacer la llamada de Mayday en Inglés. Haga clic en la palabra o el número para escuchar en Inglés. Practique diciendo la palabra usted mismo.",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[
-                    "/assets/videos/02-es.mp4"
-                ]
+                "uniqueMedia":[]
             },
             "vi": {
                 "title": "Thực hành",
@@ -3223,9 +3219,7 @@
                 "subtitles": "Đây là một bài tập giúp quý vị thực tập cách gọi Mayday bằng tiếng Anh. Nhấn vào chử hay số để nghe bằng tiếng Anh. Thực tập bằng cách tự nói các chử, hoăc số nêu trên.",
                 "listHeads": [],
                 "listPoints": [],
-                "uniqueMedia":[
-                    "/assets/videos/02-vi.mp4"
-                ]
+                "uniqueMedia":[]
             }
         },
         {
