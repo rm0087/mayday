@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 #root {
- 
-}
+  overflow-y: scroll
+} */
 
 #render-div{
   background-color: #fffeea;
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction:row;
   align-items: left;
-  /* justify-content: center; */⇦
+  /* justify-content: center; */
   /* margin: auto; */
   /* font-size: 20px; */
 }

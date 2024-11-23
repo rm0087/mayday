@@ -14,27 +14,28 @@ export default function App() {
     // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button className="m-1 w-[300px] p-4 border rounded-lg text-center text-20px" key={content[language].links.indexOf(link)} onClick={()=>
+            <button className="border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
         return (
-            <>
+            <div className="flex flex-col mt-10">
                 {links}
-            </>
+            </div>
         )
     };
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a href={link.ref} className=" flex items-center m-1 w-[300px] p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a href={link.ref} className="flex items-center m-1 p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
         )
         
         return (
             <>
+                
+                <div className="flex flex-col mt-10">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
-                <div className="flex flex-col mt-1">
-                {links}
+                    {links}
                 </div>
             </>
         )
@@ -87,7 +88,7 @@ export default function App() {
 
         return (
             <>
-            {<div className="w-full list-inside">
+            {<div className="w-full list-inside mt-10 md:p-6">
                 {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
                 {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads2[0]}</h3> : null}
@@ -257,6 +258,7 @@ export default function App() {
         const newIndex = (currentIndex + 1) % slides.length;
         const newSlideType = slides[newIndex].type;
         scrollToTop();
+        setIsPlaying(false)
         setCurrentIndex(newIndex);
         setSlideType(newSlideType);
     };
@@ -266,6 +268,7 @@ export default function App() {
         const newIndex = (currentIndex - 1 + slides.length) % slides.length;
         const newSlideType = slides[newIndex].type;
         scrollToTop();
+        setIsPlaying(false)
         setCurrentIndex(newIndex);
         setSlideType(newSlideType);
     };
@@ -294,9 +297,12 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`md:w-2/4 md:min-w-[960px] w-full flex flex-col transition-all items-center border rounded-lg shadow-lg md:p-5 py-5 ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative md:w-2/4 md:min-w-[960px] w-full transition-all items-center border rounded-lg shadow-lg md:p-5 py-5 ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
+            <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
+                onClick={toggleMediaPlayback}> {!isPlaying? '▶︎' : '||'}
+            </button>
                 {(() => {
                     switch (slideType) {
                         case "1":
@@ -324,19 +330,19 @@ export default function App() {
                     <button key={key} className="m-2" onClick={()=>handleLanguage(key)}>{language}</button>
                 )}
             <div className="min-w-full justify-center flex" id ="header-limit">
-                <div className="p-7 flex justify-left w-screen shadow-md" id = "header">
+                <div className="p-7 flex justify-left w-screen shadow-md border" id = "header">
                     <div className="w-3/4 md:m-auto" id ="title">
                         <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
                     </div>
                 </div>
             </div>
             <div id="container" className="flex items-center justify-center align-center pt-5">
-                <button className="w-10 h-10 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:m-2" onClick={goToPreviousSlide}>←</button>
+                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:m-2" onClick={goToPreviousSlide}>←</button>
                 {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
                 <div className="w-full md:w-min items-center flex flex-col pt-5" id = "slide">{renderSlide()}</div>
-                <button className="w-10 h-10 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:m-2" onClick={goToNextSlide}>→</button>
+                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:m-2" onClick={goToNextSlide}>→</button>
             </div>
-            <div id = "control-panel" className="mt-4">
+            {/* <div id = "control-panel" className="mt-4">
                 <div id = "controls">
                     <button onClick={goToPreviousSlide}>Previous</button>
                     <button onClick={toggleMediaPlayback}>
@@ -344,7 +350,7 @@ export default function App() {
                     </button>
                     <button onClick={goToNextSlide}>Next</button>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 }
