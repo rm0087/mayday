@@ -11,7 +11,7 @@ export default function App() {
     const videoRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false)
     
-    // SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////////
+    // SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
             <button className="w-[300px] border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
@@ -244,7 +244,7 @@ export default function App() {
         )
     };
 
-    // END SLIDE TEMPLATES //////////////////////////////////////////////////////////////////////
+    // END SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////
     
     // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
     const goToSlide = (index, slide) => {
@@ -297,7 +297,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5 ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5 z-0 ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
             <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
@@ -336,11 +336,11 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            <div id="container" className="flex items-center justify-center align-center pt-5">
-                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:m-auto" onClick={goToPreviousSlide}>←</button>
+            <div id="container" className="relative z-0 flex items-center justify-center align-center pt-5">
+                <button id ="prev-slide "className="fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:opacity-100 opacity-50 hover:opacity-100" onClick={goToPreviousSlide}>←</button>
                 {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
-                <div className="w-full md:w-min items-center flex flex-col pt-5" id = "slide">{renderSlide()}</div>
-                <button className="w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:m-auto" onClick={goToNextSlide}>→</button>
+                <div className="w-full md:w-min items-center flex flex-col pt-5 relative z-0" id = "slide">{renderSlide()}</div>
+                <button className="fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50 hover:opacity-100" onClick={goToNextSlide}>→</button>
             </div>
             {/* <div id = "control-panel" className="mt-4">
                 <div id = "controls">
