@@ -303,7 +303,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5 z-0 ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5 ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
             <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
@@ -331,7 +331,7 @@ export default function App() {
 
     return (
         <>
-            <div className="relative flex">
+            <div className="relative min-h-screen flex flex col">
                 {/* Sliding Menu */}
                 <div
                     className={`overflow-y-scroll fixed top-0 left-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
@@ -422,9 +422,9 @@ export default function App() {
                     </div>
                     <div
                         id="footer"
-                        className="w-full h-[300px] mt-[200px] bg-slate-500 border"
+                        className="w-full h-[600px] mt-20 bg-slate-500 border flex justify-center p-10 "
                     >
-                        <div className="w-full">FOOTER</div>
+                        <img className="h-[200px] w-auto" src="footer-logo.png"></img>
                     </div>
                 </div>
             </div>
