@@ -5,11 +5,16 @@ const { slides } = slideContent;
 export default function App() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [slideType, setSlideType] = useState(slides[currentIndex].type);
-    const [language, setLanguage] = useState("en")
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [language, setLanguage] = useState("en");
+    const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
     const videoRef = useRef(null);
-    const [isAnimating, setIsAnimating] = useState(false)
+    const [isAnimating, setIsAnimating] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
     
     // SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
@@ -325,32 +330,102 @@ export default function App() {
 
     return (
         <>
-            <button className="h-10 w-10 border">E</button>
-            {Object.entries(slideContent.languages).map(([key,language]) =>
-                    <button key={key} className="m-2" onClick={()=>handleLanguage(key)}>{language}</button>
-                )}
-            <div className="min-w-full justify-center flex" id ="header-limit">
-                <div className="p-7 flex justify-left w-screen shadow-md border" id = "header">
-                    <div className="w-3/4 md:m-auto" id ="title">
-                        <h1 className="w-full text-left text-3xl font-bold">{slideContent.slides[currentIndex].id}. {slideContent.slides[currentIndex][language].title}</h1>
+            <div className="relative flex">
+                {/* Sliding Menu */}
+                <div
+                    className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform transition-transform duration-300 ${
+                        isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
+                >
+                    <button
+                        className="absolute top-4 right-4 text-white"
+                        onClick={toggleMenu}
+                    >
+                        X
+                    </button>
+                    <div className="p-4">
+                        <h2 className="text-lg font-bold">Menu</h2>
+                        <ul>
+                            <li className="mt-4">Option 1</li>
+                            <li className="mt-4">Option 2</li>
+                            <li className="mt-4">Option 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Main Content Wrapper */}
+                <div
+                    className={`flex-1 transition-all duration-300 ${
+                        isMenuOpen ? "ml-64" : "ml-0"
+                    }`}
+                >
+                    {/* Top Buttons */}
+                    <button
+                        className="h-10 w-10 border"
+                        onClick={toggleMenu}
+                    >
+                        E
+                    </button>
+                    {Object.entries(slideContent.languages).map(([key, language]) => (
+                        <button
+                            key={key}
+                            className="m-2"
+                            onClick={() => handleLanguage(key)}
+                        >
+                            {language}
+                        </button>
+                    ))}
+
+                    {/* Main Content */}
+                    <div className="min-w-full justify-center flex" id="header-limit">
+                        <div
+                            className="p-7 flex justify-left w-screen shadow-md border"
+                            id="header"
+                        >
+                            <div className="w-3/4 md:m-auto" id="title">
+                                <h1 className="w-full text-left text-3xl font-bold">
+                                    {slideContent.slides[currentIndex].id}.{" "}
+                                    {slideContent.slides[currentIndex][language].title}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="container"
+                        className="relative z-0 flex items-center justify-center align-center pt-5"
+                    >
+                        <button
+                            id="prev-slide"
+                            className="fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
+                            onClick={goToPreviousSlide}
+                        >
+                            {"<"}
+                        </button>
+                        <audio
+                            ref={audioRef}
+                            src={slideContent.slides[currentIndex][language].soundtrack}
+                        />
+                        <div
+                            className="w-full md:w-min items-center flex flex-col pt-5 relative z-0"
+                            id="slide"
+                        >
+                            {renderSlide()}
+                        </div>
+                        <button
+                            className="fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
+                            onClick={goToNextSlide}
+                        >
+                            {">"}
+                        </button>
+                    </div>
+                    <div
+                        id="footer"
+                        className="w-full h-[300px] mt-[200px] bg-slate-500 border"
+                    >
+                        <div className="w-full">FOOTER</div>
                     </div>
                 </div>
             </div>
-            <div id="container" className="relative z-0 flex items-center justify-center align-center pt-5">
-                <button id ="prev-slide "className="fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:opacity-100 opacity-50" onClick={goToPreviousSlide}>{"<"}</button>
-                {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
-                <div className="w-full md:w-min items-center flex flex-col pt-5 relative z-0" id = "slide">{renderSlide()}</div>
-                <button className="fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50" onClick={goToNextSlide}>{">"}</button>
-            </div>
-            {/* <div id = "control-panel" className="mt-4">
-                <div id = "controls">
-                    <button onClick={goToPreviousSlide}>Previous</button>
-                    <button onClick={toggleMediaPlayback}>
-                        {isPlaying ? 'Pause' : 'Play'}
-                    </button>
-                    <button onClick={goToNextSlide}>Next</button>
-                </div>
-            </div> */}
         </>
     );
 }
