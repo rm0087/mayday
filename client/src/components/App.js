@@ -253,6 +253,7 @@ export default function App() {
     
     // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
     const goToSlide = (index, slide) => {
+        scrollToTop();
         setIsAnimating(true);
         setCurrentIndex(index-1)
         setSlideType(slide.type)
@@ -333,7 +334,7 @@ export default function App() {
             <div className="relative flex">
                 {/* Sliding Menu */}
                 <div
-                    className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform transition-transform duration-300 ${
+                    className={`overflow-y-scroll fixed top-0 left-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
                         isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                 >
@@ -345,10 +346,19 @@ export default function App() {
                     </button>
                     <div className="p-4">
                         <h2 className="text-lg font-bold">Menu</h2>
+                        {Object.entries(slideContent.languages).map(([key, language]) => (
+                        <button
+                            key={key}
+                            className="m-2"
+                            onClick={() => handleLanguage(key)}
+                        >
+                            {language}
+                        </button>
+                    ))}
                         <ul>
-                            <li className="mt-4">Option 1</li>
-                            <li className="mt-4">Option 2</li>
-                            <li className="mt-4">Option 3</li>
+                            {slideContent.slides.map((slide) => 
+                                <li><button className="mt-1" key={slide.id} onClick={() => goToSlide(slide.id, slideContent.slides.find((goSlide)=>goSlide.id === slide.id))}>{slide.id} - {slide[language].title}</button></li>
+                            )}
                         </ul>
                     </div>
                 </div>
@@ -361,20 +371,12 @@ export default function App() {
                 >
                     {/* Top Buttons */}
                     <button
-                        className="h-10 w-10 border"
+                        className="border p-3"
                         onClick={toggleMenu}
                     >
-                        E
+                        Menu
                     </button>
-                    {Object.entries(slideContent.languages).map(([key, language]) => (
-                        <button
-                            key={key}
-                            className="m-2"
-                            onClick={() => handleLanguage(key)}
-                        >
-                            {language}
-                        </button>
-                    ))}
+                    
 
                     {/* Main Content */}
                     <div className="min-w-full justify-center flex" id="header-limit">
