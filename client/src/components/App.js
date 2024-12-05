@@ -337,10 +337,10 @@ export default function App() {
                 </div>
             </div>
             <div id="container" className="relative z-0 flex items-center justify-center align-center pt-5">
-                <button id ="prev-slide "className="fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:opacity-100 opacity-50" onClick={goToPreviousSlide}>←</button>
+                <button id ="prev-slide "className="fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center left-4 shadow-md text-3xl md:opacity-100 opacity-50" onClick={goToPreviousSlide}>{"<"}</button>
                 {<audio ref={audioRef} src={slideContent.slides[currentIndex][language].soundtrack}/>}
                 <div className="w-full md:w-min items-center flex flex-col pt-5 relative z-0" id = "slide">{renderSlide()}</div>
-                <button className="fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50" onClick={goToNextSlide}>→</button>
+                <button className="fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50" onClick={goToNextSlide}>{">"}</button>
             </div>
             {/* <div id = "control-panel" className="mt-4">
                 <div id = "controls">
