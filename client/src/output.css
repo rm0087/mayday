@@ -711,6 +711,22 @@ video {
   margin-top: 5rem;
 }
 
+.ml-\[200px\] {
+  margin-left: 200px;
+}
+
+.ml-\[500px\] {
+  margin-left: 500px;
+}
+
+.ml-\[450px\] {
+  margin-left: 450px;
+}
+
+.ml-\[440px\] {
+  margin-left: 440px;
+}
+
 .flex {
   display: flex;
 }

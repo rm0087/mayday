@@ -257,6 +257,7 @@ export default function App() {
         setIsAnimating(true);
         setCurrentIndex(index-1)
         setSlideType(slide.type)
+        setIsMenuOpen(false)
     }
 
     const goToNextSlide = () => {
@@ -303,7 +304,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5 ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
             <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
@@ -334,12 +335,12 @@ export default function App() {
             <div className="relative min-h-screen flex flex col">
                 {/* Sliding Menu */}
                 <div
-                    className={`overflow-y-scroll fixed top-0 left-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
+                    className={`overflow-y-scroll w-200 fixed top-0 left-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
                         isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                 >
                     <button
-                        className="absolute top-4 right-4 text-white"
+                        className="absolute top-4 left-0 text-white"
                         onClick={toggleMenu}
                     >
                         X
@@ -366,7 +367,7 @@ export default function App() {
                 {/* Main Content Wrapper */}
                 <div
                     className={`flex-1 transition-all duration-300 ${
-                        isMenuOpen ? "ml-64" : "ml-0"
+                        isMenuOpen ? "ml-[440px]" : "ml-0"
                     }`}
                 >
                     {/* Top Buttons */}
