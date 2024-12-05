@@ -335,12 +335,12 @@ export default function App() {
             <div className="relative min-h-screen flex flex col">
                 {/* Sliding Menu */}
                 <div
-                    className={`overflow-y-scroll w-200 fixed top-0 left-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
+                    className={`overflow-y-scroll w-[300px] fixed top-0 left-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
                         isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                 >
                     <button
-                        className="absolute top-4 left-0 text-white"
+                        className="absolute top-4 right-4 text-white font-bold"
                         onClick={toggleMenu}
                     >
                         X
@@ -358,7 +358,7 @@ export default function App() {
                     ))}
                         <ul>
                             {slideContent.slides.map((slide) => 
-                                <li><button className="mt-1" key={slide.id} onClick={() => goToSlide(slide.id, slideContent.slides.find((goSlide)=>goSlide.id === slide.id))}>{slide.id} - {slide[language].title}</button></li>
+                                <li><button className="mt-2 text-left" key={slide.id} onClick={() => goToSlide(slide.id, slideContent.slides.find((goSlide)=>goSlide.id === slide.id))}>{slide.id} - {slide[language].title}</button></li>
                             )}
                         </ul>
                     </div>
@@ -367,7 +367,7 @@ export default function App() {
                 {/* Main Content Wrapper */}
                 <div
                     className={`flex-1 transition-all duration-300 ${
-                        isMenuOpen ? "ml-[440px]" : "ml-0"
+                        isMenuOpen ? "ml-[300px]" : "ml-0"
                     }`}
                 >
                     {/* Top Buttons */}
