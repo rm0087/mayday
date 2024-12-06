@@ -19,7 +19,7 @@ export default function App() {
     // SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button className="w-[300px] border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
+            <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -32,7 +32,7 @@ export default function App() {
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a key={content[language].links.indexOf(link)} href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
         )
         
         return (
@@ -50,23 +50,23 @@ export default function App() {
         
         //if listpoints is not empty, map list points
         const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li className="leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li key={content[language].listPoints.indexOf(point)} className="leading-tight tracking-wide p-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
-            point ? <li className="leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li key={content[language].listPoints2.indexOf(point)} className="leading-tight tracking-wide p-2">{point}</li> : null
         )
         
         // if content.images is not empty, map images
         const images = content.images?.map((media) =>
-            media? <img className="w-auto h-auto max-w-full max-h-full mt-5" src={media} alt="Slide Media"/> : null    
+            media? <img key={content.images.indexOf(media)} className="w-auto h-auto max-w-full max-h-full mt-5" src={media} alt="Slide Media"/> : null    
         )
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
-                    <video className="w-min h-auto" controls autoplay loop>
-                        <source src={video} type="video/mp4"/>
+                <div key={video} className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
+                    <video ref={videoRef} src={video} className="w-min h-auto" controls autoPlay loop>
+                        
                     </video>
                 </div> : null
            
@@ -84,11 +84,11 @@ export default function App() {
         const uniqueMedia = content[language].uniqueMedia?.map((media)=>
             media.slice(-4) === ".mp4"?
             <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
-                <video className="" controls autoplay>
-                    <source src={media} type="video/mp4"/>
+                <video className="" controls autoPlay>
+                    <source key={content.images.indexOf(media)} src={media} type="video/mp4"/>
                 </video>
                 </div> 
-                : <img src = {media} alt="Slide Media" />    
+                : <img key={content.images.indexOf(media)} src = {media} alt="Slide Media" />    
         )
 
         return (
@@ -283,10 +283,10 @@ export default function App() {
     const toggleMediaPlayback = () => {
         if (isPlaying) {
           audioRef.current?.pause();
-          videoRef.current?.pause();
+          
         } else {
           audioRef.current?.play();
-          videoRef.current?.play();
+          
         }
         setIsPlaying(!isPlaying);
       };
@@ -350,7 +350,7 @@ export default function App() {
                         <h2 className="text-lg font-bold mt-5 text-center">Menu</h2>
                         {Object.entries(slideContent.languages).map(([key, language]) => (
                         <button
-                            key={key}
+                            key={language}
                             className="m-2"
                             onClick={() => handleLanguage(key)}
                         >
@@ -382,7 +382,7 @@ export default function App() {
                     </div>
 
                     {/* Main Content */}
-                    <div id="banner" className="w-full p-5 flex justify-center">
+                    <div id="banner" className="w-full p-5 flex justify-center text-center">
                         {slideContent.presentationTitle[language]}
                     </div>
                     <div className="min-w-full justify-center flex flex col" id="header-limit">
