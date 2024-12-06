@@ -6,9 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontSize: {
-        '20px': '20px',
-      },
+      fontFamily: {
+        arial: ['Arial', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        customFont: ['"Your Custom Font"', 'serif'],
+    },
     },
   },
   plugins: [],

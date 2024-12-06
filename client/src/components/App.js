@@ -50,11 +50,11 @@ export default function App() {
         
         //if listpoints is not empty, map list points
         const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li key={content[language].listPoints.indexOf(point)} className="leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li key={content[language].listPoints.indexOf(point)} className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
-            point ? <li key={content[language].listPoints2.indexOf(point)} className="leading-tight tracking-wide p-2">{point}</li> : null
+            point ? <li key={content[language].listPoints2.indexOf(point)} className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
         )
         
         // if content.images is not empty, map images
@@ -94,9 +94,9 @@ export default function App() {
         return (
             <>
             {<div className="w-full list-inside mt-7 md:p-6">
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
-                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads2[0]}</h3> : null}
+                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>}
                 <div className = "grid place-items-center" id= "medias">
@@ -307,7 +307,7 @@ export default function App() {
                 className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
-            {slideContent.slides[currentIndex][language].soundtrack ? <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
+            {slideContent.slides[currentIndex][language].soundtrack ? <button className="hover:font-bold absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
                 onClick={toggleMediaPlayback}> {!isPlaying? '▶︎' : '||'}
             </button> : null}
             
@@ -341,17 +341,17 @@ export default function App() {
                     }`}
                 >
                     <button
-                        className="absolute top-4 left-4 text-white font-bold"
+                        className="absolute top-4 left-4 text-white font-bold hover:bg-black rounded py-1 px-3 "
                         onClick={toggleMenu}
                     >
                         X
                     </button>
                     <div className="p-4">
-                        <h2 className="text-lg font-bold mt-5 text-center">Menu</h2>
+                        <h2 className="text-lg font-bold mt-5 text-center font-roboto">Menu</h2>
                         {Object.entries(slideContent.languages).map(([key, language]) => (
                         <button
                             key={language}
-                            className="m-2"
+                            className="m-2 hover:font-bold"
                             onClick={() => handleLanguage(key)}
                         >
                             {language}
@@ -359,7 +359,7 @@ export default function App() {
                     ))}
                         <ul>
                             {slideContent.slides.map((slide) => 
-                                <li><button className="mt-2 text-left" key={slide.id} onClick={() => goToSlide(slide.id, slideContent.slides.find((goSlide)=>goSlide.id === slide.id))}>{slide.id} - {slide[language].title}</button></li>
+                                <li><button className="mt-2 text-left font-roboto hover:font-bold" key={slide.id} onClick={() => goToSlide(slide.id, slideContent.slides.find((goSlide)=>goSlide.id === slide.id))}>{slide.id} - {slide[language].title}</button></li>
                             )}
                         </ul>
                     </div>
@@ -374,7 +374,7 @@ export default function App() {
                     {/* Top Buttons */}
                     <div className="w-full border p-2">
                         <button
-                            className="border p-3 m-1"
+                            className="border rounded p-3 m-1 hover:bg-slate-500 hover:font-bold font-roboto"
                             onClick={toggleMenu}
                         >
                             Menu
@@ -382,7 +382,7 @@ export default function App() {
                     </div>
 
                     {/* Main Content */}
-                    <div id="banner" className="w-full p-5 flex justify-center text-center">
+                    <div id="banner" className="w-full p-5 flex justify-center text-center font-roboto text-lg tracking-wide">
                         {slideContent.presentationTitle[language]}
                     </div>
                     <div className="min-w-full justify-center flex flex col" id="header-limit">
@@ -393,8 +393,8 @@ export default function App() {
                             id="header"
                         >
                             
-                            <div className="w-3/4 md:m-auto" id="title">
-                                <h1 className="w-full text-left text-3xl font-bold">
+                            <div className="w-3/4 md:m-auto font-roboto" id="title">
+                                <h1 className="w-full text-left text-3xl font-bold tracking-wide">
                                     {slideContent.slides[currentIndex].id}.{" "}
                                     {slideContent.slides[currentIndex][language].title}
                                 </h1>
@@ -407,7 +407,7 @@ export default function App() {
                     >
                         <button
                             id="prev-slide"
-                            className="fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
+                            className="hover:font-bold fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
                             onClick={goToPreviousSlide}
                         >
                             {"<"}
@@ -423,7 +423,7 @@ export default function App() {
                             {renderSlide()}
                         </div>
                         <button
-                            className="fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
+                            className="hover:font-bold fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
                             onClick={goToNextSlide}
                         >
                             {">"}
