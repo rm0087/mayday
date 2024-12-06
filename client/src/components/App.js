@@ -307,9 +307,10 @@ export default function App() {
                 className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${isAnimating ? 'slide-enter' : ''}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
-            <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
+            {slideContent.slides[currentIndex][language].soundtrack ? <button className="absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
                 onClick={toggleMediaPlayback}> {!isPlaying? '▶︎' : '||'}
-            </button>
+            </button> : null}
+            
                 {(() => {
                     switch (slideType) {
                         case "1":
@@ -340,13 +341,13 @@ export default function App() {
                     }`}
                 >
                     <button
-                        className="absolute top-4 right-4 text-white font-bold"
+                        className="absolute top-4 left-4 text-white font-bold"
                         onClick={toggleMenu}
                     >
                         X
                     </button>
                     <div className="p-4">
-                        <h2 className="text-lg font-bold">Menu</h2>
+                        <h2 className="text-lg font-bold mt-5 text-center">Menu</h2>
                         {Object.entries(slideContent.languages).map(([key, language]) => (
                         <button
                             key={key}
@@ -371,20 +372,27 @@ export default function App() {
                     }`}
                 >
                     {/* Top Buttons */}
-                    <button
-                        className="border p-3"
-                        onClick={toggleMenu}
-                    >
-                        Menu
-                    </button>
-                    
+                    <div className="w-full border p-2">
+                        <button
+                            className="border p-3 m-1"
+                            onClick={toggleMenu}
+                        >
+                            Menu
+                        </button>
+                    </div>
 
                     {/* Main Content */}
-                    <div className="min-w-full justify-center flex" id="header-limit">
+                    <div id="banner" className="w-full p-5 flex justify-center">
+                        {slideContent.presentationTitle[language]}
+                    </div>
+                    <div className="min-w-full justify-center flex flex col" id="header-limit">
+                    
+                        
                         <div
                             className="p-7 flex justify-left w-screen shadow-md border"
                             id="header"
                         >
+                            
                             <div className="w-3/4 md:m-auto" id="title">
                                 <h1 className="w-full text-left text-3xl font-bold">
                                     {slideContent.slides[currentIndex].id}.{" "}

@@ -13,6 +13,11 @@
         "es": "Español",
         "vi": "Tiếng Việt"
     },
+    "presentationTitle":{
+        "en": "Communication, Navigation, and Mayday",
+        "es": "Navegación, Comunicación y Mayday",
+        "vi": "Cách Liên Lạc Của Luật Hải Hành Và Cách Gọi MAYDAY"
+    },
     "slides": [
         {
             "id": 1,
