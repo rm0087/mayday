@@ -11,6 +11,7 @@ export default function App() {
     const videoRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [fadeEffect, setFadeEffect] = useState(false);
     
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -19,7 +20,7 @@ export default function App() {
     // SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4" key={content[language].links.indexOf(link)} onClick={()=>
+            <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto" onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -32,14 +33,14 @@ export default function App() {
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a key={content[language].links.indexOf(link)} href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a key={content[language].links.indexOf(link)} href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px font-roboto" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
         )
         
         return (
             <>
                 
                 <div className="flex flex-col mt-10 items-center">
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto">{content[language].listHeads[0]}</h3> : null}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads[0]}</h3> : null}
                     {links}
                 </div>
             </>
@@ -158,7 +159,7 @@ export default function App() {
             <div className="w-full max-w-2xl p-6 flex-grow ">
                 {!quizCompleted ? (
                     <div className="space-y-6 mt-5">
-                        <h2 className="text-2xl font-bold">Question</h2>
+                        <h2 className="text-2xl font-bold font-roboto">Question</h2>
                         <div className="m-0 text-sm text-gray-500" id="test">
                             {`${currentQuestionIndex + 1} / ${questions.length}`}
                         </div>
@@ -170,13 +171,13 @@ export default function App() {
                                 className="max-w-full h-auto rounded-lg drop-shadow-md"
                             />
                             : null}
-                            <h3 className="tracking-wide leading-tight font-semibold text-lg">{currentQuestion.questionText}</h3>
+                            <h3 className="tracking-wide leading-tight font-semibold text-lg font-roboto">{currentQuestion.questionText}</h3>
                             
                             <div className="w-full space-y-2 items-center flex flex-col">
                                 {currentQuestion.options.map((option) => (
                                     <button
                                         key={option.id}
-                                        className={`w-full text-left text-base p-4 rounded-lg border ${
+                                        className={`w-full text-left text-base p-4 rounded-lg border font-roboto ${
                                             selectedAnswer === option.id
                                                 ? showFeedback
                                                     ? option.isCorrect
@@ -255,9 +256,16 @@ export default function App() {
     const goToSlide = (index, slide) => {
         scrollToTop();
         setIsAnimating(true);
-        setCurrentIndex(index-1)
-        setSlideType(slide.type)
         setIsMenuOpen(false)
+        
+        setFadeEffect(true)
+        setTimeout(() => {
+            // Change slide after fade-out completes
+            setCurrentIndex(index-1);
+            setSlideType(slide.type);
+            // Trigger fade-in effect
+            setFadeEffect(false);
+          }, 500);
     }
 
     const goToNextSlide = () => {
@@ -266,8 +274,15 @@ export default function App() {
         const newSlideType = slides[newIndex].type;
         scrollToTop();
         setIsPlaying(false)
-        setCurrentIndex(newIndex);
-        setSlideType(newSlideType);
+        
+        setFadeEffect(true)
+        setTimeout(() => {
+            // Change slide after fade-out completes
+            setCurrentIndex((currentIndex + 1) % slides.length);
+            setSlideType(newSlideType);
+            // Trigger fade-in effect
+            setFadeEffect(false);
+          }, 500);
     };
 
     const goToPreviousSlide = () => {
@@ -276,8 +291,15 @@ export default function App() {
         const newSlideType = slides[newIndex].type;
         scrollToTop();
         setIsPlaying(false)
-        setCurrentIndex(newIndex);
-        setSlideType(newSlideType);
+        
+        setFadeEffect(true)
+        setTimeout(() => {
+            // Change slide after fade-out completes
+            setCurrentIndex((currentIndex - 1 + slides.length) % slides.length);
+            setSlideType(newSlideType);
+            // Trigger fade-in effect
+            setFadeEffect(false);
+          }, 500);
     };
 
     const toggleMediaPlayback = () => {
@@ -304,7 +326,7 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${isAnimating ? 'slide-enter' : ''}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${fadeEffect ? 'opacity-0' : "opacity-100"}`}
                 onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
             {slideContent.slides[currentIndex][language].soundtrack ? <button className="hover:font-bold absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
