@@ -20,8 +20,10 @@ export default function App() {
     // SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto font-bold hover:bg-gray-100" onClick={()=>
-                {goToSlide(link.ref, slideContent.slides[link.ref-1].type)}}>{link.title}</button>
+            <button key={content[language].links.indexOf(link)} 
+                className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto font-bold hover:bg-gray-100" 
+                onClick={()=>
+                    {goToSlide(link.ref, slideContent.slides[link.ref - 1].type)}}>{link.title}</button>
         )
         
         return (
@@ -33,41 +35,58 @@ export default function App() {
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a key={content[language].links.indexOf(link)} href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px font-roboto font-bold hover:bg-gray-100" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a key={content[language].links.indexOf(link)} 
+                href={link.ref} 
+                className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px font-roboto font-bold hover:bg-gray-100" 
+                target="_blank" 
+                rel="noreferrer">
+                    <div>
+                        <img className="rounded-lg border w-8 h-8 m-4 shadow-md" 
+                        src="/assets/images/pdf-logo-sm.png" alt="PDF document"/>
+                    </div>
+                    <p className="text-left">{link.title}</p>
+            </a>
         )
         
         return (
             <>
-                
                 <div className="flex flex-col mt-10 items-center">
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads[0]}</h3> : null}
-                    {links}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? 
+                    <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads[0]}</h3> : null}
+                {links}
                 </div>
             </>
         )
     }
 
     const TextAndMediaSlide = ({ content }) => {
-        
-        //if listpoints is not empty, map list points
         const listPoints = content[language].listPoints?.map((point) =>
-            point ? <li key={content[language].listPoints.indexOf(point)} className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
+            point ? <li key={content[language].listPoints.indexOf(point)} 
+                className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
-            point ? <li key={content[language].listPoints2.indexOf(point)} className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
+            point ? <li key={content[language].listPoints2.indexOf(point)} 
+                className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
         )
         
-        // if content.images is not empty, map images
+      
         const images = content.images?.map((media) =>
-            media? <img key={content.images.indexOf(media)} className="w-auto h-auto max-w-full max-h-full mt-5" src={media} alt="Slide Media"/> : null    
+            media? <img key={content.images.indexOf(media)} 
+                className="w-auto h-auto max-w-full max-h-full mt-5" 
+                src={media} 
+                alt="Slide Media"/> : null    
         )
 
         const videos = content.videos?.map((video)=>
             video? 
-                <div key={video} className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
-                    <video ref={videoRef} src={video} className="w-min h-auto" controls autoPlay loop>
-                        
+                <div key={video} 
+                    className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
+                    <video 
+                        ref={videoRef} 
+                        src={video} 
+                        className="w-min h-auto" 
+                        controls autoPlay loop>
                     </video>
                 </div> : null
            
@@ -76,7 +95,9 @@ export default function App() {
         const animations = content.animations?.map((animation)=>
             animation?
                 <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
-                    <div id={`sprite${content.id}`} className="bg-no-repeat bg-contain" style={{ backgroundImage: `url(${animation})` }}>
+                    <div id={`sprite${content.id}`} 
+                        className="bg-no-repeat bg-contain" 
+                        style={{ backgroundImage: `url(${animation})` }}>
                     </div>
                 </div> : null
 
@@ -86,18 +107,26 @@ export default function App() {
             media.slice(-4) === ".mp4"?
             <div className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
                 <video className="" controls autoPlay>
-                    <source key={content.images.indexOf(media)} src={media} type="video/mp4"/>
+                    <source key={content.images.indexOf(media)} 
+                        src={media} 
+                        type="video/mp4"> 
+                    </source>
                 </video>
-                </div> 
-                : <img key={content.images.indexOf(media)} src = {media} alt="Slide Media" />    
+            </div> 
+            : <img key={content.images.indexOf(media)} 
+                src = {media} 
+                alt="Slide Media">  
+            </img>    
         )
 
         return (
             <>
             {<div className="w-full list-inside mt-7 md:p-6">
-                {content[language].listHeads && content[language].listHeads.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads[0]}</h3> : null}
+                {content[language].listHeads && content[language].listHeads.length > 0 ? 
+                    <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads[0]}</h3> : null}
                 {listPoints}
-                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads2[0]}</h3> : null}
+                {content[language].listHeads2 && content[language].listHeads2.length > 0 ? 
+                    <h3 className="text-xl font-bold leading-tight tracking-wide p-2 m-auto font-roboto">{content[language].listHeads2[0]}</h3> : null}
                 {listPoints2}
             </div>}
                 <div className = "grid place-items-center" id= "medias">
