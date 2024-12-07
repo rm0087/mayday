@@ -8,8 +8,6 @@ export default function App() {
     const [language, setLanguage] = useState("en");
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
-    const videoRef = useRef(null);
-    const [isAnimating, setIsAnimating] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [fadeEffect, setFadeEffect] = useState(false);
     
@@ -23,7 +21,7 @@ export default function App() {
             <button key={content[language].links.indexOf(link)} 
                 className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto font-bold hover:bg-gray-100" 
                 onClick={()=>
-                    {goToSlide(link.ref, slideContent.slides[link.ref - 1].type)}}>{link.title}</button>
+                    {goToSlide(link.ref)}}>{link.title}</button>
         )
         
         return (
@@ -82,8 +80,7 @@ export default function App() {
             video? 
                 <div key={video} 
                     className = "mt-5 p-4 bg-slate-800 drop-shadow-md justify-center">
-                    <video 
-                        ref={videoRef} 
+                    <video
                         src={video} 
                         className="w-min h-auto" 
                         controls autoPlay loop>
@@ -282,23 +279,24 @@ export default function App() {
     // END SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////
     
     // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
-    const goToSlide = (index, slideType) => {
+    const goToSlide = (index) => {
+        
         scrollToTop();
-        setIsAnimating(true);
+        
         setIsMenuOpen(false)
         
         setFadeEffect(true)
         setTimeout(() => {
             // Change slide after fade-out completes
             setCurrentIndex(index-1);
-            setSlideType(slideType);
+            setSlideType(slideContent.slides[index - 1].type);
             // Trigger fade-in effect
             setFadeEffect(false);
           }, 500);
     }
 
     const goToNextSlide = () => {
-        setIsAnimating(true);
+        
         const newIndex = (currentIndex + 1) % slides.length;
         const newSlideType = slides[newIndex].type;
         scrollToTop();
@@ -315,7 +313,7 @@ export default function App() {
     };
 
     const goToPreviousSlide = () => {
-        setIsAnimating(true);
+       
         const newIndex = (currentIndex - 1 + slides.length) % slides.length;
         const newSlideType = slides[newIndex].type;
         scrollToTop();
@@ -356,11 +354,14 @@ export default function App() {
         return (
             <div id="render-div"
                 className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${fadeEffect ? 'opacity-0' : "opacity-100"}`}
-                onAnimationEnd={() => setIsAnimating(false)} // Reset animation state after it finishes
             >
-            {slideContent.slides[currentIndex][language].soundtrack ? <button className="hover:font-bold absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
-                onClick={toggleMediaPlayback}> {!isPlaying? '▶︎' : '||'}
-            </button> : null}
+            {slideContent.slides[currentIndex][language].soundtrack ? 
+                <button 
+                    className="hover:font-bold absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
+                    onClick={toggleMediaPlayback}> 
+                    {!isPlaying? '▶︎' : '||'}
+                </button> : null
+            }
             
                 {(() => {
                     switch (slideType) {
@@ -410,7 +411,12 @@ export default function App() {
                     ))}
                         <ul>
                             {slideContent.slides.map((slide) => 
-                                <li><button className="mt-2 text-left text-sm font-roboto hover:underline" key={slide.id} onClick={() => goToSlide(slide.id, slide.type)}>{slide.id}. {slide[language].title}</button></li>
+                                <li>
+                                    <button className="mt-2 text-left text-sm font-roboto hover:underline" 
+                                        key={slide.id} 
+                                        onClick={() => goToSlide(slide.id)}>{slide.id}. {slide[language].title}
+                                    </button>
+                                </li>
                             )}
                         </ul>
                     </div>
@@ -484,7 +490,7 @@ export default function App() {
                         id="footer"
                         className="w-full h-[600px] mt-20 bg-slate-500 border flex justify-center p-10 "
                     >
-                        <img className="h-[200px] w-auto" src="footer-logo.png"></img>
+                        <img className="h-[200px] w-auto" src="footer-logo.png" alt="UTHealth Houston School of Public Health - Southwest Center for Occupational and Environmental Health"></img>
                     </div>
                 </div>
             </div>
