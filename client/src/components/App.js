@@ -20,7 +20,7 @@ export default function App() {
     // SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////////
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto" onClick={()=>
+            <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto font-bold hover:bg-gray-100" onClick={()=>
                 {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
         )
         
@@ -33,7 +33,7 @@ export default function App() {
 
     const PdfSlide = ({ content }) => {
         const links = content[language].links?.map((link) =>
-            <a key={content[language].links.indexOf(link)} href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px font-roboto" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
+            <a key={content[language].links.indexOf(link)} href={link.ref} className="w-[300px] flex items-center m-1 p-1 border rounded-lg text-left text-20px font-roboto font-bold hover:bg-gray-100" target="_blank" rel="noreferrer" key={content[language].links.indexOf(link)}><div><img className="rounded-lg border w-8 h-8 m-4 shadow-md" src="/assets/images/pdf-logo-sm.png" alt="PDF document"/></div><p className="text-left">{link.title}</p></a>
         )
         
         return (
@@ -253,7 +253,7 @@ export default function App() {
     // END SLIDE COMPONENTS //////////////////////////////////////////////////////////////////////
     
     // SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
-    const goToSlide = (index, slide) => {
+    const goToSlide = (index, slideType) => {
         scrollToTop();
         setIsAnimating(true);
         setIsMenuOpen(false)
@@ -262,7 +262,7 @@ export default function App() {
         setTimeout(() => {
             // Change slide after fade-out completes
             setCurrentIndex(index-1);
-            setSlideType(slide.type);
+            setSlideType(slideType);
             // Trigger fade-in effect
             setFadeEffect(false);
           }, 500);
@@ -278,7 +278,7 @@ export default function App() {
         setFadeEffect(true)
         setTimeout(() => {
             // Change slide after fade-out completes
-            setCurrentIndex((currentIndex + 1) % slides.length);
+            setCurrentIndex(newIndex);
             setSlideType(newSlideType);
             // Trigger fade-in effect
             setFadeEffect(false);
@@ -295,7 +295,7 @@ export default function App() {
         setFadeEffect(true)
         setTimeout(() => {
             // Change slide after fade-out completes
-            setCurrentIndex((currentIndex - 1 + slides.length) % slides.length);
+            setCurrentIndex(newIndex);
             setSlideType(newSlideType);
             // Trigger fade-in effect
             setFadeEffect(false);
@@ -363,7 +363,7 @@ export default function App() {
                     }`}
                 >
                     <button
-                        className="absolute top-4 left-4 text-white font-bold hover:bg-black rounded py-1 px-3 "
+                        className="absolute top-4 left-4 text-white font-bold hover:bg-black px-2 border"
                         onClick={toggleMenu}
                     >
                         X
@@ -381,7 +381,7 @@ export default function App() {
                     ))}
                         <ul>
                             {slideContent.slides.map((slide) => 
-                                <li><button className="mt-2 text-left font-roboto hover:font-bold" key={slide.id} onClick={() => goToSlide(slide.id, slideContent.slides.find((goSlide)=>goSlide.id === slide.id))}>{slide.id} - {slide[language].title}</button></li>
+                                <li><button className="mt-2 text-left text-sm font-roboto hover:underline" key={slide.id} onClick={() => goToSlide(slide.id, slide.type)}>{slide.id}. {slide[language].title}</button></li>
                             )}
                         </ul>
                     </div>
@@ -404,7 +404,7 @@ export default function App() {
                     </div>
 
                     {/* Main Content */}
-                    <div id="banner" className="w-full p-5 flex justify-center text-center font-roboto text-lg tracking-wide">
+                    <div id="banner" className="w-full p-5 flex justify-center text-center font-roboto text-lg">
                         {slideContent.presentationTitle[language]}
                     </div>
                     <div className="min-w-full justify-center flex flex col" id="header-limit">

@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         arial: ['Arial', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
-        customFont: ['"Your Custom Font"', 'serif'],
+        mathjax: ['MathJax_Math', 'serif']
     },
     },
   },
