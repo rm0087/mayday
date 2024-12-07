@@ -21,7 +21,7 @@ export default function App() {
     const Navigation = ({ content }) => {
         const links = content[language].links?.map((link) =>
             <button key={content[language].links.indexOf(link)} className="w-[300px] border rounded-lg text-center text-20px m-1 p-4 font-roboto font-bold hover:bg-gray-100" onClick={()=>
-                {goToSlide(link.ref, slideContent.slides.find((slide)=>slide.id === link.ref))}}>{link.title}</button>
+                {goToSlide(link.ref, slideContent.slides[link.ref].type)}}>{link.title}</button>
         )
         
         return (
