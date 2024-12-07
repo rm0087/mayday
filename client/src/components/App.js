@@ -60,7 +60,7 @@ export default function App() {
     const TextAndMediaSlide = ({ content }) => {
         const listPoints = content[language].listPoints?.map((point) =>
             point ? <li key={content[language].listPoints.indexOf(point)} 
-                className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
+                className="list-none leading-tight tracking-wide p-2 font-serif text-lg before:text-lg before:content-['⚓'] before:mr-2">{point}</li> : null
         )
 
         const listPoints2 = content[language].listPoints2?.map((point) =>
@@ -109,11 +109,14 @@ export default function App() {
                         type="video/mp4"> 
                     </source>
                 </video>
-            </div> 
-            : <img key={content.images.indexOf(media)} 
-                src = {media} 
-                alt="Slide Media">  
-            </img>    
+            </div>
+            : 
+            <div className="p-4 bg-slate-500 shadow-lg">
+                <img key={content.images.indexOf(media)} 
+                    src = {media} 
+                    alt="Slide Media">  
+                </img>
+            </div>    
         )
 
         return (
@@ -165,6 +168,7 @@ export default function App() {
         };
     
         const moveToNextQuestion = () => {
+            scrollToTopQuiz()
             if (currentQuestionIndex < questions.length - 1) {
                 setCurrentQuestionIndex(currentQuestionIndex + 1);
                 setSelectedAnswer(null);
@@ -344,6 +348,13 @@ export default function App() {
         window.scrollTo(0,0)
     }
 
+    const scrollToTopQuiz = () => {
+        const contentFrame = document.getElementById('header');
+        if (contentFrame) {
+            contentFrame.scrollIntoView();
+        }
+    }
+
     const handleLanguage = (key) => setLanguage(key)
       // END SLIDE CONTROLS /////////////////////////////////////////////////////////////////////
 
@@ -353,13 +364,13 @@ export default function App() {
         // Apply the animation class if isAnimating is true
         return (
             <div id="render-div"
-                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg py-5 md:p-5f ${fadeEffect ? 'opacity-0' : "opacity-100"}`}
+                className={`relative w-full md:w-2/4 md:min-w-[960px] flex flex-col items-center transition-all border rounded-lg shadow-lg pt-5 pb-12 md:p-5f ${fadeEffect ? 'opacity-0' : "opacity-100"}`}
             >
             {slideContent.slides[currentIndex][language].soundtrack ? 
                 <button 
-                    className="hover:font-bold absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md" 
+                    className={`hover:border-2 hover:bg-white hover:font-bold hover:text-black absolute top-0 left-0 m-3 md:m-2 w-7 h-7 md:w-10 md:h-10 flex text-center items-center justify-center rounded-full bg-black text-white text-sm shadow-md ${isPlaying? "bg-white text-black": null}`} 
                     onClick={toggleMediaPlayback}> 
-                    {!isPlaying? '▶︎' : '||'}
+                    {!isPlaying? '\u25B6\uFE0E' : '\u23F8\uFE0E'}
                 </button> : null
             }
             
@@ -464,7 +475,7 @@ export default function App() {
                     >
                         <button
                             id="prev-slide"
-                            className="hover:font-bold fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
+                            className="md:hover:bg-white md:hover:text-black md:hover:border-2 md:hover:border:black md:hover:font-bold fixed z-10 md:top-[50%] md:left-[10%] top-[50%] left-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
                             onClick={goToPreviousSlide}
                         >
                             {"<"}
@@ -480,7 +491,7 @@ export default function App() {
                             {renderSlide()}
                         </div>
                         <button
-                            className="hover:font-bold fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
+                            className="md:hover:bg-white md:hover:text-black md:hover:border-2 md:hover:border:black md:hover:font-bold fixed z-10 md:top-[50%] md:right-[10%] top-[50%] right-[0%] w-7 h-7 md:w-12 md:h-12 bg-black text-white rounded-full flex items-center justify-center shadow-md text-3xl md:opacity-100 opacity-50"
                             onClick={goToNextSlide}
                         >
                             {">"}
